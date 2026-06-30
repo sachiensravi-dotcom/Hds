@@ -146,13 +146,13 @@ function App() {
       {/* Animated Background Halos */}
       <div className="absolute inset-0 pointer-events-none z-0 overflow-hidden">
         <div className="halo-bg-1 absolute top-[5%] right-[-10%] w-[600px] md:w-[900px] h-[600px] md:h-[900px] opacity-[0.18] mix-blend-screen">
-          <img src="/hero-asset.png" alt="Halo Glow" className="w-full h-full object-contain" />
+          <img src={`${import.meta.env.BASE_URL}hero-asset.png`} alt="Halo Glow" className="w-full h-full object-contain" />
         </div>
         <div className="halo-bg-2 absolute top-[35%] left-[-15%] w-[500px] md:w-[800px] h-[500px] md:h-[800px] opacity-[0.14] mix-blend-screen">
-          <img src="/hero-asset.png" alt="Halo Glow" className="w-full h-full object-contain" />
+          <img src={`${import.meta.env.BASE_URL}hero-asset.png`} alt="Halo Glow" className="w-full h-full object-contain" />
         </div>
         <div className="halo-bg-3 absolute bottom-[10%] right-[-12%] w-[600px] md:w-[900px] h-[600px] md:h-[900px] opacity-[0.16] mix-blend-screen">
-          <img src="/hero-asset.png" alt="Halo Glow" className="w-full h-full object-contain" />
+          <img src={`${import.meta.env.BASE_URL}hero-asset.png`} alt="Halo Glow" className="w-full h-full object-contain" />
         </div>
       </div>
 

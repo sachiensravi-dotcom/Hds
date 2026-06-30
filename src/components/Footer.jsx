@@ -20,7 +20,7 @@ export default function Footer({ setCurrentRoute }) {
               className="flex items-center gap-2 cursor-pointer focus:outline-none"
             >
               <img 
-                src="/logo.png" 
+                src={`${import.meta.env.BASE_URL}logo.png`} 
                 alt="Hyperion Logo" 
                 className="h-6 object-contain transition-all duration-300 transform hover:scale-[1.03]" 
                 style={{ filter: 'brightness(0) invert(1)' }}
