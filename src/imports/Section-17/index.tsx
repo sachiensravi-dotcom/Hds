@@ -1,4 +1,5 @@
 import svgPaths from "./svg-beszt3j2ew";
+import { Link } from "react-router";
 
 function Hyperion() {
   return (
@@ -108,7 +109,13 @@ export default function Section() {
       <p className="[word-break:break-word] absolute font-['Geist_Mono:Regular',sans-serif] font-normal leading-[1.4] right-[calc(41.67%+185px)] text-[16px] text-white top-[115px] translate-x-full uppercase whitespace-nowrap">Navigation</p>
       <p className="[word-break:break-word] absolute font-['Geist_Mono:Regular',sans-serif] font-normal leading-[1.4] right-[calc(33.33%+93px)] text-[16px] text-white top-[115px] translate-x-full uppercase whitespace-nowrap">Services</p>
       <p className="[word-break:break-word] absolute font-['Geist_Mono:Regular',sans-serif] font-normal leading-[1.4] right-[calc(8.33%+161px)] text-[16px] text-white top-[115px] translate-x-full uppercase whitespace-nowrap">Customers</p>
-      <p className="[word-break:break-word] absolute font-['Inter_Tight:Regular',sans-serif] leading-[normal] left-[calc(16.67%-201px)] not-italic text-[#989898] text-[16px] top-[298px] whitespace-nowrap">@2024-2026. Hyperion Digital Solutions. All Rights Reserved.</p>
+      <div className="absolute left-[40px] top-[298px] flex items-center gap-6 text-[#989898] text-[16px] font-['Inter_Tight:Regular',sans-serif] whitespace-nowrap">
+        <span>@2024-2026. Hyperion Digital Solutions. All Rights Reserved.</span>
+        <span className="text-[#3B3B3B]">|</span>
+        <Link to="/privacy" className="hover:text-white transition-colors duration-200">Privacy Policy</Link>
+        <span className="text-[#3B3B3B]">|</span>
+        <Link to="/terms" className="hover:text-white transition-colors duration-200">Terms of Service</Link>
+      </div>
       <div className="absolute h-0 left-[40px] top-px w-[1360px]">
         <div className="absolute inset-[-1px_0_0_0]">
           <svg className="block size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 1360 1">

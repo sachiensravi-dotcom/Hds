@@ -7,6 +7,8 @@ import IndustriesPage from "../pages/IndustriesPage";
 import CaseStudiesPage from "../pages/CaseStudiesPage";
 import BlogsPage from "../pages/BlogsPage";
 import ContactPage from "../pages/ContactPage";
+import PrivacyPolicyPage from "../pages/PrivacyPolicyPage";
+import TermsOfServicePage from "../pages/TermsOfServicePage";
 
 export const router = createBrowserRouter([
   {
@@ -20,6 +22,8 @@ export const router = createBrowserRouter([
       { path: "case-studies", Component: CaseStudiesPage },
       { path: "blogs", Component: BlogsPage },
       { path: "contact", Component: ContactPage },
+      { path: "privacy", Component: PrivacyPolicyPage },
+      { path: "terms", Component: TermsOfServicePage },
       { path: "*", Component: HomePage },
     ],
   },

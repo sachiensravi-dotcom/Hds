@@ -1,4 +1,5 @@
 import svgPaths from "./svg-yfyuewiki1";
+import { Link } from "react-router";
 
 function Input1() {
   return (
@@ -110,18 +111,35 @@ function InputRow1() {
 
 function Btn() {
   return (
-    <div className="-translate-x-1/2 absolute bg-[#ffa62a] content-stretch flex items-center justify-center left-1/2 px-[20px] py-[16px] rounded-[120px] top-[439px] w-[656px]" data-name="btn">
+    <div className="-translate-x-1/2 absolute bg-[#ffa62a] content-stretch flex items-center justify-center left-1/2 px-[20px] py-[16px] rounded-[120px] top-[460px] w-[656px]" data-name="btn">
       <p className="[word-break:break-word] font-['Inter_Tight:Medium',sans-serif] leading-[normal] not-italic relative shrink-0 text-[#462c07] text-[18px] text-right whitespace-nowrap">Send to the team</p>
+    </div>
+  );
+}
+
+function SMSConsent() {
+  return (
+    <div className="absolute left-[31px] top-[408px] w-[656px] flex items-start gap-2.5 text-neutral-400 font-['Inter_Tight:Regular',sans-serif] text-[12px] leading-[1.3] text-left">
+      <input 
+        type="checkbox" 
+        id="sms-consent" 
+        required 
+        className="mt-0.5 accent-[#ffa62a] rounded cursor-pointer"
+      />
+      <label htmlFor="sms-consent" className="cursor-pointer select-none">
+        I agree to receive SMS notifications and update messages from Hyperion. Msg & data rates may apply. Reply STOP to opt-out. See our <Link to="/privacy" className="text-[#ffa62a] underline hover:text-white">Privacy Policy</Link> and <Link to="/terms" className="text-[#ffa62a] underline hover:text-white">Terms of Service</Link>.
+      </label>
     </div>
   );
 }
 
 function Form() {
   return (
-    <div className="-translate-x-1/2 absolute backdrop-blur-[6px] bg-[rgba(20,20,20,0.2)] border border-[rgba(255,255,255,0.1)] border-solid h-[526px] left-1/2 overflow-clip rounded-[6px] top-[252px] w-[720px]" data-name="form">
+    <div className="-translate-x-1/2 absolute backdrop-blur-[6px] bg-[rgba(20,20,20,0.2)] border border-[rgba(255,255,255,0.1)] border-solid h-[546px] left-1/2 overflow-clip rounded-[6px] top-[252px] w-[720px]" data-name="form">
       <InputRow />
       <Input4 />
       <InputRow1 />
+      <SMSConsent />
       <Btn />
     </div>
   );
