@@ -41,14 +41,13 @@ export default function TermsOfServicePage() {
               Hyperion Digital Solutions offers automated and manual text messaging notifications for appointment reminders, project check-ins, and digital agency updates.
             </p>
             <ul className="list-disc pl-6 space-y-2 mb-4">
-              <li><strong>Opt-In:</strong> By entering your mobile number in our contact form or booking wizard and choosing to opt-in, you consent to receive SMS communications.</li>
-              <li><strong>Message & Data Rates:</strong> Standard message and data rates may apply for any messages sent to you or from you.</li>
+              <li><strong>Opt-In:</strong> Users can opt-in to receive messages. By entering your mobile number in our contact form or booking wizard and choosing to opt-in, you consent to receive SMS communications.</li>
+              <li><strong>Opt-Out:</strong> Users can reply <strong>STOP</strong> to opt-out at any time to stop receiving messages.</li>
+              <li><strong>Assistance:</strong> Users can reply <strong>HELP</strong> for assistance or contact us directly at <strong>info@hyperiondigitalsolutions.com</strong>.</li>
+              <li><strong>Message & Data Rates:</strong> Standard message and data rates may apply for any messages sent to you or from us.</li>
               <li><strong>Message Frequency:</strong> Message frequency varies depending on your interactions with our scheduling calendar and agency staff.</li>
               <li><strong>Carrier Liability Disclaimer:</strong> Carriers are not liable for delayed or undelivered messages.</li>
             </ul>
-            <p>
-              To stop receiving messages, reply <strong>STOP</strong> at any time. For support, reply <strong>HELP</strong> or contact us directly at <strong>info@hyperiondigitalsolutions.com</strong>.
-            </p>
           </section>
 
           <section className="bg-[#1a1a1a]/60 backdrop-blur-md border border-[#3B3B3B] p-8 rounded-2xl">

@@ -41,7 +41,7 @@ export default function PrivacyPolicyPage() {
               We strictly adhere to carrier guidelines regarding text messaging originator opt-in data and consent.
             </p>
             <div className="bg-[#242424] border-l-4 border-[#FFA62A] p-4 rounded-r-xl text-white font-medium my-4">
-              <strong>Important Carrier Disclosure:</strong> Mobile information will not be shared with third parties/affiliates for marketing/promotional purposes. All the above categories exclude text messaging originator opt-in data and consent; this information will not be shared with any third parties or affiliates.
+              <strong>Important Carrier Disclosure:</strong> No mobile information will be shared with third parties/affiliates for marketing/promotional purposes. All the above categories exclude text messaging originator opt-in data and consent; this information will not be shared with any third parties.
             </div>
             <p>
               No mobile phone numbers, opt-in details, or consent records collected through our contact or scheduling forms will be sold, traded, or shared with third parties under any circumstances.
