@@ -11,7 +11,7 @@ export default function ContactPage() {
 
   return (
     <div className="bg-[#141414] min-w-[1440px] overflow-x-hidden">
-      <div className="relative w-full h-[300px] overflow-hidden">
+      <div className="relative w-full h-[120px] overflow-hidden">
         <HeroSection />
       </div>
       <div className="relative w-full h-[850px]">

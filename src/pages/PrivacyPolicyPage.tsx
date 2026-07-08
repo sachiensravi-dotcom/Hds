@@ -9,7 +9,7 @@ export default function PrivacyPolicyPage() {
 
   return (
     <div className="bg-[#141414] min-w-[1440px] overflow-x-hidden font-['Inter_Tight',sans-serif] text-white">
-      <div className="relative w-full h-[300px] overflow-hidden">
+      <div className="relative w-full h-[120px] overflow-hidden">
         <HeroSection />
       </div>
 
