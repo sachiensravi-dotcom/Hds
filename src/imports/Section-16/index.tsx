@@ -1,5 +1,5 @@
 import { useState } from "react";
-import waveBg from "../../assets/contact_wave.png";
+import waveBg from "./contact_wave.png";
 import { Mail, Phone, User, DollarSign, MessageSquare } from "lucide-react";
 
 export default function Section() {
