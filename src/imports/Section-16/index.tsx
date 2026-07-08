@@ -208,14 +208,14 @@ export default function Section() {
               </a>
 
               <a 
-                href="mailto:info@gohds.co" 
+                href="mailto:info@hyperiondigitalsolutions.com" 
                 className="backdrop-blur-md bg-[rgba(255,255,255,0.08)] border border-[rgba(255,255,255,0.15)] hover:border-[#ffa62a] rounded-[6px] px-8 py-[20px] flex items-center justify-between transition-all duration-300 group cursor-pointer shadow-[0_8px_32px_0_rgba(0,0,0,0.3)] hover:scale-[1.01]"
               >
                 <div className="flex items-center gap-4">
                   <Mail className="size-[20px] text-[#ffa62a]" />
                   <span className="font-['Inter_Tight:Medium',sans-serif] text-[17px] text-white">Email</span>
                 </div>
-                <span className="font-['Inter_Tight:Regular',sans-serif] text-[17px] text-[#c7c7c7] group-hover:text-white transition-colors duration-300">info@gohds.co</span>
+                <span className="font-['Inter_Tight:Regular',sans-serif] text-[17px] text-[#c7c7c7] group-hover:text-white transition-colors duration-300">info@hyperiondigitalsolutions.com</span>
               </a>
             </div>
           </div>

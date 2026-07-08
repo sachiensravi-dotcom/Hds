@@ -80,7 +80,7 @@ export default function PrivacyPolicyPage() {
               5. Opt-Out & Support
             </h2>
             <p>
-              You can cancel the SMS service at any time. Simply reply <strong>STOP</strong> to any message we send to immediately opt-out and terminate all text updates. For help or programmatic details, reply <strong>HELP</strong> or email us at <strong>info@gohds.co</strong>.
+              You can cancel the SMS service at any time. Simply reply <strong>STOP</strong> to any message we send to immediately opt-out and terminate all text updates. For help or programmatic details, reply <strong>HELP</strong> or email us at <strong>info@hyperiondigitalsolutions.com</strong>.
             </p>
           </section>
         </div>

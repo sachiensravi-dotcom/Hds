@@ -47,7 +47,7 @@ export default function TermsOfServicePage() {
               <li><strong>Carrier Liability Disclaimer:</strong> Carriers are not liable for delayed or undelivered messages.</li>
             </ul>
             <p>
-              To stop receiving messages, reply <strong>STOP</strong> at any time. For support, reply <strong>HELP</strong> or contact us directly at <strong>info@gohds.co</strong>.
+              To stop receiving messages, reply <strong>STOP</strong> at any time. For support, reply <strong>HELP</strong> or contact us directly at <strong>info@hyperiondigitalsolutions.com</strong>.
             </p>
           </section>
 

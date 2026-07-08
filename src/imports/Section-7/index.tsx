@@ -73,8 +73,10 @@ function MaskGroup() {
 export default function Section() {
   return (
     <div className="bg-[#141414] relative size-full" data-name="Section">
-      <p className="-translate-x-full [word-break:break-word] absolute font-['Inter_Tight:Regular',sans-serif] leading-[normal] left-[calc(91.67%+80px)] not-italic text-[#989898] text-[16px] text-right top-[24px] whitespace-nowrap">info@gohds.co</p>
-      <p className="[word-break:break-word] absolute font-['Inter_Tight:Regular',sans-serif] leading-[normal] left-[39px] not-italic text-[#989898] text-[16px] top-[24px] whitespace-nowrap">Gavin D: (469) 247-8014</p>
+      <p className="-translate-x-full [word-break:break-word] absolute font-['Inter_Tight:Regular',sans-serif] leading-[normal] left-[calc(91.67%+80px)] not-italic text-[#989898] text-[16px] text-right top-[24px] whitespace-nowrap">
+        <a href="mailto:info@hyperiondigitalsolutions.com" className="hover:text-[#ffa62a] transition-colors duration-200">info@hyperiondigitalsolutions.com</a>
+      </p>
+
       <p className="[word-break:break-word] absolute font-['Inter_Tight:Medium',sans-serif] leading-[normal] left-[calc(41.67%+55px)] not-italic text-[24px] text-white top-[153px] whitespace-nowrap">Home</p>
       <p className="[word-break:break-word] absolute font-['Inter_Tight:Medium',sans-serif] leading-[normal] left-[calc(41.67%+55px)] not-italic text-[#8f8f8f] text-[24px] top-[198px] whitespace-nowrap">Portfolio</p>
       <p className="[word-break:break-word] absolute font-['Inter_Tight:Medium',sans-serif] leading-[normal] left-[calc(58.33%+27px)] not-italic text-[#8f8f8f] text-[24px] top-[198px] whitespace-nowrap">Webflow</p>
@@ -86,7 +88,9 @@ export default function Section() {
       <p className="[word-break:break-word] absolute font-['Inter_Tight:Medium',sans-serif] leading-[normal] left-[calc(75%+79px)] not-italic text-[#8f8f8f] text-[24px] top-[243px] whitespace-nowrap">Startups</p>
       <p className="[word-break:break-word] absolute font-['Inter_Tight:Medium',sans-serif] leading-[normal] left-[calc(41.67%+55px)] not-italic text-[#8f8f8f] text-[24px] top-[288px] whitespace-nowrap">Blog</p>
       <p className="[word-break:break-word] absolute font-['Inter_Tight:Medium',sans-serif] leading-[normal] left-[calc(58.33%+27px)] not-italic text-[#8f8f8f] text-[24px] top-[288px] whitespace-nowrap">{`SEO & AEO`}</p>
-      <p className="[word-break:break-word] absolute font-['Inter_Tight:Regular',sans-serif] leading-[normal] left-[calc(16.67%+33px)] not-italic text-[#989898] text-[16px] top-[24px] whitespace-nowrap">Sachien R: (972) 439-7854</p>
+      <p className="[word-break:break-word] absolute font-['Inter_Tight:Regular',sans-serif] leading-[normal] left-[39px] not-italic text-[#989898] text-[16px] top-[24px] whitespace-nowrap">
+        Sachien R: <a href="tel:9724397854" className="hover:text-[#ffa62a] transition-colors duration-200">(972) 439-7854</a>
+      </p>
       <div className="absolute h-0 left-[40px] top-[67px] w-[1360px]">
         <div className="absolute inset-[-1px_0_0_0]">
           <svg className="block size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 1360 1">
