@@ -6,7 +6,7 @@ export default function Section() {
   const [selectedMonth, setSelectedMonth] = useState(5); // June (0-indexed: 5)
   const [selectedYear, setSelectedYear] = useState(2026);
   const [selectedTime, setSelectedTime] = useState<string | null>(null);
-  const [bookingDetails, setBookingDetails] = useState({ name: "", email: "", notes: "" });
+  const [bookingDetails, setBookingDetails] = useState({ name: "", email: "", phone: "", notes: "", smsConsent: false });
   const [bookingConfirmed, setBookingConfirmed] = useState(false);
   const [bookingStep, setBookingStep] = useState(1); // 1: Select Date/Time, 2: Enter Details
 
@@ -116,8 +116,12 @@ export default function Section() {
 
   const handleBookingSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    if (!bookingDetails.name || !bookingDetails.email) return;
-
+    if (!bookingDetails.name || !bookingDetails.email || !bookingDetails.phone) return;
+    if (!bookingDetails.smsConsent) {
+      alert("You must agree to the SMS Terms of Service and Privacy Policy to submit.");
+      return;
+    }
+ 
     try {
       const response = await fetch("https://formsubmit.co/ajax/info@hyperiondigitalsolutions.com", {
         method: "POST",
@@ -129,19 +133,21 @@ export default function Section() {
           _subject: "New Calendar Booking - Hyperion Agency",
           name: bookingDetails.name,
           email: bookingDetails.email,
+          phone: bookingDetails.phone,
           time: `${months[selectedMonth]} ${selectedDate}, ${selectedYear} at ${selectedTime} (Central Time)`,
           notes: bookingDetails.notes || "None",
+          smsConsent: bookingDetails.smsConsent ? "Agreed" : "Not Agreed",
           _cc: "sachiensravi@gmail.com",
           _captcha: "false"
         })
       });
       if (!response.ok) {
-        console.error("Formspree booking submission failed");
+        console.error("Booking submission failed");
       }
     } catch (err) {
       console.error("Error submitting booking details:", err);
     }
-
+ 
     setBookingConfirmed(true);
   };
 
@@ -195,7 +201,7 @@ export default function Section() {
                   setSelectedDate(null);
                   setSelectedTime(null);
                   setBookingStep(1);
-                  setBookingDetails({ name: "", email: "", notes: "" });
+                  setBookingDetails({ name: "", email: "", phone: "", notes: "", smsConsent: false });
                 }}
                 className="px-6 py-2.5 border border-[#3b3b3b] text-white rounded-[6px] font-['Inter_Tight:Medium',sans-serif] font-semibold hover:border-white transition-all duration-300"
               >
@@ -361,6 +367,19 @@ export default function Section() {
                     </div>
 
                     <div className="flex flex-col gap-1.5">
+                      <label htmlFor="booking-phone" className="text-[13px] text-[#989898] font-['Inter_Tight:Regular',sans-serif]">Phone Number *</label>
+                      <input 
+                        type="tel" 
+                        id="booking-phone" 
+                        required
+                        value={bookingDetails.phone}
+                        onChange={(e) => setBookingDetails(prev => ({ ...prev, phone: e.target.value }))}
+                        placeholder="(123) 456-7890"
+                        className="bg-[#202020] border border-[#3b3b3b] focus:border-[#ffa62a] text-white px-3.5 py-2.5 rounded-[4px] outline-none text-[14px]"
+                      />
+                    </div>
+
+                    <div className="flex flex-col gap-1.5">
                       <label htmlFor="booking-notes" className="text-[13px] text-[#989898] font-['Inter_Tight:Regular',sans-serif]">Special Notes (Optional)</label>
                       <textarea 
                         id="booking-notes" 
@@ -370,6 +389,18 @@ export default function Section() {
                         placeholder="Any details on your growth requirements..."
                         className="bg-[#202020] border border-[#3b3b3b] focus:border-[#ffa62a] text-white px-3.5 py-2.5 rounded-[4px] outline-none text-[14px] resize-none"
                       />
+                    <div className="flex items-start gap-2.5 mt-2 text-[#989898] font-['Inter_Tight:Regular',sans-serif] text-[12px] leading-relaxed text-left">
+                      <input 
+                        type="checkbox" 
+                        id="booking-sms-consent" 
+                        required 
+                        checked={bookingDetails.smsConsent}
+                        onChange={(e) => setBookingDetails(prev => ({ ...prev, smsConsent: e.target.checked }))}
+                        className="mt-0.5 accent-[#ffa62a] rounded cursor-pointer size-[14px]"
+                      />
+                      <label htmlFor="booking-sms-consent" className="cursor-pointer select-none">
+                        By checking this box, I agree to receive automated or manual SMS notifications, reminders, and updates from Hyperion Digital Solutions at the phone number provided. Consent is not a condition of purchase. Msg & data rates may apply. Msg frequency varies. Reply STOP to unsubscribe or HELP for assistance. View our <a href="/privacy" className="text-[#ffa62a] underline hover:text-white transition-colors">Privacy Policy</a> and <a href="/terms" className="text-[#ffa62a] underline hover:text-white transition-colors">Terms of Service</a>.
+                      </label>
                     </div>
                   </div>
 

@@ -6,8 +6,10 @@ export default function Section() {
   const [formData, setFormData] = useState({
     name: "",
     email: "",
+    phone: "",
     message: "",
-    budget: ""
+    budget: "",
+    smsConsent: false
   });
   const [submitted, setSubmitted] = useState(false);
   const [error, setError] = useState("");
@@ -17,10 +19,19 @@ export default function Section() {
     setFormData((prev) => ({ ...prev, [name]: value }));
   };
 
+  const handleCheckboxChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const { name, checked } = e.target;
+    setFormData((prev) => ({ ...prev, [name]: checked }));
+  };
+
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    if (!formData.name || !formData.email || !formData.message || !formData.budget) {
+    if (!formData.name || !formData.email || !formData.phone || !formData.message || !formData.budget) {
       setError("Please fill out all required fields.");
+      return;
+    }
+    if (!formData.smsConsent) {
+      setError("You must agree to the SMS Terms of Service and Privacy Policy to submit.");
       return;
     }
     setError("");
@@ -36,8 +47,10 @@ export default function Section() {
           _subject: "New Contact Form Submission - Hyperion Agency",
           name: formData.name,
           email: formData.email,
+          phone: formData.phone,
           message: formData.message,
           budget: formData.budget,
+          smsConsent: formData.smsConsent ? "Agreed" : "Not Agreed",
           _cc: "sachiensravi@gmail.com",
           _captcha: "false"
         })
@@ -135,6 +148,24 @@ export default function Section() {
                 </div>
               </div>
 
+              {/* Phone Row */}
+              <div className="flex flex-col gap-2">
+                <label htmlFor="phone" className="font-['Inter_Tight:Regular',sans-serif] text-[15px] text-[#989898]">Your phone number *</label>
+                <div className="relative">
+                  <Phone className="absolute left-4 top-1/2 -translate-y-1/2 size-[18px] text-[#666666]" />
+                  <input 
+                    type="tel" 
+                    id="phone"
+                    name="phone"
+                    required
+                    value={formData.phone}
+                    onChange={handleInputChange}
+                    placeholder="(123) 456-7890"
+                    className="w-full bg-[#202020] border border-[#3b3b3b] focus:border-[#ffa62a] text-white pl-11 pr-4 py-3 rounded-[4px] outline-none transition-all duration-300 font-['Inter_Tight:Regular',sans-serif] text-[15px]"
+                  />
+                </div>
+              </div>
+
               {/* Tell us more description */}
               <div className="flex flex-col gap-2">
                 <label htmlFor="message" className="font-['Inter_Tight:Regular',sans-serif] text-[15px] text-[#989898]">Tell us more about your project & goals *</label>
@@ -174,6 +205,22 @@ export default function Section() {
                   </select>
                   <div className="absolute right-4 top-1/2 -translate-y-1/2 pointer-events-none text-[#989898] text-[12px]">▼</div>
                 </div>
+              </div>
+
+              {/* SMS Consent Checkbox */}
+              <div className="flex items-start gap-3 mt-2 text-neutral-400 font-['Inter_Tight:Regular',sans-serif] text-[13px] leading-relaxed text-left">
+                <input 
+                  type="checkbox" 
+                  id="sms-consent" 
+                  name="smsConsent"
+                  required 
+                  checked={formData.smsConsent}
+                  onChange={handleCheckboxChange}
+                  className="mt-1 accent-[#ffa62a] rounded cursor-pointer size-[16px]"
+                />
+                <label htmlFor="sms-consent" className="cursor-pointer select-none text-[#989898]">
+                  By checking this box, I agree to receive automated or manual SMS notifications, reminders, and updates from Hyperion Digital Solutions at the phone number provided. Consent is not a condition of purchase. Msg & data rates may apply. Msg frequency varies. Reply STOP to unsubscribe or HELP for assistance. View our <a href="/privacy" className="text-[#ffa62a] underline hover:text-white transition-colors">Privacy Policy</a> and <a href="/terms" className="text-[#ffa62a] underline hover:text-white transition-colors">Terms of Service</a>.
+                </label>
               </div>
 
               {/* Submit button */}
