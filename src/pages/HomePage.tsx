@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-import HeroSection from "../imports/HeroSection-1/index";
+import HeroSection from "../imports/HeroSection/index";
 import DifferentSection from "../imports/Section-8/index";
 import TestimonialSection from "../imports/Section-14/index";
 import CTASection from "../imports/Section-13/index";

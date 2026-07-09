@@ -247,14 +247,25 @@ function Logo6() {
 
 function LogoMarquee() {
   return (
-    <div className="absolute content-stretch flex gap-[64px] items-center justify-center left-[40px] top-[813px] w-[1360px]" data-name="logo marquee">
-      <Logo />
-      <Logo1 />
-      <Logo2 />
-      <Logo3 />
-      <Logo4 />
-      <Logo5 />
-      <Logo6 />
+    <div className="absolute overflow-hidden left-[40px] top-[813px] w-[1360px] h-[40px] flex items-center gap-[64px]" data-name="logo marquee">
+      <div className="flex gap-[64px] shrink-0 min-w-full justify-around animate-marquee">
+        <Logo />
+        <Logo1 />
+        <Logo2 />
+        <Logo3 />
+        <Logo4 />
+        <Logo5 />
+        <Logo6 />
+      </div>
+      <div className="flex gap-[64px] shrink-0 min-w-full justify-around animate-marquee" aria-hidden="true">
+        <Logo />
+        <Logo1 />
+        <Logo2 />
+        <Logo3 />
+        <Logo4 />
+        <Logo5 />
+        <Logo6 />
+      </div>
     </div>
   );
 }
