@@ -255,21 +255,21 @@ export default function Section() {
               </a>
 
               <a 
-                href="mailto:info@hyperiondigitalsolutions.com" 
+                href="mailto:info@gohds.co" 
                 className="backdrop-blur-md bg-[rgba(255,255,255,0.08)] border border-[rgba(255,255,255,0.15)] hover:border-[#ffa62a] rounded-[6px] px-8 py-[20px] flex items-center justify-between transition-all duration-300 group cursor-pointer shadow-[0_8px_32px_0_rgba(0,0,0,0.3)] hover:scale-[1.01]"
               >
                 <div className="flex items-center gap-4">
                   <Mail className="size-[20px] text-[#ffa62a]" />
-                  <span className="font-['Inter_Tight:Medium',sans-serif] text-[17px] text-white">Email</span>
+                  <span className="font-['Inter_Tight',sans-serif] font-medium text-[17px] text-white">Email</span>
                 </div>
-                <span className="font-['Inter_Tight:Regular',sans-serif] text-[17px] text-[#c7c7c7] group-hover:text-white transition-colors duration-300">info@hyperiondigitalsolutions.com</span>
+                <span className="font-['Inter_Tight',sans-serif] text-[17px] text-[#c7c7c7] group-hover:text-white transition-colors duration-300">info@gohds.co</span>
               </a>
             </div>
           </div>
-
+ 
           <div className="relative z-10 pt-[40px] border-t border-[rgba(255,255,255,0.05)] mt-8">
-            <span className="font-['Inter_Tight:Regular',sans-serif] text-[11px] text-[#989898] uppercase tracking-widest font-semibold block mb-1">HQ Location</span>
-            <p className="font-['Inter_Tight:Regular',sans-serif] text-[#989898] text-[14px]">Dallas-Fort Worth Metroplex, Texas</p>
+            <span className="font-geist-mono text-[12px] text-[#989898] uppercase tracking-widest block mb-2">HQ LOCATION</span>
+            <p className="font-['Inter_Tight',sans-serif] text-white text-[16px]">Dallas-Fort Worth Metroplex, Texas</p>
           </div>
         </div>
 

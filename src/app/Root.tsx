@@ -23,7 +23,7 @@ export default function Root() {
         navigate("/services");
       } else if (text === "Industries" || text === "Solar businesses" || text === "Local businesses" || text === "Startups") {
         e.preventDefault();
-        navigate("/industries");
+        navigate("/services");
       } else if (text === "Case studies") {
         e.preventDefault();
         navigate("/case-studies");

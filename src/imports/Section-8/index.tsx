@@ -491,12 +491,12 @@ export default function Section() {
     <div className="bg-[#141414] relative size-full" data-name="Section">
       <Graphic />
       <Graphic1 />
-      <p className="[word-break:break-word] absolute font-['Geist_Mono:Regular',sans-serif] font-normal leading-[normal] left-[40px] text-[#989898] text-[16px] top-[164px] uppercase whitespace-nowrap">What makes us different</p>
-      <p className="[word-break:break-word] absolute font-['Geist_Mono:Regular',sans-serif] font-normal leading-[normal] left-[calc(58.33%-12px)] text-[#989898] text-[16px] top-[907px] uppercase whitespace-nowrap">Why Your Website Matters</p>
-      <p className="[word-break:break-word] absolute font-['Inter_Tight:Regular',sans-serif] leading-[normal] left-[40px] not-italic text-[48px] text-white top-[201px] w-[572px]">Built by human. For organic stable growth</p>
-      <p className="[word-break:break-word] absolute font-['Inter_Tight:Regular',sans-serif] leading-[normal] left-[calc(58.33%-12px)] not-italic text-[48px] text-white top-[944px] w-[572px]">The Foundation for Your Business Growth</p>
-      <p className="[word-break:break-word] absolute font-['Inter_Tight:Regular',sans-serif] leading-[1.4] left-[40px] not-italic text-[#989898] text-[16px] top-[341px] w-[572px]">We get it. Your business isn’t like everyone else’s, so why should your website be? We make sure your website stands out and works for you in a meaningful and stable way. So you have a great foundation to keep moving upward.</p>
-      <p className="[word-break:break-word] absolute font-['Inter_Tight:Regular',sans-serif] leading-[1.4] left-[calc(58.33%-12px)] not-italic text-[#989898] text-[16px] top-[1084px] w-[572px]">Your website is the first impression customers have of your business. It’s not just about looks, it’s about building trust, engaging your audience, and driving growth. We create websites that provide a solid foundation for your business to thrive.</p>
+      <p className="[word-break:break-word] absolute font-geist-mono font-normal leading-[normal] left-[40px] text-[#989898] text-[16px] top-[164px] uppercase tracking-wider whitespace-nowrap">WHAT MAKES US DIFFERENT</p>
+      <p className="[word-break:break-word] absolute font-geist-mono font-normal leading-[normal] left-[calc(58.33%-12px)] text-[#989898] text-[16px] top-[907px] uppercase tracking-wider whitespace-nowrap">WHY YOUR GROWTH ENGINE MATTERS</p>
+      <p className="[word-break:break-word] absolute font-['Inter_Tight',sans-serif] leading-[normal] left-[40px] not-italic text-[48px] text-white top-[201px] w-[572px]">Custom systems. For organic stable growth</p>
+      <p className="[word-break:break-word] absolute font-['Inter_Tight',sans-serif] leading-[normal] left-[calc(58.33%-12px)] not-italic text-[48px] text-white top-[944px] w-[572px]">The Foundation for Your Business Growth</p>
+      <p className="[word-break:break-word] absolute font-['Inter_Tight',sans-serif] leading-[1.4] left-[40px] not-italic text-[#989898] text-[16px] top-[341px] w-[572px]">We get it. Your business isn't like everyone else's, so why should your scaling systems be? We make sure your growth channels stand out and work for you in a meaningful and stable way. So you have a great foundation to keep moving upward.</p>
+      <p className="[word-break:break-word] absolute font-['Inter_Tight',sans-serif] leading-[1.4] left-[calc(58.33%-12px)] not-italic text-[#989898] text-[16px] top-[1084px] w-[572px]">Your digital presence is the first impression customers have of your business. It's not just about aesthetics—it's about building trust, automating pipelines, and driving growth. We create custom solutions that provide a solid foundation to thrive.</p>
       <CardList />
       <CardList1 />
     </div>

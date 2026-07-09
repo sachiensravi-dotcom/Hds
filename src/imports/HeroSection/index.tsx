@@ -1,19 +1,30 @@
+import { useNavigate } from "react-router";
 import svgPaths from "./svg-7jy2cgk51z";
 import imgRectangle from "./0fc5cd55bfcfabe97c24fc66a7c313eb74b63633.png";
 
 function Btn() {
+  const navigate = useNavigate();
   return (
-    <div className="bg-[#ffa62a] content-stretch flex items-center justify-center px-[20px] py-[16px] relative rounded-[120px] shrink-0 cursor-pointer transition-all duration-300 hover:scale-[1.04] hover:shadow-[0_0_20px_rgba(255,166,42,0.4)] active:scale-[0.98]" data-name="btn">
-      <p className="[word-break:break-word] font-['Inter_Tight:Medium',sans-serif] leading-[normal] not-italic relative shrink-0 text-[#462c07] text-[18px] text-right whitespace-nowrap select-none">Book a Consultation</p>
+    <div 
+      onClick={() => navigate("/contact")}
+      className="bg-[#ffa62a] content-stretch flex items-center justify-center px-[20px] py-[16px] relative rounded-[120px] shrink-0 cursor-pointer transition-all duration-300 hover:scale-[1.04] hover:shadow-[0_0_20px_rgba(255,166,42,0.4)] active:scale-[0.98]" 
+      data-name="btn"
+    >
+      <p className="[word-break:break-word] font-['Inter_Tight',sans-serif] leading-[normal] not-italic relative shrink-0 text-[#462c07] text-[18px] text-right whitespace-nowrap select-none">Book a Consultation</p>
     </div>
   );
 }
 
 function Btn1() {
+  const navigate = useNavigate();
   return (
-    <div className="bg-white content-stretch flex items-center justify-center px-[20px] py-[16px] relative rounded-[120px] shrink-0 cursor-pointer transition-all duration-300 hover:bg-[#eaeaea] hover:scale-[1.04] active:scale-[0.98]" data-name="btn">
+    <div 
+      onClick={() => navigate("/works")}
+      className="bg-white content-stretch flex items-center justify-center px-[20px] py-[16px] relative rounded-[120px] shrink-0 cursor-pointer transition-all duration-300 hover:bg-[#eaeaea] hover:scale-[1.04] active:scale-[0.98]" 
+      data-name="btn"
+    >
       <div aria-hidden className="absolute border border-[#c7c7c7] border-solid inset-0 pointer-events-none rounded-[120px]" />
-      <p className="[word-break:break-word] font-['Inter_Tight:Medium',sans-serif] leading-[normal] not-italic relative shrink-0 text-[#141414] text-[18px] text-right whitespace-nowrap select-none">View Our Work</p>
+      <p className="[word-break:break-word] font-['Inter_Tight',sans-serif] leading-[normal] not-italic relative shrink-0 text-[#141414] text-[18px] text-right whitespace-nowrap select-none">View Our Work</p>
     </div>
   );
 }
@@ -319,8 +330,13 @@ function TopNav() {
 }
 
 function Hyperion() {
+  const navigate = useNavigate();
   return (
-    <div className="h-[20px] relative shrink-0 w-[131.175px]" data-name="HYPERION">
+    <div 
+      onClick={() => navigate("/")}
+      className="h-[20px] relative shrink-0 w-[131.175px] cursor-pointer" 
+      data-name="HYPERION"
+    >
       <svg className="absolute block inset-0 size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 131.175 20">
         <g id="HYPERION">
           <path d={svgPaths.pae2b200} fill="var(--fill-0, white)" id="Vector" />
@@ -356,22 +372,48 @@ function GlyphsChevronBold() {
 }
 
 function Dropdown() {
+  const navigate = useNavigate();
   return (
-    <div className="content-stretch flex gap-[6px] items-center relative shrink-0 cursor-pointer transition-colors duration-250 hover:text-[#ffa62a] text-white" data-name="dropdown">
-      <p className="[word-break:break-word] font-['Inter_Tight:Regular',sans-serif] leading-[normal] not-italic relative shrink-0 text-[16px] text-center text-inherit whitespace-nowrap select-none">Services</p>
+    <div 
+      onClick={() => navigate("/services")}
+      className="content-stretch flex gap-[6px] items-center relative shrink-0 cursor-pointer transition-colors duration-250 hover:text-[#ffa62a] text-white" 
+      data-name="dropdown"
+    >
+      <p className="[word-break:break-word] font-['Inter_Tight',sans-serif] leading-[normal] not-italic relative shrink-0 text-[16px] text-center text-inherit whitespace-nowrap select-none">Services</p>
       <GlyphsChevronBold />
     </div>
   );
 }
 
 function Menu() {
+  const navigate = useNavigate();
   return (
     <div className="content-stretch flex gap-[40px] items-center relative shrink-0" data-name="menu">
-      <p className="[word-break:break-word] font-['Inter_Tight:Regular',sans-serif] leading-[normal] not-italic relative shrink-0 text-[16px] text-center text-white whitespace-nowrap cursor-pointer transition-colors duration-250 hover:text-[#ffa62a] select-none">Works</p>
+      <p 
+        onClick={() => navigate("/works")}
+        className="[word-break:break-word] font-['Inter_Tight',sans-serif] leading-[normal] not-italic relative shrink-0 text-[16px] text-center text-white whitespace-nowrap cursor-pointer transition-colors duration-250 hover:text-[#ffa62a] select-none"
+      >
+        Works
+      </p>
       <Dropdown />
-      <p className="[word-break:break-word] font-['Inter_Tight:Regular',sans-serif] leading-[normal] not-italic relative shrink-0 text-[16px] text-center text-white whitespace-nowrap cursor-pointer transition-colors duration-250 hover:text-[#ffa62a] select-none">Industries</p>
-      <p className="[word-break:break-word] font-['Inter_Tight:Regular',sans-serif] leading-[normal] not-italic relative shrink-0 text-[16px] text-center text-white whitespace-nowrap cursor-pointer transition-colors duration-250 hover:text-[#ffa62a] select-none">Case studies</p>
-      <p className="[word-break:break-word] font-['Inter_Tight:Regular',sans-serif] leading-[normal] not-italic relative shrink-0 text-[16px] text-center text-white whitespace-nowrap cursor-pointer transition-colors duration-250 hover:text-[#ffa62a] select-none">Blogs</p>
+      <p 
+        onClick={() => navigate("/services")}
+        className="[word-break:break-word] font-['Inter_Tight',sans-serif] leading-[normal] not-italic relative shrink-0 text-[16px] text-center text-white whitespace-nowrap cursor-pointer transition-colors duration-250 hover:text-[#ffa62a] select-none"
+      >
+        Industries
+      </p>
+      <p 
+        onClick={() => navigate("/case-studies")}
+        className="[word-break:break-word] font-['Inter_Tight',sans-serif] leading-[normal] not-italic relative shrink-0 text-[16px] text-center text-white whitespace-nowrap cursor-pointer transition-colors duration-250 hover:text-[#ffa62a] select-none"
+      >
+        Case studies
+      </p>
+      <p 
+        onClick={() => navigate("/blogs")}
+        className="[word-break:break-word] font-['Inter_Tight',sans-serif] leading-[normal] not-italic relative shrink-0 text-[16px] text-center text-white whitespace-nowrap cursor-pointer transition-colors duration-250 hover:text-[#ffa62a] select-none"
+      >
+        Blogs
+      </p>
     </div>
   );
 }
@@ -398,10 +440,15 @@ function Btn2() {
 }
 
 function Btn3() {
+  const navigate = useNavigate();
   return (
-    <div className="bg-[rgba(255,255,255,0.1)] content-stretch flex items-center justify-center px-[16px] py-[12px] relative rounded-[6px] shrink-0 cursor-pointer transition-all duration-300 hover:bg-[rgba(255,255,255,0.18)] hover:scale-[1.03] active:scale-[0.98] text-white hover:text-[#ffa62a]" data-name="btn">
+    <div 
+      onClick={() => navigate("/contact")}
+      className="bg-[rgba(255,255,255,0.1)] content-stretch flex items-center justify-center px-[16px] py-[12px] relative rounded-[6px] shrink-0 cursor-pointer transition-all duration-300 hover:bg-[rgba(255,255,255,0.18)] hover:scale-[1.03] active:scale-[0.98] text-white hover:text-[#ffa62a]" 
+      data-name="btn"
+    >
       <div aria-hidden className="absolute border border-[rgba(255,255,255,0.2)] border-solid inset-0 pointer-events-none rounded-[6px]" />
-      <p className="[word-break:break-word] font-['Inter_Tight:Regular',sans-serif] leading-[normal] not-italic relative shrink-0 text-[18px] text-right text-inherit whitespace-nowrap select-none">Contact us</p>
+      <p className="[word-break:break-word] font-['Inter_Tight',sans-serif] leading-[normal] not-italic relative shrink-0 text-[18px] text-right text-inherit whitespace-nowrap select-none">Contact us</p>
     </div>
   );
 }

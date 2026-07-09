@@ -1,5 +1,52 @@
+import { useState, useEffect } from "react";
+import { useNavigate } from "react-router";
 import svgPaths from "./svg-v8mhxq91vx";
-import imgHeroSection from "./86ed76ee86ae8f8c60a2bd7b738129117ab7cb62.png";
+
+// Import laptop mockup images
+import imgWhitewright from "./whitewright_laptop.png";
+import imgTexasSun from "./texas_sun_laptop.png";
+import imgCoffee from "./coffee_laptop.png";
+import imgBruceNorwood from "./bruce_norwood_laptop.png";
+import imgBarber from "./barber_laptop.png";
+
+// Project database
+const rp = [
+  {
+    name: "Whitewright",
+    desc: "Chamber of Commerce & Area Guide",
+    year: "2025",
+    url: "https://www.whitewright.org/",
+    image: imgWhitewright
+  },
+  {
+    name: "Texas Sun",
+    desc: "Premium Roofing & Solar Installation",
+    year: "2025",
+    url: "https://www.texas-sun.com/",
+    image: imgTexasSun
+  },
+  {
+    name: "Country Charm Coffee",
+    desc: "Local Coffee Roastery & Cafe Website",
+    year: "2024",
+    url: "https://www.countrycharmcoffee.com/",
+    image: imgCoffee
+  },
+  {
+    name: "Bruce Norwood",
+    desc: "Commercial Real Estate Platform",
+    year: "2024 - 2025",
+    url: "https://bruce-norwoods-website.webflow.io/",
+    image: imgBruceNorwood
+  },
+  {
+    name: "4th Main Barber & Co.",
+    desc: "Premium Barber Shop & Booking System",
+    year: "2024",
+    url: "https://4thandmainbarber.com/",
+    image: imgBarber
+  }
+];
 
 function RiFacebookFill() {
   return (
@@ -28,7 +75,7 @@ function RiInstagramFill() {
 function SocilaMedia() {
   return (
     <div className="content-stretch flex gap-[6px] items-start relative shrink-0" data-name="socila media">
-      <p className="[word-break:break-word] font-['Inter_Tight:Regular',sans-serif] leading-[normal] not-italic relative shrink-0 text-[#989898] text-[14px] text-right whitespace-nowrap">Follow us on</p>
+      <p className="[word-break:break-word] font-['Inter_Tight',sans-serif] leading-[normal] not-italic relative shrink-0 text-[#989898] text-[14px] text-right whitespace-nowrap">Follow us on</p>
       <RiFacebookFill />
       <RiInstagramFill />
     </div>
@@ -41,7 +88,7 @@ function TopNav() {
       <div aria-hidden className="absolute border-[#3b3b3b] border-b border-solid inset-0 pointer-events-none" />
       <div className="flex flex-row items-center size-full">
         <div className="content-stretch flex items-center justify-between px-[40px] py-[12px] relative size-full">
-          <p className="[word-break:break-word] font-['Inter_Tight:Regular',sans-serif] leading-[normal] not-italic relative shrink-0 text-[#989898] text-[14px] whitespace-nowrap">GMT-5 | 8:05 AM</p>
+          <p className="[word-break:break-word] font-['Inter_Tight',sans-serif] leading-[normal] not-italic relative shrink-0 text-[#989898] text-[14px] whitespace-nowrap">GMT-5 | 8:05 AM</p>
           <SocilaMedia />
         </div>
       </div>
@@ -50,8 +97,13 @@ function TopNav() {
 }
 
 function Hyperion() {
+  const navigate = useNavigate();
   return (
-    <div className="h-[20px] relative shrink-0 w-[131.175px]" data-name="HYPERION">
+    <div 
+      onClick={() => navigate("/")}
+      className="h-[20px] relative shrink-0 w-[131.175px] cursor-pointer" 
+      data-name="HYPERION"
+    >
       <svg className="absolute block inset-0 size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 131.175 20">
         <g id="HYPERION">
           <path d={svgPaths.pae2b200} fill="var(--fill-0, white)" id="Vector" />
@@ -87,52 +139,56 @@ function GlyphsChevronBold() {
 }
 
 function Dropdown() {
+  const navigate = useNavigate();
   return (
-    <div className="content-stretch flex gap-[6px] items-center relative shrink-0 cursor-pointer transition-colors duration-250 hover:text-[#ffa62a] text-white" data-name="dropdown">
-      <p className="[word-break:break-word] font-['Inter_Tight:Regular',sans-serif] leading-[normal] not-italic relative shrink-0 text-[16px] text-center text-inherit whitespace-nowrap select-none">Services</p>
+    <div 
+      onClick={() => navigate("/services")}
+      className="content-stretch flex gap-[6px] items-center relative shrink-0 cursor-pointer transition-colors duration-250 hover:text-[#ffa62a] text-white" 
+      data-name="dropdown"
+    >
+      <p className="[word-break:break-word] font-['Inter_Tight',sans-serif] leading-[normal] not-italic relative shrink-0 text-[16px] text-center text-inherit whitespace-nowrap select-none">Services</p>
       <GlyphsChevronBold />
     </div>
   );
 }
 
 function Menu() {
+  const navigate = useNavigate();
   return (
     <div className="content-stretch flex gap-[40px] items-center relative shrink-0" data-name="menu">
-      <p className="[word-break:break-word] font-['Inter_Tight:Regular',sans-serif] leading-[normal] not-italic relative shrink-0 text-[16px] text-center text-white whitespace-nowrap cursor-pointer transition-colors duration-250 hover:text-[#ffa62a] select-none">Works</p>
+      <p 
+        onClick={() => navigate("/works")}
+        className="[word-break:break-word] font-['Inter_Tight',sans-serif] leading-[normal] not-italic relative shrink-0 text-[16px] text-center text-white whitespace-nowrap cursor-pointer transition-colors duration-250 hover:text-[#ffa62a] select-none"
+      >
+        Works
+      </p>
       <Dropdown />
-      <p className="[word-break:break-word] font-['Inter_Tight:Regular',sans-serif] leading-[normal] not-italic relative shrink-0 text-[16px] text-center text-white whitespace-nowrap cursor-pointer transition-colors duration-250 hover:text-[#ffa62a] select-none">Industries</p>
-      <p className="[word-break:break-word] font-['Inter_Tight:Regular',sans-serif] leading-[normal] not-italic relative shrink-0 text-[16px] text-center text-white whitespace-nowrap cursor-pointer transition-colors duration-250 hover:text-[#ffa62a] select-none">Case studies</p>
-      <p className="[word-break:break-word] font-['Inter_Tight:Regular',sans-serif] leading-[normal] not-italic relative shrink-0 text-[16px] text-center text-white whitespace-nowrap cursor-pointer transition-colors duration-250 hover:text-[#ffa62a] select-none">Blogs</p>
-    </div>
-  );
-}
-
-function TablerMoon() {
-  return (
-    <div className="relative shrink-0 size-[24px]" data-name="tabler:moon">
-      <svg className="absolute block inset-0 size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 24 24">
-        <g id="tabler:moon">
-          <path d={svgPaths.p17084400} id="Vector" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" />
-        </g>
-      </svg>
-    </div>
-  );
-}
-
-function Btn() {
-  return (
-    <div className="bg-[rgba(255,255,255,0.1)] content-stretch flex items-center justify-center px-[16px] py-[12px] relative rounded-[6px] shrink-0 size-[46px] cursor-pointer transition-all duration-300 hover:bg-[rgba(255,255,255,0.18)] hover:scale-[1.05] active:scale-[0.96] text-white hover:text-[#ffa62a]" data-name="btn">
-      <div aria-hidden className="absolute border border-[rgba(255,255,255,0.2)] border-solid inset-0 pointer-events-none rounded-[6px]" />
-      <TablerMoon />
+      <p 
+        onClick={() => navigate("/case-studies")}
+        className="[word-break:break-word] font-['Inter_Tight',sans-serif] leading-[normal] not-italic relative shrink-0 text-[16px] text-center text-white whitespace-nowrap cursor-pointer transition-colors duration-250 hover:text-[#ffa62a] select-none"
+      >
+        Case studies
+      </p>
+      <p 
+        onClick={() => navigate("/blogs")}
+        className="[word-break:break-word] font-['Inter_Tight',sans-serif] leading-[normal] not-italic relative shrink-0 text-[16px] text-center text-white whitespace-nowrap cursor-pointer transition-colors duration-250 hover:text-[#ffa62a] select-none"
+      >
+        Blogs
+      </p>
     </div>
   );
 }
 
 function Btn1() {
+  const navigate = useNavigate();
   return (
-    <div className="bg-[rgba(255,255,255,0.1)] content-stretch flex items-center justify-center px-[16px] py-[12px] relative rounded-[6px] shrink-0 cursor-pointer transition-all duration-300 hover:bg-[rgba(255,255,255,0.18)] hover:scale-[1.03] active:scale-[0.98] text-white hover:text-[#ffa62a]" data-name="btn">
+    <div 
+      onClick={() => navigate("/contact")}
+      className="bg-[rgba(255,255,255,0.1)] content-stretch flex items-center justify-center px-[16px] py-[12px] relative rounded-[6px] shrink-0 cursor-pointer transition-all duration-300 hover:bg-[rgba(255,255,255,0.18)] hover:scale-[1.03] active:scale-[0.98] text-white hover:text-[#ffa62a]" 
+      data-name="btn"
+    >
       <div aria-hidden className="absolute border border-[rgba(255,255,255,0.2)] border-solid inset-0 pointer-events-none rounded-[6px]" />
-      <p className="[word-break:break-word] font-['Inter_Tight:Regular',sans-serif] leading-[normal] not-italic relative shrink-0 text-[18px] text-right text-inherit whitespace-nowrap select-none">Contact us</p>
+      <p className="[word-break:break-word] font-['Inter_Tight',sans-serif] leading-[normal] not-italic relative shrink-0 text-[18px] text-right text-inherit whitespace-nowrap select-none">Contact us</p>
     </div>
   );
 }
@@ -140,7 +196,6 @@ function Btn1() {
 function BtnGroup() {
   return (
     <div className="content-stretch flex gap-[12px] items-center relative shrink-0" data-name="btn group">
-      <Btn />
       <Btn1 />
     </div>
   );
@@ -171,120 +226,95 @@ function MainNav() {
 
 function NavbarFull() {
   return (
-    <div className="absolute content-stretch flex flex-col items-start left-0 top-0 w-[1440px]" data-name="navbar full">
+    <div className="absolute content-stretch flex flex-col items-start left-0 top-0 w-[1440px] z-50" data-name="navbar full">
       <TopNav />
       <MainNav />
     </div>
   );
 }
 
-function Item() {
-  return (
-    <div className="absolute content-stretch flex gap-[64px] items-start left-[40px] p-[20px] top-[297px] w-[1360px]" data-name="item">
-      <div aria-hidden className="absolute border-[rgba(255,255,255,0.3)] border-b border-solid inset-0 pointer-events-none" />
-      <p className="[word-break:break-word] font-['Geist_Mono:Medium',sans-serif] font-medium leading-[normal] relative shrink-0 text-[20px] text-white uppercase w-[207px]">Autotraxs</p>
-      <p className="[word-break:break-word] flex-[1_0_0] font-['Inter_Tight:Regular',sans-serif] leading-[1.4] min-w-px not-italic relative text-[16px] text-white uppercase">New and Used Auto Directory</p>
-      <p className="[word-break:break-word] font-['Inter_Tight:Regular',sans-serif] leading-[1.4] not-italic relative shrink-0 text-[16px] text-white uppercase whitespace-nowrap">2025 - 2026</p>
-    </div>
-  );
-}
-
-function Item1() {
-  return (
-    <div className="absolute bg-white content-stretch flex gap-[64px] items-start left-[40px] p-[20px] top-[363px] w-[1360px]" data-name="item">
-      <div aria-hidden className="absolute border-[rgba(255,255,255,0.3)] border-b border-solid inset-0 pointer-events-none" />
-      <p className="[word-break:break-word] font-['Geist_Mono:Medium',sans-serif] font-medium leading-[normal] relative shrink-0 text-[#141414] text-[20px] uppercase w-[207px]">Autotraxs</p>
-      <p className="[word-break:break-word] flex-[1_0_0] font-['Inter_Tight:Regular',sans-serif] leading-[1.4] min-w-px not-italic relative text-[#141414] text-[16px] uppercase">New and Used Auto Directory</p>
-      <p className="[word-break:break-word] font-['Inter_Tight:Regular',sans-serif] leading-[1.4] not-italic relative shrink-0 text-[#141414] text-[16px] uppercase whitespace-nowrap">Visit website →</p>
-      <p className="[word-break:break-word] font-['Inter_Tight:Regular',sans-serif] leading-[1.4] not-italic relative shrink-0 text-[#141414] text-[16px] uppercase whitespace-nowrap">2025 - 2026</p>
-    </div>
-  );
-}
-
-function Item2() {
-  return (
-    <div className="absolute content-stretch flex gap-[64px] items-start left-[40px] p-[20px] top-[429px] w-[1360px]" data-name="item">
-      <div aria-hidden className="absolute border-[rgba(255,255,255,0.3)] border-b border-solid inset-0 pointer-events-none" />
-      <p className="[word-break:break-word] font-['Geist_Mono:Medium',sans-serif] font-medium leading-[normal] relative shrink-0 text-[20px] text-white uppercase w-[207px]">Autotraxs</p>
-      <p className="[word-break:break-word] flex-[1_0_0] font-['Inter_Tight:Regular',sans-serif] leading-[1.4] min-w-px not-italic relative text-[16px] text-white uppercase">New and Used Auto Directory</p>
-      <p className="[word-break:break-word] font-['Inter_Tight:Regular',sans-serif] leading-[1.4] not-italic relative shrink-0 text-[16px] text-white uppercase whitespace-nowrap">2025 - 2026</p>
-    </div>
-  );
-}
-
-function Item3() {
-  return (
-    <div className="absolute content-stretch flex gap-[64px] items-start left-[40px] p-[20px] top-[495px] w-[1360px]" data-name="item">
-      <div aria-hidden className="absolute border-[rgba(255,255,255,0.3)] border-b border-solid inset-0 pointer-events-none" />
-      <p className="[word-break:break-word] font-['Geist_Mono:Medium',sans-serif] font-medium leading-[normal] relative shrink-0 text-[20px] text-white uppercase w-[207px]">Autotraxs</p>
-      <p className="[word-break:break-word] flex-[1_0_0] font-['Inter_Tight:Regular',sans-serif] leading-[1.4] min-w-px not-italic relative text-[16px] text-white uppercase">New and Used Auto Directory</p>
-      <p className="[word-break:break-word] font-['Inter_Tight:Regular',sans-serif] leading-[1.4] not-italic relative shrink-0 text-[16px] text-white uppercase whitespace-nowrap">2025 - 2026</p>
-    </div>
-  );
-}
-
-function Item4() {
-  return (
-    <div className="absolute content-stretch flex gap-[64px] items-start left-[40px] p-[20px] top-[561px] w-[1360px]" data-name="item">
-      <div aria-hidden className="absolute border-[rgba(255,255,255,0.3)] border-b border-solid inset-0 pointer-events-none" />
-      <p className="[word-break:break-word] font-['Geist_Mono:Medium',sans-serif] font-medium leading-[normal] relative shrink-0 text-[20px] text-white uppercase w-[207px]">Autotraxs</p>
-      <p className="[word-break:break-word] flex-[1_0_0] font-['Inter_Tight:Regular',sans-serif] leading-[1.4] min-w-px not-italic relative text-[16px] text-white uppercase">New and Used Auto Directory</p>
-      <p className="[word-break:break-word] font-['Inter_Tight:Regular',sans-serif] leading-[1.4] not-italic relative shrink-0 text-[16px] text-white uppercase whitespace-nowrap">2025 - 2026</p>
-    </div>
-  );
-}
-
-function Item5() {
-  return (
-    <div className="absolute content-stretch flex gap-[64px] items-start left-[40px] p-[20px] top-[627px] w-[1360px]" data-name="item">
-      <div aria-hidden className="absolute border-[rgba(255,255,255,0.3)] border-b border-solid inset-0 pointer-events-none" />
-      <p className="[word-break:break-word] font-['Geist_Mono:Medium',sans-serif] font-medium leading-[normal] relative shrink-0 text-[20px] text-white uppercase w-[207px]">Autotraxs</p>
-      <p className="[word-break:break-word] flex-[1_0_0] font-['Inter_Tight:Regular',sans-serif] leading-[1.4] min-w-px not-italic relative text-[16px] text-white uppercase">New and Used Auto Directory</p>
-      <p className="[word-break:break-word] font-['Inter_Tight:Regular',sans-serif] leading-[1.4] not-italic relative shrink-0 text-[16px] text-white uppercase whitespace-nowrap">2025 - 2026</p>
-    </div>
-  );
-}
-
-function Item6() {
-  return (
-    <div className="absolute content-stretch flex gap-[64px] items-start left-[40px] p-[20px] top-[693px] w-[1360px]" data-name="item">
-      <div aria-hidden className="absolute border-[rgba(255,255,255,0.3)] border-b border-solid inset-0 pointer-events-none" />
-      <p className="[word-break:break-word] font-['Geist_Mono:Medium',sans-serif] font-medium leading-[normal] relative shrink-0 text-[20px] text-white uppercase w-[207px]">Autotraxs</p>
-      <p className="[word-break:break-word] flex-[1_0_0] font-['Inter_Tight:Regular',sans-serif] leading-[1.4] min-w-px not-italic relative text-[16px] text-white uppercase">New and Used Auto Directory</p>
-      <p className="[word-break:break-word] font-['Inter_Tight:Regular',sans-serif] leading-[1.4] not-italic relative shrink-0 text-[16px] text-white uppercase whitespace-nowrap">2025 - 2026</p>
-    </div>
-  );
-}
-
-function Item7() {
-  return (
-    <div className="absolute content-stretch flex gap-[64px] items-start left-[40px] p-[20px] top-[759px] w-[1360px]" data-name="item">
-      <div aria-hidden className="absolute border-[rgba(255,255,255,0.3)] border-b border-solid inset-0 pointer-events-none" />
-      <p className="[word-break:break-word] font-['Geist_Mono:Medium',sans-serif] font-medium leading-[normal] relative shrink-0 text-[20px] text-white uppercase w-[207px]">Autotraxs</p>
-      <p className="[word-break:break-word] flex-[1_0_0] font-['Inter_Tight:Regular',sans-serif] leading-[1.4] min-w-px not-italic relative text-[16px] text-white uppercase">New and Used Auto Directory</p>
-      <p className="[word-break:break-word] font-['Inter_Tight:Regular',sans-serif] leading-[1.4] not-italic relative shrink-0 text-[16px] text-white uppercase whitespace-nowrap">2025 - 2026</p>
-    </div>
-  );
-}
-
 export default function HeroSection() {
+  const [activeIndex, setActiveIndex] = useState(0);
+  const navigate = useNavigate();
+
   return (
-    <div className="relative size-full" data-name="Hero Section">
-      <div aria-hidden className="absolute inset-0 pointer-events-none">
-        <img alt="" className="absolute max-w-none object-cover size-full" src={imgHeroSection} />
-        <div className="absolute bg-[rgba(20,20,20,0.3)] inset-0" />
+    <div className="relative size-full overflow-hidden bg-[#141414]" data-name="Hero Section">
+      {/* Background crossfading laptop mockups */}
+      <div aria-hidden className="absolute inset-0 pointer-events-none z-0">
+        {rp.map((project, idx) => (
+          <img
+            key={project.name + idx}
+            alt=""
+            className={`absolute inset-0 w-full h-full object-cover transition-all duration-700 ease-in-out ${
+              activeIndex === idx ? "opacity-100 scale-100" : "opacity-0 scale-[1.03]"
+            }`}
+            src={project.image}
+          />
+        ))}
+        {/* Subtle blur overlay */}
+        <div className="absolute bg-[rgba(15,15,15,0.65)] inset-0 backdrop-blur-[2px]" />
       </div>
-      <p className="[word-break:break-word] absolute font-['Inter_Tight:Regular',sans-serif] leading-[normal] left-[calc(12.5%-140px)] not-italic text-[56px] text-white top-[205px] whitespace-nowrap">Our works</p>
-      <p className="[word-break:break-word] absolute font-['Geist_Mono:Regular',sans-serif] font-normal leading-[normal] left-[40px] text-[#989898] text-[16px] top-[168px] uppercase whitespace-nowrap">Built for Growth</p>
+
+      <p className="[word-break:break-word] absolute font-['Inter_Tight',sans-serif] leading-[normal] left-[40px] not-italic text-[56px] text-white top-[205px] whitespace-nowrap z-10">
+        Our works
+      </p>
+      <p className="[word-break:break-word] absolute font-geist-mono font-medium leading-[normal] left-[40px] text-[#989898] text-[16px] top-[168px] uppercase whitespace-nowrap tracking-wide z-10">
+        Built for Growth
+      </p>
+      
       <NavbarFull />
-      <Item />
-      <Item1 />
-      <Item2 />
-      <Item3 />
-      <Item4 />
-      <Item5 />
-      <Item6 />
-      <Item7 />
+
+      {/* Dynamic list rows */}
+      <div className="absolute top-[280px] left-[40px] w-[1360px] flex flex-col z-10">
+        {rp.map((project, idx) => {
+          const isActive = activeIndex === idx;
+          return (
+            <div
+              key={project.name}
+              onMouseEnter={() => setActiveIndex(idx)}
+              onClick={() => {
+                if (project.url.startsWith("/")) {
+                  navigate(project.url);
+                } else {
+                  window.open(project.url, "_blank");
+                }
+              }}
+              className={`content-stretch flex gap-[64px] items-center p-[20px_24px] w-full cursor-pointer transition-all duration-300 border-b border-[rgba(255,255,255,0.15)] ${
+                isActive ? "bg-white text-[#141414] rounded-[4px]" : "text-white bg-transparent"
+              }`}
+              data-name="item"
+            >
+              {/* Project Name */}
+              <p className={`font-geist-mono font-semibold leading-[normal] text-[20px] uppercase w-[320px] transition-colors duration-300 ${
+                isActive ? "text-[#141414]" : "text-white"
+              }`}>
+                {project.name}
+              </p>
+
+              {/* Project Description */}
+              <p className={`flex-grow font-['Inter_Tight',sans-serif] leading-[1.4] text-[16px] uppercase transition-colors duration-300 ${
+                isActive ? "text-[#141414]" : "text-[#989898]"
+              }`}>
+                {project.desc}
+              </p>
+
+              {/* Visit Link (only if active) */}
+              {isActive && (
+                <p className="font-['Inter_Tight',sans-serif] leading-[1.4] text-[#141414] text-[16px] uppercase font-bold whitespace-nowrap hover:underline decoration-2">
+                  Visit website →
+                </p>
+              )}
+
+              {/* Project Year */}
+              <p className={`font-['Inter_Tight',sans-serif] leading-[1.4] text-[16px] uppercase whitespace-nowrap transition-colors duration-300 ${
+                isActive ? "text-[#525252]" : "text-[#989898]"
+              }`}>
+                {project.year}
+              </p>
+            </div>
+          );
+        })}
+      </div>
     </div>
   );
 }

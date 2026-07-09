@@ -1,7 +1,12 @@
+import { useEffect, useRef } from "react";
+import { useNavigate } from "react-router";
 import svgPaths from "./svg-js3pazu5gk";
 import imgImage14 from "./ad701330b9a892a499a90aea9dc6e75c7c52daad.png";
 import imgImage17 from "./ea330f50b9275ae1fc908298dd63d4095eb08e20.png";
 import imgImage15 from "./8ae2193dbb10bec7783bfc1948549080c9af139a.png";
+
+// Keep top definitions unchanged...
+
 
 function RiFacebookFill() {
   return (
@@ -52,8 +57,13 @@ function TopNav() {
 }
 
 function Hyperion() {
+  const navigate = useNavigate();
   return (
-    <div className="h-[20px] relative shrink-0 w-[131.175px]" data-name="HYPERION">
+    <div 
+      onClick={() => navigate("/")}
+      className="h-[20px] relative shrink-0 w-[131.175px] cursor-pointer" 
+      data-name="HYPERION"
+    >
       <svg className="absolute block inset-0 size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 131.175 20">
         <g id="HYPERION">
           <path d={svgPaths.pae2b200} fill="var(--fill-0, white)" id="Vector" />
@@ -89,22 +99,48 @@ function GlyphsChevronBold() {
 }
 
 function Dropdown() {
+  const navigate = useNavigate();
   return (
-    <div className="content-stretch flex gap-[6px] items-center relative shrink-0 cursor-pointer transition-colors duration-250 hover:text-[#ffa62a] text-white" data-name="dropdown">
-      <p className="[word-break:break-word] font-['Inter_Tight:Regular',sans-serif] leading-[normal] not-italic relative shrink-0 text-[16px] text-center text-inherit whitespace-nowrap select-none">Services</p>
+    <div 
+      onClick={() => navigate("/services")}
+      className="content-stretch flex gap-[6px] items-center relative shrink-0 cursor-pointer transition-colors duration-250 hover:text-[#ffa62a] text-white" 
+      data-name="dropdown"
+    >
+      <p className="[word-break:break-word] font-['Inter_Tight',sans-serif] leading-[normal] not-italic relative shrink-0 text-[16px] text-center text-inherit whitespace-nowrap select-none">Services</p>
       <GlyphsChevronBold />
     </div>
   );
 }
 
 function Menu() {
+  const navigate = useNavigate();
   return (
     <div className="content-stretch flex gap-[40px] items-center relative shrink-0" data-name="menu">
-      <p className="[word-break:break-word] font-['Inter_Tight:Regular',sans-serif] leading-[normal] not-italic relative shrink-0 text-[16px] text-center text-white whitespace-nowrap cursor-pointer transition-colors duration-250 hover:text-[#ffa62a] select-none">Works</p>
+      <p 
+        onClick={() => navigate("/works")}
+        className="[word-break:break-word] font-['Inter_Tight',sans-serif] leading-[normal] not-italic relative shrink-0 text-[16px] text-center text-white whitespace-nowrap cursor-pointer transition-colors duration-250 hover:text-[#ffa62a] select-none"
+      >
+        Works
+      </p>
       <Dropdown />
-      <p className="[word-break:break-word] font-['Inter_Tight:Regular',sans-serif] leading-[normal] not-italic relative shrink-0 text-[16px] text-center text-white whitespace-nowrap cursor-pointer transition-colors duration-250 hover:text-[#ffa62a] select-none">Industries</p>
-      <p className="[word-break:break-word] font-['Inter_Tight:Regular',sans-serif] leading-[normal] not-italic relative shrink-0 text-[16px] text-center text-white whitespace-nowrap cursor-pointer transition-colors duration-250 hover:text-[#ffa62a] select-none">Case studies</p>
-      <p className="[word-break:break-word] font-['Inter_Tight:Regular',sans-serif] leading-[normal] not-italic relative shrink-0 text-[16px] text-center text-white whitespace-nowrap cursor-pointer transition-colors duration-250 hover:text-[#ffa62a] select-none">Blogs</p>
+      <p 
+        onClick={() => navigate("/services")}
+        className="[word-break:break-word] font-['Inter_Tight',sans-serif] leading-[normal] not-italic relative shrink-0 text-[16px] text-center text-white whitespace-nowrap cursor-pointer transition-colors duration-250 hover:text-[#ffa62a] select-none"
+      >
+        Industries
+      </p>
+      <p 
+        onClick={() => navigate("/case-studies")}
+        className="[word-break:break-word] font-['Inter_Tight',sans-serif] leading-[normal] not-italic relative shrink-0 text-[16px] text-center text-white whitespace-nowrap cursor-pointer transition-colors duration-250 hover:text-[#ffa62a] select-none"
+      >
+        Case studies
+      </p>
+      <p 
+        onClick={() => navigate("/blogs")}
+        className="[word-break:break-word] font-['Inter_Tight',sans-serif] leading-[normal] not-italic relative shrink-0 text-[16px] text-center text-white whitespace-nowrap cursor-pointer transition-colors duration-250 hover:text-[#ffa62a] select-none"
+      >
+        Blogs
+      </p>
     </div>
   );
 }
@@ -131,10 +167,15 @@ function Btn() {
 }
 
 function Btn1() {
+  const navigate = useNavigate();
   return (
-    <div className="bg-[rgba(255,255,255,0.1)] content-stretch flex items-center justify-center px-[16px] py-[12px] relative rounded-[6px] shrink-0 cursor-pointer transition-all duration-300 hover:bg-[rgba(255,255,255,0.18)] hover:scale-[1.03] active:scale-[0.98] text-white hover:text-[#ffa62a]" data-name="btn">
+    <div 
+      onClick={() => navigate("/contact")}
+      className="bg-[rgba(255,255,255,0.1)] content-stretch flex items-center justify-center px-[16px] py-[12px] relative rounded-[6px] shrink-0 cursor-pointer transition-all duration-300 hover:bg-[rgba(255,255,255,0.18)] hover:scale-[1.03] active:scale-[0.98] text-white hover:text-[#ffa62a]" 
+      data-name="btn"
+    >
       <div aria-hidden className="absolute border border-[rgba(255,255,255,0.2)] border-solid inset-0 pointer-events-none rounded-[6px]" />
-      <p className="[word-break:break-word] font-['Inter_Tight:Regular',sans-serif] leading-[normal] not-italic relative shrink-0 text-[18px] text-right text-inherit whitespace-nowrap select-none">Contact us</p>
+      <p className="[word-break:break-word] font-['Inter_Tight',sans-serif] leading-[normal] not-italic relative shrink-0 text-[18px] text-right text-inherit whitespace-nowrap select-none">Contact us</p>
     </div>
   );
 }
@@ -180,9 +221,9 @@ function NavbarFull() {
   );
 }
 
-function Graphic() {
+function Graphic({ style }: { style?: React.CSSProperties }) {
   return (
-    <div className="absolute content-stretch flex gap-[40px] items-center justify-center left-0 overflow-clip top-[583px] w-[1440px]" data-name="graphic">
+    <div style={style} className="absolute content-stretch flex gap-[40px] items-center justify-center left-0 overflow-clip top-[583px] w-[1440px]" data-name="graphic">
       <div className="h-[480px] relative rounded-[6px] shrink-0 w-[768px]" data-name="image 14">
         <img alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none rounded-[6px] size-full" src={imgImage14} />
       </div>
@@ -202,23 +243,99 @@ function Graphic() {
   );
 }
 
-function Btn2() {
-  return (
-    <div className="-translate-x-1/2 absolute bg-[#ffa62a] content-stretch flex items-center justify-center left-[calc(50%+0.5px)] px-[20px] py-[16px] rounded-[120px] top-[449px] cursor-pointer transition-all duration-300 hover:scale-[1.04] hover:shadow-[0_0_20px_rgba(255,166,42,0.4)] active:scale-[0.98]" data-name="btn">
-      <p className="[word-break:break-word] font-['Inter_Tight:Medium',sans-serif] leading-[normal] not-italic relative shrink-0 text-[#462c07] text-[18px] text-right whitespace-nowrap select-none">Talk with us</p>
-    </div>
-  );
-}
+export default function HeroSection({
+  subtitle = "Custom Website Design That Drives Growth",
+  title = "We create online presences that reach",
+  description = "At Hyperion, we specialize in creating bespoke websites designed to help businesses like yours grow. We don't rely on generic templates, and we definitely don't use AI-generated solutions. Every website we build is unique, tailored to meet your business goals and deliver a seamless user experience.",
+  isMini = false,
+  ctaText = "Talk with us"
+}: {
+  subtitle?: string;
+  title?: string;
+  description?: string;
+  isMini?: boolean;
+  ctaText?: string;
+}) {
+  const navigate = useNavigate();
+  const subtitleRef = useRef<HTMLParagraphElement>(null);
+  const titleRef = useRef<HTMLHeadingElement>(null);
+  const descRef = useRef<HTMLParagraphElement>(null);
+  const btnRef = useRef<HTMLDivElement>(null);
+  const graphicRef = useRef<HTMLDivElement>(null);
 
-export default function HeroSection() {
+  useEffect(() => {
+    if (isMini) return; // No parallax on mini hero pages to maximize speed
+
+    let ticking = false;
+    const handleScroll = () => {
+      if (!ticking) {
+        window.requestAnimationFrame(() => {
+          const y = window.scrollY;
+          if (subtitleRef.current) subtitleRef.current.style.transform = `translateY(${y * 0.16}px) translateZ(0)`;
+          if (titleRef.current) titleRef.current.style.transform = `translateY(${y * 0.12}px) translateZ(0)`;
+          if (descRef.current) descRef.current.style.transform = `translateY(${y * 0.08}px) translateZ(0)`;
+          if (btnRef.current) btnRef.current.style.transform = `translateY(${y * 0.06}px) translateZ(0)`;
+          if (graphicRef.current) graphicRef.current.style.transform = `translateY(${y * 0.03}px) translateZ(0)`;
+          ticking = false;
+        });
+        ticking = true;
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, [isMini]);
+
   return (
-    <div className="bg-[#141414] relative size-full" data-name="Hero Section">
-      <p className="-translate-x-1/2 [word-break:break-word] absolute font-['Inter_Tight:Regular',sans-serif] leading-[normal] left-1/2 not-italic text-[56px] text-center text-white top-[229px] whitespace-nowrap">We create online presences that reach</p>
-      <p className="-translate-x-1/2 [word-break:break-word] absolute font-['Geist_Mono:Regular',sans-serif] font-normal leading-[normal] left-1/2 text-[#989898] text-[16px] text-center top-[192px] uppercase whitespace-nowrap">Custom Website Design That Drives Growth</p>
+    <div className="bg-[#141414] relative size-full flex flex-col items-center" data-name="Hero Section">
       <NavbarFull />
-      <Graphic />
-      <p className="-translate-x-1/2 [word-break:break-word] absolute font-['Inter_Tight:Regular',sans-serif] leading-[1.4] left-1/2 not-italic text-[#989898] text-[16px] text-center top-[321px] w-[680px]">{`At Hyperion, we specialize in creating bespoke websites designed to help businesses like yours grow. We don't rely on generic templates, and we definitely don't use AI-generated solutions. Every website we build is unique, tailored to meet your business goals and deliver a seamless user experience.`}</p>
-      <Btn2 />
+      
+      <div 
+        className={`relative z-20 flex flex-col items-center text-center w-full max-w-[1000px] px-6 ${
+          isMini ? "mt-[115px]" : "mt-[180px]"
+        } justify-start`}
+        data-name="content"
+      >
+        <p 
+          ref={subtitleRef}
+          className="relative font-geist-mono font-normal leading-[normal] text-[#989898] text-[16px] uppercase tracking-widest whitespace-nowrap will-change-transform"
+        >
+          {subtitle}
+        </p>
+        <h1 
+          ref={titleRef}
+          className="relative mt-4 font-['Inter_Tight',sans-serif] leading-tight font-normal text-[52px] text-white w-full max-w-[900px] break-words will-change-transform"
+        >
+          {title}
+        </h1>
+        
+        {!isMini && (
+          <>
+            <p 
+              ref={descRef}
+              className="relative mt-6 font-['Inter_Tight',sans-serif] leading-[1.6] text-[#989898] text-[17px] w-full max-w-[720px] break-words will-change-transform"
+            >
+              {description}
+            </p>
+            <div 
+              ref={btnRef}
+              onClick={() => navigate("/contact")}
+              className="glow-button-company relative mt-8 bg-[#ffa62a] content-stretch flex items-center justify-center px-[24px] py-[16px] rounded-[6px] cursor-pointer hover:bg-[#ffe62a] transition-colors duration-300 active:scale-[0.97] will-change-transform"
+              data-name="btn"
+            >
+              <p className="[word-break:break-word] font-['Inter_Tight',sans-serif] leading-[normal] not-italic relative shrink-0 text-[#462c07] text-[18px] text-right font-semibold whitespace-nowrap z-10">
+                {ctaText}
+              </p>
+            </div>
+          </>
+        )}
+      </div>
+
+      {!isMini && (
+        <div ref={graphicRef} className="will-change-transform absolute top-[583px]">
+          <Graphic />
+        </div>
+      )}
     </div>
   );
 }

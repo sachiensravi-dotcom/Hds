@@ -93,25 +93,25 @@ export default function Section() {
       {/* Navigation Column */}
       <p 
         onClick={() => navigate("/")}
-        className="[word-break:break-word] absolute leading-[normal] left-[calc(41.67%+55px)] not-italic text-[24px] text-white top-[153px] whitespace-nowrap cursor-pointer hover:text-white transition-colors duration-300"
+        className="[word-break:break-word] absolute leading-[normal] left-[calc(41.67%+55px)] font-['Inter_Tight',sans-serif] font-medium text-[24px] text-white top-[153px] whitespace-nowrap cursor-pointer hover:text-[#ffa62a] transition-colors duration-300"
       >
         Home
       </p>
       <p 
         onClick={() => navigate("/works")}
-        className="[word-break:break-word] absolute leading-[normal] left-[calc(41.67%+55px)] not-italic text-[#8f8f8f] text-[24px] top-[198px] whitespace-nowrap cursor-pointer hover:text-white transition-colors duration-300"
+        className="[word-break:break-word] absolute leading-[normal] left-[calc(41.67%+55px)] font-['Inter_Tight',sans-serif] font-medium text-[#8f8f8f] text-[24px] top-[198px] whitespace-nowrap cursor-pointer hover:text-white transition-colors duration-300"
       >
         Portfolio
       </p>
       <p 
         onClick={() => navigate("/services")}
-        className="[word-break:break-word] absolute leading-[normal] left-[calc(41.67%+55px)] not-italic text-[#8f8f8f] text-[24px] top-[243px] whitespace-nowrap cursor-pointer hover:text-white transition-colors duration-300"
+        className="[word-break:break-word] absolute leading-[normal] left-[calc(41.67%+55px)] font-['Inter_Tight',sans-serif] font-medium text-[#8f8f8f] text-[24px] top-[243px] whitespace-nowrap cursor-pointer hover:text-white transition-colors duration-300"
       >
         Services
       </p>
       <p 
         onClick={() => navigate("/blogs")}
-        className="[word-break:break-word] absolute leading-[normal] left-[calc(41.67%+55px)] not-italic text-[#8f8f8f] text-[24px] top-[288px] whitespace-nowrap cursor-pointer hover:text-white transition-colors duration-300"
+        className="[word-break:break-word] absolute leading-[normal] left-[calc(41.67%+55px)] font-['Inter_Tight',sans-serif] font-medium text-[#8f8f8f] text-[24px] top-[288px] whitespace-nowrap cursor-pointer hover:text-white transition-colors duration-300"
       >
         Blog
       </p>
@@ -119,25 +119,25 @@ export default function Section() {
       {/* Services Column */}
       <p 
         onClick={() => navigate("/services/website")}
-        className="[word-break:break-word] absolute leading-[normal] left-[calc(58.33%+27px)] not-italic text-[#8f8f8f] text-[24px] top-[153px] whitespace-nowrap cursor-pointer hover:text-white transition-colors duration-300"
+        className="[word-break:break-word] absolute leading-[normal] left-[calc(58.33%+27px)] font-['Inter_Tight',sans-serif] font-medium text-[#8f8f8f] text-[24px] top-[153px] whitespace-nowrap cursor-pointer hover:text-white transition-colors duration-300"
       >
         Custom website
       </p>
       <p 
         onClick={() => navigate("/services/smm")}
-        className="[word-break:break-word] absolute leading-[normal] left-[calc(58.33%+27px)] not-italic text-[#8f8f8f] text-[24px] top-[198px] whitespace-nowrap cursor-pointer hover:text-white transition-colors duration-300"
+        className="[word-break:break-word] absolute leading-[normal] left-[calc(58.33%+27px)] font-['Inter_Tight',sans-serif] font-medium text-[#8f8f8f] text-[24px] top-[198px] whitespace-nowrap cursor-pointer hover:text-white transition-colors duration-300"
       >
         SMM & Ads
       </p>
       <p 
         onClick={() => navigate("/services/website")}
-        className="[word-break:break-word] absolute leading-[normal] left-[calc(58.33%+27px)] not-italic text-[#8f8f8f] text-[24px] top-[243px] whitespace-nowrap cursor-pointer hover:text-white transition-colors duration-300"
+        className="[word-break:break-word] absolute leading-[normal] left-[calc(58.33%+27px)] font-['Inter_Tight',sans-serif] font-medium text-[#8f8f8f] text-[24px] top-[243px] whitespace-nowrap cursor-pointer hover:text-white transition-colors duration-300"
       >
         Web application
       </p>
       <p 
         onClick={() => navigate("/services/seo")}
-        className="[word-break:break-word] absolute leading-[normal] left-[calc(58.33%+27px)] not-italic text-[#8f8f8f] text-[24px] top-[288px] whitespace-nowrap cursor-pointer hover:text-white transition-colors duration-300"
+        className="[word-break:break-word] absolute leading-[normal] left-[calc(58.33%+27px)] font-['Inter_Tight',sans-serif] font-medium text-[#8f8f8f] text-[24px] top-[288px] whitespace-nowrap cursor-pointer hover:text-white transition-colors duration-300"
       >
         SEO & AEO
       </p>
@@ -145,25 +145,25 @@ export default function Section() {
       {/* CRM Suite Column */}
       <p 
         onClick={() => navigate("/contact")}
-        className="[word-break:break-word] absolute leading-[normal] left-[calc(75%+79px)] not-italic text-[#8f8f8f] text-[24px] top-[153px] whitespace-nowrap cursor-pointer hover:text-white transition-colors duration-300"
+        className="[word-break:break-word] absolute leading-[normal] left-[calc(75%+79px)] font-['Inter_Tight',sans-serif] font-medium text-[#8f8f8f] text-[24px] top-[153px] whitespace-nowrap cursor-pointer hover:text-white transition-colors duration-300"
       >
         GHL CRM Setup
       </p>
       <p 
         onClick={() => navigate("/contact")}
-        className="[word-break:break-word] absolute leading-[normal] left-[calc(75%+79px)] not-italic text-[#8f8f8f] text-[24px] top-[198px] whitespace-nowrap cursor-pointer hover:text-white transition-colors duration-300"
+        className="[word-break:break-word] absolute leading-[normal] left-[calc(75%+79px)] font-['Inter_Tight',sans-serif] font-medium text-[#8f8f8f] text-[24px] top-[198px] whitespace-nowrap cursor-pointer hover:text-white transition-colors duration-300"
       >
         SMS & Email
       </p>
       <p 
         onClick={() => navigate("/contact")}
-        className="[word-break:break-word] absolute leading-[normal] left-[calc(75%+79px)] not-italic text-[#8f8f8f] text-[24px] top-[243px] whitespace-nowrap cursor-pointer hover:text-white transition-colors duration-300"
+        className="[word-break:break-word] absolute leading-[normal] left-[calc(75%+79px)] font-['Inter_Tight',sans-serif] font-medium text-[#8f8f8f] text-[24px] top-[243px] whitespace-nowrap cursor-pointer hover:text-white transition-colors duration-300"
       >
         Calendar Booking
       </p>
       <p 
         onClick={() => navigate("/contact")}
-        className="[word-break:break-word] absolute leading-[normal] left-[calc(75%+79px)] not-italic text-[#8f8f8f] text-[24px] top-[288px] whitespace-nowrap cursor-pointer hover:text-white transition-colors duration-300"
+        className="[word-break:break-word] absolute leading-[normal] left-[calc(75%+79px)] font-['Inter_Tight',sans-serif] font-medium text-[#8f8f8f] text-[24px] top-[288px] whitespace-nowrap cursor-pointer hover:text-white transition-colors duration-300"
       >
         Review Automation
       </p>
@@ -196,21 +196,21 @@ export default function Section() {
       <MaskGroup />
 
       {/* Slogans and Headers */}
-      <p className="footer-slogan [word-break:break-word] absolute font-normal leading-[1.4] right-[calc(66.67%+440px)] text-[16px] text-white top-[159px] translate-x-full uppercase whitespace-nowrap">
-        More than websites. Your engine for growth.
+      <p className="footer-slogan [word-break:break-word] absolute font-geist-mono font-normal leading-[1.4] right-[calc(66.67%+440px)] text-[14px] text-white top-[159px] translate-x-full uppercase tracking-wider whitespace-nowrap">
+        MORE THAN WEBSITES. YOUR ENGINE FOR GROWTH.
       </p>
-      <p className="[word-break:break-word] absolute font-normal leading-[1.4] right-[calc(41.67%+185px)] text-[16px] text-white top-[115px] translate-x-full uppercase whitespace-nowrap font-bold">
+      <p className="[word-break:break-word] absolute font-geist-mono font-semibold leading-[1.4] right-[calc(41.67%+185px)] text-[13px] text-[#989898] top-[115px] translate-x-full uppercase tracking-wider whitespace-nowrap">
         Navigation
       </p>
-      <p className="[word-break:break-word] absolute font-normal leading-[1.4] right-[calc(33.33%+93px)] text-[16px] text-white top-[115px] translate-x-full uppercase whitespace-nowrap font-bold">
+      <p className="[word-break:break-word] absolute font-geist-mono font-semibold leading-[1.4] right-[calc(33.33%+93px)] text-[13px] text-[#989898] top-[115px] translate-x-full uppercase tracking-wider whitespace-nowrap">
         Services
       </p>
-      <p className="[word-break:break-word] absolute font-normal leading-[1.4] right-[calc(8.33%+161px)] text-[16px] text-white top-[115px] translate-x-full uppercase whitespace-nowrap font-bold">
+      <p className="[word-break:break-word] absolute font-geist-mono font-semibold leading-[1.4] right-[calc(8.33%+161px)] text-[13px] text-[#989898] top-[115px] translate-x-full uppercase tracking-wider whitespace-nowrap">
         CRM SUITE
       </p>
 
       {/* Bottom Copyright and Compliance links */}
-      <div className="absolute left-[40px] top-[298px] flex items-center gap-6 text-[#989898] text-[16px] font-['Inter_Tight',sans-serif] whitespace-nowrap">
+      <div className="absolute left-[40px] top-[398px] flex items-center gap-6 text-[#989898] text-[16px] font-['Inter_Tight',sans-serif] whitespace-nowrap">
         <span>@2024-2026. Hyperion Digital Solutions. All Rights Reserved.</span>
         <span className="text-[#3B3B3B]">|</span>
         <Link to="/privacy" className="hover:text-white transition-colors duration-200">

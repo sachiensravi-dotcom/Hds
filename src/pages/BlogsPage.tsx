@@ -1,87 +1,123 @@
-import { useEffect } from "react";
+import { useState, useEffect } from "react";
+import { useNavigate } from "react-router";
 import HeroSection from "../imports/HeroSection-1/index";
+import CTASection from "../imports/Section-13/index";
 import FooterSection from "../imports/Section-17/index";
-import { BookOpen, Calendar, User } from "lucide-react";
+import TiltCard from "../imports/TiltCard";
+import { blogsList } from "../data/blogsData";
+
+const categories = ["All", "SEO", "Optimization", "Keywords", "Building a presence"];
 
 export default function BlogsPage() {
+  const navigate = useNavigate();
+  const [selectedCat, setSelectedCat] = useState("All");
+
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
 
-  const posts = [
-    {
-      title: "Why Webflow is our selected tech for websites",
-      excerpt: "It's more important who the builder is. But Webflow definitely has its edges as we will explain in this article regarding design speed, clean builds, and hosting.",
-      date: "June 28, 2026",
-      author: "Sachien R."
-    },
-    {
-      title: "Understanding A2P 10DLC for Local Services",
-      excerpt: "Carrier regulations are tightening. Learn what registration steps and website disclaimers your local business needs to stay compliant and send SMS notifications.",
-      date: "July 2, 2026",
-      author: "Hyperion Team"
-    },
-    {
-      title: "AEO vs SEO: Preparing for the Future of AI Answers",
-      excerpt: "Search engines are shifting to generative answers. Discover how structuring clear metadata and semantic text can ensure your brand gets cited by LLMs.",
-      date: "July 8, 2026",
-      author: "Sachien R."
-    }
-  ];
+  const filteredBlogs = selectedCat === "All"
+    ? blogsList
+    : blogsList.filter(blog => blog.category === selectedCat);
 
   return (
-    <div className="bg-[#141414] min-w-[1440px] overflow-x-hidden font-['Inter_Tight',sans-serif] text-white">
-      <div className="relative w-full h-[120px] overflow-hidden">
-        <HeroSection />
+    <div className="bg-[#141414] w-full min-w-[1440px] flex flex-col items-center overflow-x-hidden text-white">
+      {/* Mini Hero Section */}
+      <div className="relative w-[1440px] h-[300px] shrink-0 overflow-hidden">
+        <HeroSection 
+          subtitle="Our Insights"
+          title="Latest in growth, automations, & custom web"
+          isMini={true}
+        />
       </div>
 
-      {/* Hero Title */}
-      <div className="max-w-[1360px] mx-auto px-[40px] pt-20 pb-12">
-        <span className="font-['Geist_Mono'] text-[#ffa62a] text-[16px] uppercase tracking-widest block mb-4">
-          Insights & Updates
-        </span>
-        <h1 className="text-5xl md:text-6xl font-normal tracking-tight text-white mb-6 max-w-[700px] leading-tight">
-          News & Insights
-        </h1>
-        <p className="text-neutral-400 text-lg max-w-[600px] leading-relaxed">
-          Read our latest breakdowns of web development technology, search engine optimization (SEO/AEO), and digital marketing compliance.
-        </p>
-      </div>
+      {/* Blogs Main Section */}
+      <div className="relative w-[1440px] py-[80px] px-[40px] flex flex-col items-start bg-[#141414] shrink-0">
+        
+        {/* Category Filters */}
+        <div className="flex gap-[12px] mb-[48px] flex-wrap w-full justify-start items-center select-none">
+          {categories.map((cat) => (
+            <button
+              key={cat}
+              onClick={() => setSelectedCat(cat)}
+              className={`px-[20px] py-[10px] rounded-[100px] font-['Inter_Tight',sans-serif] text-[15px] border transition-all duration-300 cursor-pointer ${
+                selectedCat === cat
+                  ? "bg-[#ffa62a] border-[#ffa62a] text-[#141414] font-semibold"
+                  : "bg-transparent border-[#3b3b3b] text-[#989898] hover:text-white hover:border-white"
+              }`}
+            >
+              {cat}
+            </button>
+          ))}
+        </div>
 
-      {/* Blog Cards Grid */}
-      <div className="max-w-[1360px] mx-auto px-[40px] pb-24 grid grid-cols-1 md:grid-cols-3 gap-6">
-        {posts.map((post, idx) => (
-          <div 
-            key={idx}
-            className="bg-[#1a1a1a]/40 border border-[#2b2b2b] p-8 rounded-xl flex flex-col justify-between h-[380px] hover:border-[#ffa62a] transition-all duration-300 group hover:shadow-[0_8px_30px_rgb(0,0,0,0.12)]"
-          >
-            <div>
-              <div className="flex items-center gap-4 text-xs font-['Geist_Mono'] text-neutral-500 uppercase tracking-wider mb-6">
-                <span className="flex items-center gap-1.5">
-                  <Calendar className="size-3.5" />
-                  {post.date}
-                </span>
-                <span className="size-1 bg-[#2b2b2b] rounded-full"></span>
-                <span className="flex items-center gap-1.5">
-                  <User className="size-3.5" />
-                  {post.author}
-                </span>
-              </div>
-              <h3 className="text-[22px] font-semibold text-white mb-4 leading-snug group-hover:text-[#ffa62a] transition-colors duration-300">
-                {post.title}
-              </h3>
-              <p className="text-neutral-400 text-[14px] leading-relaxed line-clamp-4">
-                {post.excerpt}
-              </p>
-            </div>
-            <span className="font-['Geist_Mono'] text-xs text-[#ffa62a] hover:underline cursor-pointer flex items-center gap-1.5 mt-6">
-              <BookOpen className="size-3.5" /> Read Article →
-            </span>
+        {/* Blog Post Cards Grid */}
+        <div className="grid grid-cols-3 gap-[40px] w-full items-stretch">
+          {filteredBlogs.map((blog, idx) => {
+            // Extract the slug from the url e.g. "https://www.gohds.co/blog-posts/technical-seo" -> "technical-seo"
+            const slug = blog.url.split("/").pop();
+            return (
+              <TiltCard
+                key={blog.title + idx}
+                onClick={() => navigate(`/blog-posts/${slug}`)}
+                max={6}
+                scale={1.02}
+                className="flex flex-col group cursor-pointer w-full bg-[rgba(255,255,255,0.01)] border border-[#2d2d2d] rounded-[8px] p-[24px] hover:border-[#ffa62a] transition-all duration-300 glow-card-gold"
+              >
+                {/* Blog Card Thumbnail */}
+                <div className="relative h-[220px] w-full overflow-hidden rounded-[4px] border border-transparent group-hover:border-[#ffa62a] transition-all duration-300 bg-black">
+                  <img
+                    alt={blog.title}
+                    className="absolute inset-0 object-cover pointer-events-none size-full transition-transform duration-500 group-hover:scale-105"
+                    src={blog.image}
+                    loading="lazy"
+                  />
+                  <div className="absolute top-[12px] left-[12px] bg-[#141414] border border-[#3b3b3b] text-[#ffa62a] font-geist-mono text-[12px] px-[10px] py-[4px] rounded-[4px] uppercase tracking-wider">
+                    {blog.category}
+                  </div>
+                </div>
+
+                {/* Card Title & Navigation */}
+                <div className="flex flex-col flex-grow mt-[20px] justify-between">
+                  <div>
+                    <h3 className="font-['Inter_Tight',sans-serif] text-[20px] leading-snug text-white font-semibold group-hover:text-[#ffa62a] transition-colors duration-300">
+                      {blog.title}
+                    </h3>
+                    <p className="font-['Inter_Tight',sans-serif] text-[#989898] text-[14px] mt-[12px] leading-relaxed line-clamp-3">
+                      {blog.desc}
+                    </p>
+                  </div>
+                  <div className="border-t border-[#2d2d2d] pt-[16px] mt-[24px] w-full flex items-center justify-between">
+                    <span className="font-['Inter_Tight',sans-serif] text-[14px] text-white group-hover:text-[#ffa62a] transition-colors duration-300 font-medium">
+                      Read article
+                    </span>
+                    <span className="text-[16px] text-[#989898] group-hover:text-[#ffa62a] group-hover:translate-x-[4px] transition-all duration-300">
+                      →
+                    </span>
+                  </div>
+                </div>
+              </TiltCard>
+            );
+          })}
+        </div>
+
+        {/* Empty State */}
+        {filteredBlogs.length === 0 && (
+          <div className="w-full py-[80px] flex flex-col items-center justify-center text-center border border-dashed border-[#3b3b3b] rounded-[8px]">
+            <p className="font-['Inter_Tight',sans-serif] text-[#989898] text-[18px]">
+              No articles found in this category.
+            </p>
           </div>
-        ))}
+        )}
       </div>
 
-      <div className="relative w-full h-[640px]">
+      {/* CTA section */}
+      <div className="relative w-[1440px] h-auto shrink-0">
+        <CTASection title="Ready to build your growth engine?" ctaText="Talk with us" />
+      </div>
+
+      {/* Footer section */}
+      <div className="relative w-[1440px] h-[640px] shrink-0">
         <FooterSection />
       </div>
     </div>

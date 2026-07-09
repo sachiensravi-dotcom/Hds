@@ -1,97 +1,121 @@
 import { useEffect } from "react";
+import { useNavigate } from "react-router";
 import HeroSection from "../imports/HeroSection-1/index";
+import TestimonialSlider from "../imports/Section-7/index";
+import CTASection from "../imports/Section-13/index";
 import FooterSection from "../imports/Section-17/index";
-import { Coffee, Scissors, Sun } from "lucide-react";
+import TiltCard from "../imports/TiltCard";
+
+const lx = [
+  {
+    title: "Country Charm Coffee",
+    category: "Successful Local Business",
+    metric: "+140% Search Traffic",
+    desc: "How a local roastery and coffee shop restructured their website structure, resulting in a massive boost in local organic visibility and online bag purchases.",
+    color: "#ffa62a",
+    url: "/case-studies/ccc"
+  },
+  {
+    title: "4th Main Barber & Co.",
+    category: "Local Service",
+    metric: "40% Booking Friction Reduction",
+    desc: "A custom booking integration built around barber booking systems, giving them a seamless mobile schedule reservation interface that customers love.",
+    color: "#fff",
+    url: "/case-studies/jay-barber-studio"
+  },
+  {
+    title: "Texas Sun Roofing & Solar",
+    category: "Local Service & Solar",
+    metric: "52% Conversion Increase",
+    desc: "Redesigning a boutique roofing and solar installer website in North Texas, optimizing booking conversion rates and clarifying service options.",
+    color: "#ffa62a",
+    url: "https://www.texas-sun.com/"
+  }
+];
 
 export default function CaseStudiesPage() {
+  const navigate = useNavigate();
+
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
 
-  const cases = [
-    {
-      icon: <Coffee className="size-8 text-[#ffa62a]" />,
-      num: "01",
-      title: "Country Charm Coffee",
-      client: "Kevin Daugherty",
-      role: "Owner",
-      quote: "“Hyperion helped me to have a fully functional website that being the base of my advertisement campaign. We had real growth in visitors since and it's been steadily growing.”",
-      details: "Rebuilt their local storefront presence and online order funnels to scale organic customer flow."
-    },
-    {
-      icon: <Scissors className="size-8 text-[#ffa62a]" />,
-      num: "02",
-      title: "4th Main Barber & Co.",
-      client: "Marcus Vance",
-      role: "Lead Barber",
-      quote: "“Our booking rate doubled within three weeks of launching the new site. The A2P SMS notifications reduced appointment no-shows to practically zero.”",
-      details: "Implemented custom booking wizards, local search optimizations, and automatic SMS text reminders."
-    },
-    {
-      icon: <Sun className="size-8 text-[#ffa62a]" />,
-      num: "03",
-      title: "Texas Sun Power",
-      client: "Dave Reynolds",
-      role: "Director of Marketing",
-      quote: "“The custom savings calculator they built is converting leads at 14%. Our cost per acquisition has dropped by over 30% since moving away from templates.”",
-      details: "Engineered an interactive solar ROI calculator, landing page variants, and Google AEO schema markup."
-    }
-  ];
-
   return (
-    <div className="bg-[#141414] min-w-[1440px] overflow-x-hidden font-['Inter_Tight',sans-serif] text-white">
-      <div className="relative w-full h-[120px] overflow-hidden">
-        <HeroSection />
+    <div className="bg-[#141414] w-full min-w-[1440px] flex flex-col items-center overflow-x-hidden text-white">
+      {/* Mini Hero Section */}
+      <div className="relative w-[1440px] h-[300px] shrink-0 overflow-hidden">
+        <HeroSection 
+          subtitle="Client Success Stories"
+          title="Real Results. Organic Stable Growth."
+          isMini={true}
+        />
       </div>
 
-      {/* Hero Title */}
-      <div className="max-w-[1360px] mx-auto px-[40px] pt-20 pb-12">
-        <span className="font-['Geist_Mono'] text-[#ffa62a] text-[16px] uppercase tracking-widest block mb-4">
-          Proof of Performance
-        </span>
-        <h1 className="text-5xl md:text-6xl font-normal tracking-tight text-white mb-6 max-w-[700px] leading-tight">
-          Case Studies & Results
-        </h1>
-        <p className="text-neutral-400 text-lg max-w-[600px] leading-relaxed">
-          See how our custom web systems and local growth frameworks help businesses unlock customer acquisition and search visibility.
+      {/* Interactive Testimonial Slider */}
+      <div className="relative w-[1440px] h-[450px] shrink-0">
+        <TestimonialSlider />
+      </div>
+
+      {/* Grid listing section */}
+      <div className="relative w-[1440px] py-[80px] px-[40px] flex flex-col items-start bg-[#141414] shrink-0">
+        <p className="font-geist-mono font-normal text-[#989898] text-[16px] uppercase tracking-widest mb-[16px]">
+          Client Success Stories
         </p>
+        <h2 className="font-['Inter_Tight',sans-serif] text-[48px] leading-tight font-normal mb-[64px]">
+          Real Results. Organic Stable Growth.
+        </h2>
+
+        {/* 3 cards side-by-side */}
+        <div className="flex gap-[24px] w-full justify-between items-stretch">
+          {lx.map((o) => (
+            <TiltCard 
+              key={o.title}
+              onClick={() => {
+                if (o.url.startsWith("/")) {
+                  navigate(o.url);
+                } else {
+                  window.open(o.url, "_blank");
+                }
+              }}
+              className="case-study-card flex-1 border border-[#3b3b3b] p-[32px] rounded-[6px] bg-[rgba(255,255,255,0.02)] flex flex-col items-center text-center hover:border-[#ffa62a] cursor-pointer transition-all duration-300 group glow-card-gold"
+            >
+              <div className="flex flex-col items-center justify-center gap-[4px] mb-[24px] w-full min-h-[44px]">
+                <span className="font-['Inter_Tight',sans-serif] text-[14px] text-[#989898] uppercase">
+                  {o.category}
+                </span>
+                <span 
+                  style={{ color: o.color }} 
+                  className="font-['Inter_Tight',sans-serif] text-[14px] uppercase font-bold tracking-wide"
+                >
+                  {o.metric}
+                </span>
+              </div>
+              <h3 className="font-['Inter_Tight',sans-serif] text-[28px] font-semibold mb-[16px] text-center group-hover:text-[#ffa62a] transition-colors duration-300">
+                {o.title}
+              </h3>
+              <p className="font-['Inter_Tight',sans-serif] text-[#989898] text-[16px] leading-relaxed flex-grow text-center">
+                {o.desc}
+              </p>
+              <div className="border-t border-[#3b3b3b] pt-[24px] mt-[32px] w-full flex items-center justify-center gap-[8px]">
+                <span className="font-['Inter_Tight',sans-serif] text-[16px] text-white group-hover:text-[#ffa62a] transition-colors duration-300 font-medium">
+                  Read full case study
+                </span>
+                <span className="text-[18px] text-[#989898] group-hover:text-[#ffa62a] group-hover:translate-x-[4px] transition-all duration-300">
+                  →
+                </span>
+              </div>
+            </TiltCard>
+          ))}
+        </div>
       </div>
 
-      {/* Case Studies Grid */}
-      <div className="max-w-[1360px] mx-auto px-[40px] pb-24 flex flex-col gap-8">
-        {cases.map((cs, idx) => (
-          <div 
-            key={idx}
-            className="bg-[#1a1a1a]/40 border border-[#2b2b2b] rounded-xl p-8 md:p-12 grid grid-cols-1 lg:grid-cols-12 gap-8 items-center hover:border-[#ffa62a] transition-all duration-300 group"
-          >
-            {/* Left Info (4 cols) */}
-            <div className="lg:col-span-4 space-y-4">
-              <span className="font-['Geist_Mono'] text-[#ffa62a] text-lg font-semibold tracking-wider">
-                {cs.num}. {cs.title}
-              </span>
-              <div className="size-14 rounded-lg bg-[rgba(255,166,42,0.08)] flex items-center justify-center border border-[rgba(255,166,42,0.15)] group-hover:scale-105 transition-transform duration-300">
-                {cs.icon}
-              </div>
-              <p className="text-neutral-400 text-[14px] leading-relaxed">
-                {cs.details}
-              </p>
-            </div>
-
-            {/* Right Quote (8 cols) */}
-            <div className="lg:col-span-8 border-l border-[#2b2b2b] pl-8 lg:pl-12 space-y-4">
-              <p className="text-white text-lg md:text-xl font-normal leading-relaxed italic">
-                {cs.quote}
-              </p>
-              <div>
-                <span className="text-white font-semibold block text-[16px]">{cs.client}</span>
-                <span className="text-neutral-500 text-xs font-['Geist_Mono'] uppercase tracking-wider">{cs.role}</span>
-              </div>
-            </div>
-          </div>
-        ))}
+      {/* CTA section */}
+      <div className="relative w-[1440px] h-auto shrink-0">
+        <CTASection title="Ready to build your success story?" ctaText="Talk with us" />
       </div>
 
-      <div className="relative w-full h-[640px]">
+      {/* Footer section */}
+      <div className="relative w-[1440px] h-[640px] shrink-0">
         <FooterSection />
       </div>
     </div>

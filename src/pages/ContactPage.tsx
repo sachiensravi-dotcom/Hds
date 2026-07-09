@@ -10,17 +10,28 @@ export default function ContactPage() {
   }, []);
 
   return (
-    <div className="bg-[#141414] min-w-[1440px] overflow-x-hidden">
-      <div className="relative w-full h-[120px] overflow-hidden">
-        <HeroSection />
+    <div className="bg-[#141414] w-full min-w-[1440px] flex flex-col items-center overflow-x-hidden text-white">
+      {/* Mini Hero Header */}
+      <div className="relative w-[1440px] h-[300px] shrink-0 overflow-hidden">
+        <HeroSection 
+          subtitle="Let's Connect"
+          title="Build your custom growth engine"
+          isMini={true}
+        />
       </div>
-      <div className="relative w-full h-[850px]">
+
+      {/* Contact Form Section */}
+      <div className="relative w-[1440px] h-auto min-h-[650px] shrink-0">
         <ContactFormSection />
       </div>
-      <div className="relative w-full h-[950px]">
+
+      {/* FAQ Section */}
+      <div className="relative w-[1440px] h-auto min-h-[750px] shrink-0">
         <FAQSection />
       </div>
-      <div className="relative w-full h-[640px]">
+
+      {/* Footer Section */}
+      <div className="relative w-[1440px] h-[640px] shrink-0">
         <FooterSection />
       </div>
     </div>
