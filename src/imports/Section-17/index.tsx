@@ -1,5 +1,5 @@
 import svgPaths from "./svg-beszt3j2ew";
-import { Link } from "react-router";
+import { Link, useNavigate } from "react-router";
 
 function Hyperion() {
   return (
@@ -72,26 +72,103 @@ function MaskGroup() {
 }
 
 export default function Section() {
+  const navigate = useNavigate();
+
   return (
     <div className="bg-[#141414] relative size-full" data-name="Section">
-      <p className="-translate-x-full [word-break:break-word] absolute font-['Inter_Tight:Regular',sans-serif] leading-[normal] left-[calc(91.67%+80px)] not-italic text-[#989898] text-[16px] text-right top-[24px] whitespace-nowrap">
-        <a href="mailto:info@hyperiondigitalsolutions.com" className="hover:text-[#ffa62a] transition-colors duration-200">info@hyperiondigitalsolutions.com</a>
+      {/* Top Contact Info */}
+      <p className="absolute leading-[normal] left-[39px] not-italic text-[#989898] text-[16px] top-[24px] whitespace-nowrap">
+        Sachien R:{" "}
+        <a href="tel:9724397854" className="hover:text-white transition-colors duration-300">
+          (972) 439-7854
+        </a>
       </p>
 
-      <p className="[word-break:break-word] absolute font-['Inter_Tight:Medium',sans-serif] leading-[normal] left-[calc(41.67%+55px)] not-italic text-[24px] text-white top-[153px] whitespace-nowrap">Home</p>
-      <p className="[word-break:break-word] absolute font-['Inter_Tight:Medium',sans-serif] leading-[normal] left-[calc(41.67%+55px)] not-italic text-[#8f8f8f] text-[24px] top-[198px] whitespace-nowrap">Portfolio</p>
-      <p className="[word-break:break-word] absolute font-['Inter_Tight:Medium',sans-serif] leading-[normal] left-[calc(58.33%+27px)] not-italic text-[#8f8f8f] text-[24px] top-[198px] whitespace-nowrap">Webflow</p>
-      <p className="[word-break:break-word] absolute font-['Inter_Tight:Medium',sans-serif] leading-[normal] left-[calc(75%+79px)] not-italic text-[#8f8f8f] text-[24px] top-[198px] whitespace-nowrap">Local businesses</p>
-      <p className="[word-break:break-word] absolute font-['Inter_Tight:Medium',sans-serif] leading-[normal] left-[calc(58.33%+27px)] not-italic text-[#8f8f8f] text-[24px] top-[153px] whitespace-nowrap">Custom website</p>
-      <p className="[word-break:break-word] absolute font-['Inter_Tight:Medium',sans-serif] leading-[normal] left-[calc(75%+79px)] not-italic text-[#8f8f8f] text-[24px] top-[153px] whitespace-nowrap">Solar businesses</p>
-      <p className="[word-break:break-word] absolute font-['Inter_Tight:Medium',sans-serif] leading-[normal] left-[calc(41.67%+55px)] not-italic text-[#8f8f8f] text-[24px] top-[243px] whitespace-nowrap">Services</p>
-      <p className="[word-break:break-word] absolute font-['Inter_Tight:Medium',sans-serif] leading-[normal] left-[calc(58.33%+27px)] not-italic text-[#8f8f8f] text-[24px] top-[243px] whitespace-nowrap">Web application</p>
-      <p className="[word-break:break-word] absolute font-['Inter_Tight:Medium',sans-serif] leading-[normal] left-[calc(75%+79px)] not-italic text-[#8f8f8f] text-[24px] top-[243px] whitespace-nowrap">Startups</p>
-      <p className="[word-break:break-word] absolute font-['Inter_Tight:Medium',sans-serif] leading-[normal] left-[calc(41.67%+55px)] not-italic text-[#8f8f8f] text-[24px] top-[288px] whitespace-nowrap">Blog</p>
-      <p className="[word-break:break-word] absolute font-['Inter_Tight:Medium',sans-serif] leading-[normal] left-[calc(58.33%+27px)] not-italic text-[#8f8f8f] text-[24px] top-[288px] whitespace-nowrap">{`SEO & AEO`}</p>
-      <p className="[word-break:break-word] absolute font-['Inter_Tight:Regular',sans-serif] leading-[normal] left-[39px] not-italic text-[#989898] text-[16px] top-[24px] whitespace-nowrap">
-        Sachien R: <a href="tel:9724397854" className="hover:text-[#ffa62a] transition-colors duration-200">(972) 439-7854</a>
+      <p className="absolute leading-[normal] left-[calc(91.67%+80px)] -translate-x-full not-italic text-[#989898] text-[16px] text-right top-[24px] whitespace-nowrap">
+        <a href="mailto:info@gohds.co" className="hover:text-white transition-colors duration-300">
+          info@gohds.co
+        </a>
       </p>
+
+      {/* Navigation Column */}
+      <p 
+        onClick={() => navigate("/")}
+        className="[word-break:break-word] absolute leading-[normal] left-[calc(41.67%+55px)] not-italic text-[24px] text-white top-[153px] whitespace-nowrap cursor-pointer hover:text-white transition-colors duration-300"
+      >
+        Home
+      </p>
+      <p 
+        onClick={() => navigate("/works")}
+        className="[word-break:break-word] absolute leading-[normal] left-[calc(41.67%+55px)] not-italic text-[#8f8f8f] text-[24px] top-[198px] whitespace-nowrap cursor-pointer hover:text-white transition-colors duration-300"
+      >
+        Portfolio
+      </p>
+      <p 
+        onClick={() => navigate("/services")}
+        className="[word-break:break-word] absolute leading-[normal] left-[calc(41.67%+55px)] not-italic text-[#8f8f8f] text-[24px] top-[243px] whitespace-nowrap cursor-pointer hover:text-white transition-colors duration-300"
+      >
+        Services
+      </p>
+      <p 
+        onClick={() => navigate("/blogs")}
+        className="[word-break:break-word] absolute leading-[normal] left-[calc(41.67%+55px)] not-italic text-[#8f8f8f] text-[24px] top-[288px] whitespace-nowrap cursor-pointer hover:text-white transition-colors duration-300"
+      >
+        Blog
+      </p>
+
+      {/* Services Column */}
+      <p 
+        onClick={() => navigate("/services/website")}
+        className="[word-break:break-word] absolute leading-[normal] left-[calc(58.33%+27px)] not-italic text-[#8f8f8f] text-[24px] top-[153px] whitespace-nowrap cursor-pointer hover:text-white transition-colors duration-300"
+      >
+        Custom website
+      </p>
+      <p 
+        onClick={() => navigate("/services/smm")}
+        className="[word-break:break-word] absolute leading-[normal] left-[calc(58.33%+27px)] not-italic text-[#8f8f8f] text-[24px] top-[198px] whitespace-nowrap cursor-pointer hover:text-white transition-colors duration-300"
+      >
+        SMM & Ads
+      </p>
+      <p 
+        onClick={() => navigate("/services/website")}
+        className="[word-break:break-word] absolute leading-[normal] left-[calc(58.33%+27px)] not-italic text-[#8f8f8f] text-[24px] top-[243px] whitespace-nowrap cursor-pointer hover:text-white transition-colors duration-300"
+      >
+        Web application
+      </p>
+      <p 
+        onClick={() => navigate("/services/seo")}
+        className="[word-break:break-word] absolute leading-[normal] left-[calc(58.33%+27px)] not-italic text-[#8f8f8f] text-[24px] top-[288px] whitespace-nowrap cursor-pointer hover:text-white transition-colors duration-300"
+      >
+        SEO & AEO
+      </p>
+
+      {/* CRM Suite Column */}
+      <p 
+        onClick={() => navigate("/contact")}
+        className="[word-break:break-word] absolute leading-[normal] left-[calc(75%+79px)] not-italic text-[#8f8f8f] text-[24px] top-[153px] whitespace-nowrap cursor-pointer hover:text-white transition-colors duration-300"
+      >
+        GHL CRM Setup
+      </p>
+      <p 
+        onClick={() => navigate("/contact")}
+        className="[word-break:break-word] absolute leading-[normal] left-[calc(75%+79px)] not-italic text-[#8f8f8f] text-[24px] top-[198px] whitespace-nowrap cursor-pointer hover:text-white transition-colors duration-300"
+      >
+        SMS & Email
+      </p>
+      <p 
+        onClick={() => navigate("/contact")}
+        className="[word-break:break-word] absolute leading-[normal] left-[calc(75%+79px)] not-italic text-[#8f8f8f] text-[24px] top-[243px] whitespace-nowrap cursor-pointer hover:text-white transition-colors duration-300"
+      >
+        Calendar Booking
+      </p>
+      <p 
+        onClick={() => navigate("/contact")}
+        className="[word-break:break-word] absolute leading-[normal] left-[calc(75%+79px)] not-italic text-[#8f8f8f] text-[24px] top-[288px] whitespace-nowrap cursor-pointer hover:text-white transition-colors duration-300"
+      >
+        Review Automation
+      </p>
+
+      {/* Dividers */}
       <div className="absolute h-0 left-[40px] top-[67px] w-[1360px]">
         <div className="absolute inset-[-1px_0_0_0]">
           <svg className="block size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 1360 1">
@@ -106,26 +183,43 @@ export default function Section() {
           </svg>
         </div>
       </div>
-      <Hyperion />
-      <Hyperion1 />
-      <MaskGroup />
-      <p className="[word-break:break-word] absolute font-['Geist_Mono:Regular',sans-serif] font-normal leading-[1.4] right-[calc(66.67%+440px)] text-[16px] text-white top-[159px] translate-x-full uppercase whitespace-nowrap">More than website. Your base for growth.</p>
-      <p className="[word-break:break-word] absolute font-['Geist_Mono:Regular',sans-serif] font-normal leading-[1.4] right-[calc(41.67%+185px)] text-[16px] text-white top-[115px] translate-x-full uppercase whitespace-nowrap">Navigation</p>
-      <p className="[word-break:break-word] absolute font-['Geist_Mono:Regular',sans-serif] font-normal leading-[1.4] right-[calc(33.33%+93px)] text-[16px] text-white top-[115px] translate-x-full uppercase whitespace-nowrap">Services</p>
-      <p className="[word-break:break-word] absolute font-['Geist_Mono:Regular',sans-serif] font-normal leading-[1.4] right-[calc(8.33%+161px)] text-[16px] text-white top-[115px] translate-x-full uppercase whitespace-nowrap">Customers</p>
-      <div className="absolute left-[40px] top-[298px] flex items-center gap-6 text-[#989898] text-[16px] font-['Inter_Tight:Regular',sans-serif] whitespace-nowrap">
-        <span>@2024-2026. Hyperion Digital Solutions. All Rights Reserved.</span>
-        <span className="text-[#3B3B3B]">|</span>
-        <Link to="/privacy" className="hover:text-white transition-colors duration-200">Privacy Policy</Link>
-        <span className="text-[#3B3B3B]">|</span>
-        <Link to="/terms" className="hover:text-white transition-colors duration-200">Terms of Service</Link>
-      </div>
       <div className="absolute h-0 left-[40px] top-px w-[1360px]">
         <div className="absolute inset-[-1px_0_0_0]">
           <svg className="block size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 1360 1">
             <line id="Line 11" stroke="var(--stroke-0, #3B3B3B)" x2="1360" y1="0.5" y2="0.5" />
           </svg>
         </div>
+      </div>
+
+      <Hyperion />
+      <Hyperion1 />
+      <MaskGroup />
+
+      {/* Slogans and Headers */}
+      <p className="footer-slogan [word-break:break-word] absolute font-normal leading-[1.4] right-[calc(66.67%+440px)] text-[16px] text-white top-[159px] translate-x-full uppercase whitespace-nowrap">
+        More than websites. Your engine for growth.
+      </p>
+      <p className="[word-break:break-word] absolute font-normal leading-[1.4] right-[calc(41.67%+185px)] text-[16px] text-white top-[115px] translate-x-full uppercase whitespace-nowrap font-bold">
+        Navigation
+      </p>
+      <p className="[word-break:break-word] absolute font-normal leading-[1.4] right-[calc(33.33%+93px)] text-[16px] text-white top-[115px] translate-x-full uppercase whitespace-nowrap font-bold">
+        Services
+      </p>
+      <p className="[word-break:break-word] absolute font-normal leading-[1.4] right-[calc(8.33%+161px)] text-[16px] text-white top-[115px] translate-x-full uppercase whitespace-nowrap font-bold">
+        CRM SUITE
+      </p>
+
+      {/* Bottom Copyright and Compliance links */}
+      <div className="absolute left-[40px] top-[298px] flex items-center gap-6 text-[#989898] text-[16px] font-['Inter_Tight',sans-serif] whitespace-nowrap">
+        <span>@2024-2026. Hyperion Digital Solutions. All Rights Reserved.</span>
+        <span className="text-[#3B3B3B]">|</span>
+        <Link to="/privacy" className="hover:text-white transition-colors duration-200">
+          Privacy Policy
+        </Link>
+        <span className="text-[#3B3B3B]">|</span>
+        <Link to="/terms" className="hover:text-white transition-colors duration-200">
+          Terms of Service
+        </Link>
       </div>
     </div>
   );

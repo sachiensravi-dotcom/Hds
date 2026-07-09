@@ -1,17 +1,46 @@
+import { useRef, useState, useEffect } from "react";
+import { useNavigate } from "react-router";
 import imgImage18 from "./1b6b44155aaa812c18258d2f5006f7602297f840.png";
 
-function Btn() {
-  return (
-    <div className="-translate-x-1/2 absolute bg-[#ffa62a] content-stretch flex items-center justify-center left-1/2 px-[20px] py-[16px] rounded-[120px] top-[198px]" data-name="btn">
-      <p className="[word-break:break-word] font-['Inter_Tight:Medium',sans-serif] leading-[normal] not-italic relative shrink-0 text-[#462c07] text-[18px] text-right whitespace-nowrap">Talk with us</p>
-    </div>
-  );
-}
+export default function Section({ 
+  title = "Start building your online presence", 
+  ctaText = "Talk with us" 
+}: { 
+  title?: string; 
+  ctaText?: string; 
+}) {
+  const containerRef = useRef<HTMLDivElement>(null);
+  const [scrollY, setScrollY] = useState(0);
+  const navigate = useNavigate();
 
-export default function Section() {
+  useEffect(() => {
+    const handleScroll = () => {
+      if (!containerRef.current) return;
+      const rect = containerRef.current.getBoundingClientRect();
+      const winHeight = window.innerHeight;
+      
+      // Calculate offset from viewport center
+      if (rect.top < winHeight && rect.bottom > 0) {
+        const centerY = rect.top + rect.height / 2;
+        const screenCenterY = winHeight / 2;
+        setScrollY((centerY - screenCenterY) * -0.15);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    handleScroll(); // Run once initially
+    
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   return (
-    <div className="bg-black relative size-full" data-name="Section">
-      <div className="-translate-x-1/2 absolute h-[387px] left-[calc(50%-0.12px)] top-[195.32px] w-[663px]">
+    <div 
+      ref={containerRef} 
+      className="bg-black relative w-full h-[300px] flex flex-col items-center justify-center overflow-hidden" 
+      data-name="Section"
+    >
+      {/* Background Radial Glow */}
+      <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 h-[387px] w-[663px] pointer-events-none z-0">
         <div className="absolute inset-[-62.02%_-36.2%]">
           <svg className="block size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 1143 867">
             <g filter="url(#filter0_f_5_3681)" id="Ellipse 5">
@@ -27,18 +56,53 @@ export default function Section() {
           </svg>
         </div>
       </div>
-      <div className="absolute bottom-0 h-[352px] left-[calc(66.67%+11px)] w-[469px]" data-name="image 18">
-        <img alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none size-full" src={imgImage18} />
+
+      {/* Right Waveform Image (Parallax moves down/up) */}
+      <div 
+        style={{ transform: `translateY(${scrollY}px) translateZ(0)` }}
+        className="absolute bottom-0 h-[300px] right-0 w-[400px] pointer-events-none z-10"
+        data-name="image 18"
+      >
+        <img 
+          alt="" 
+          className="absolute inset-0 object-cover size-full" 
+          src={imgImage18} 
+        />
       </div>
-      <div className="absolute bottom-0 flex h-[352px] items-center justify-center left-0 w-[469px]">
+
+      {/* Left Waveform Image (Parallax moves opposite direction) */}
+      <div 
+        style={{ transform: `translateY(${-scrollY}px) translateZ(0)` }}
+        className="absolute bottom-0 flex h-[300px] items-center justify-center left-0 w-[400px] pointer-events-none z-10"
+      >
         <div className="flex-none rotate-180">
-          <div className="h-[352px] relative w-[469px]" data-name="image 19">
-            <img alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none size-full" src={imgImage18} />
+          <div className="h-[300px] relative w-[400px]" data-name="image 19">
+            <img 
+              alt="" 
+              className="absolute inset-0 object-cover size-full" 
+              src={imgImage18} 
+            />
           </div>
         </div>
       </div>
-      <p className="[word-break:break-word] absolute font-['Inter_Tight:Regular',sans-serif] leading-[normal] left-[calc(50%-355px)] not-italic text-[48px] text-white top-[100px] whitespace-nowrap">Start building your online presence</p>
-      <Btn />
+
+      {/* Content */}
+      <div className="relative z-20 flex flex-col items-center gap-6">
+        <p className="[word-break:break-word] font-['Inter_Tight',sans-serif] leading-[normal] not-italic text-[44px] text-white text-center font-normal">
+          {title}
+        </p>
+        
+        {/* Glow Button */}
+        <div 
+          onClick={() => navigate("/contact")}
+          className="glow-button-company bg-[#ffa62a] hover:bg-[#ffe62a] active:scale-[0.97] transition-all duration-300 cursor-pointer flex items-center justify-center px-[36px] py-[16px] rounded-[6px]"
+          data-name="btn"
+        >
+          <p className="[word-break:break-word] font-['Inter_Tight',sans-serif] leading-[normal] not-italic relative shrink-0 text-[#462c07] text-[18px] font-bold whitespace-nowrap z-10">
+            {ctaText}
+          </p>
+        </div>
+      </div>
     </div>
   );
 }

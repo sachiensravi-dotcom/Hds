@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="100%" height="100%">
+  <defs>
+    <!-- Gold to Amber Gradient matching the uploaded ring -->
+    <linearGradient id="haloRingGrad" x1="0%" y1="100%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#E05624" />
+      <stop offset="35%" stop-color="#F59E0B" />
+      <stop offset="70%" stop-color="#FBBF24" />
+      <stop offset="100%" stop-color="#FEF08A" />
+    </linearGradient>
+  </defs>
+
+  <!-- Dark Rounded Container (matching image background) -->
+  <rect width="512" height="512" rx="96" fill="#0A0A0A" />
+
+  <!-- Smooth Concentric Ring -->
+  <circle 
+    cx="256" 
+    cy="256" 
+    r="160" 
+    fill="none" 
+    stroke="url(#haloRingGrad)" 
+    stroke-width="38" 
+    stroke-linecap="round"
+  />
+</svg>

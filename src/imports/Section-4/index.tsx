@@ -1,35 +1,84 @@
+import { useState, useEffect } from "react";
 import imgRectangle7 from "./fe3273560c41cea13faaa5f45d423a2c6b6dd56c.png";
 
-function Group() {
-  return (
-    <div className="absolute contents left-[calc(75%+54px)] top-[144px]">
-      <div className="absolute bg-[rgba(255,255,255,0.2)] h-[3px] left-[calc(75%+54px)] top-[144px] w-[266px]" />
-      <div className="absolute bg-[#ffa62a] h-[3px] left-[calc(75%+54px)] top-[144px] w-[190px]" />
-    </div>
-  );
-}
-
-function Btn() {
-  return (
-    <div className="absolute bg-white content-stretch flex items-center justify-center left-[calc(75%+54px)] px-[20px] py-[16px] rounded-[120px] top-[273px]" data-name="btn">
-      <div aria-hidden className="absolute border border-[#c7c7c7] border-solid inset-0 pointer-events-none rounded-[120px]" />
-      <p className="[word-break:break-word] font-['Inter_Tight:Medium',sans-serif] leading-[normal] not-italic relative shrink-0 text-[#141414] text-[18px] text-right whitespace-nowrap">All case studies</p>
-    </div>
-  );
-}
+const Ts = [
+  {
+    quote: "“Hyperion helped me to have a fully functional website that being the base of my advertisement campaign. We had real growth in visitors since and it’s been steadily growing.”",
+    author: "Kevin Daugherty",
+    role: "Owner | Country charm coffee",
+    label: "01. Country Charm Coffee",
+    image: imgRectangle7
+  },
+  {
+    quote: "“Hyperion completely streamlined our booking system. We saw booking friction drop by 40% and our direct appointments tripled within the first three months of launching the new schedule interface.”",
+    author: "Jay Barber",
+    role: "Owner | 4th Main Barber & Co.",
+    label: "02. 4th Main Barber & Co.",
+    image: "/barber_owner_portrait.png"
+  }
+];
 
 export default function Section() {
+  const [i, o] = useState(0);
+
+  useEffect(() => {
+    const l = setInterval(() => {
+      o(u => (u + 1) % Ts.length);
+    }, 7000);
+    return () => clearInterval(l);
+  }, []);
+
   return (
-    <div className="bg-[#141414] relative size-full" data-name="Section">
-      <div className="absolute left-[40px] size-[207px] top-[120px]">
-        <img alt="" className="absolute inset-0 max-w-none object-bottom pointer-events-none size-full" src={imgRectangle7} />
+    <div className="bg-[#141414] relative size-full overflow-hidden" data-name="Section">
+      {/* Testimonial Image */}
+      <div className="absolute left-[40px] size-[207px] top-[160px] rounded-[6px] overflow-hidden border border-[#3b3b3b]">
+        {Ts.map((l, u) => (
+          <img
+            key={u}
+            alt=""
+            className={`absolute inset-0 w-full h-full object-cover pointer-events-none transition-all duration-500 ease-in-out ${i === u ? "opacity-100 scale-100" : "opacity-0 scale-95 pointer-events-none"}`}
+            src={l.image}
+          />
+        ))}
       </div>
-      <p className="[word-break:break-word] absolute font-['Inter_Tight:Regular',sans-serif] leading-[normal] left-[calc(16.67%+47px)] not-italic text-[28px] text-white top-[120px] w-[767px]">“Hyperion helped me to have a fully functional website that being the base of my advertisement campaign. We had real growth in visitors since and it’s been steadily growing.”</p>
-      <p className="[word-break:break-word] absolute font-['Inter_Tight:SemiBold',sans-serif] leading-[normal] left-[calc(16.67%+47px)] not-italic text-[18px] text-white top-[279px] whitespace-nowrap">Kevin Daugherty</p>
-      <p className="[word-break:break-word] absolute font-['Geist_Mono:Regular',sans-serif] font-normal leading-[normal] left-[calc(16.67%+47px)] text-[#989898] text-[14px] top-[309px] uppercase whitespace-nowrap">Owner | Country charm coffee</p>
-      <p className="[word-break:break-word] absolute font-['Geist_Mono:Regular',sans-serif] font-normal leading-[normal] left-[calc(75%+54px)] text-[14px] text-white top-[120px] uppercase whitespace-nowrap">01. Country Charm Coffee</p>
-      <p className="[word-break:break-word] absolute font-['Geist_Mono:Regular',sans-serif] font-normal leading-[normal] left-[calc(75%+54px)] text-[#989898] text-[14px] top-[171px] uppercase whitespace-nowrap">{`02. 4th Main Barber & Co.`}</p>
-      <div className="absolute flex h-[207px] items-center justify-center left-[calc(75%+14px)] top-[120px] w-0">
+
+      {/* Quote Content */}
+      <div className="absolute left-[calc(16.67%+47px)] top-[160px] w-[767px] h-[210px] relative">
+        {Ts.map((l, u) => (
+          <div
+            key={u}
+            className={`absolute inset-0 flex flex-col justify-between transition-all duration-500 ease-in-out ${i === u ? "opacity-100 translate-y-0" : "opacity-0 translate-y-2 pointer-events-none"}`}
+          >
+            <p className="[word-break:break-word] font-['Inter_Tight:Regular',sans-serif] leading-[1.5] not-italic text-[26px] text-white">
+              {l.quote}
+            </p>
+            <div className="mt-4">
+              <p className="[word-break:break-word] font-['Inter_Tight:SemiBold',sans-serif] leading-[normal] not-italic text-[18px] text-white font-semibold">
+                {l.author}
+              </p>
+              <p className="[word-break:break-word] font-['Inter_Tight:Regular',sans-serif] font-normal leading-[normal] text-[#989898] text-[14px] uppercase whitespace-nowrap mt-1">
+                {l.role}
+              </p>
+            </div>
+          </div>
+        ))}
+      </div>
+
+      {/* Selector Tabs Links */}
+      <div className="absolute left-[calc(75%+54px)] top-[160px] flex flex-col gap-[36px] select-none z-10">
+        {Ts.map((l, u) => (
+          <p
+            key={u}
+            onClick={() => o(u)}
+            className={`[word-break:break-word] font-['Geist_Mono:Regular',sans-serif] font-normal leading-[normal] text-[14px] uppercase whitespace-nowrap cursor-pointer transition-colors duration-300 ${i === u ? "text-white font-medium" : "text-[#8f8f8f] hover:text-white"}`}
+          >
+            {l.label}
+          </p>
+        ))}
+      </div>
+
+      {/* Vertical Divider line */}
+      <div className="absolute flex h-[207px] items-center justify-center left-[calc(75%+14px)] top-[160px] w-0">
         <div className="flex-none rotate-90">
           <div className="h-0 relative w-[207px]">
             <div className="absolute inset-[-1px_0_0_0]">
@@ -40,8 +89,16 @@ export default function Section() {
           </div>
         </div>
       </div>
-      <Group />
-      <Btn />
+
+      {/* Animated Accent Bar */}
+      <div className="absolute left-[calc(75%+54px)] top-[160px] w-[266px] h-[78px] pointer-events-none">
+        <div className="absolute bg-[rgba(255,255,255,0.08)] h-[2px] top-[24px] w-full" />
+        <div className="absolute bg-[rgba(255,255,255,0.08)] h-[2px] top-[75px] w-full" />
+        <div
+          className="absolute bg-[#ffa62a] h-[2px] w-[190px] transition-all duration-300 ease-in-out"
+          style={{ top: i === 0 ? "24px" : "75px" }}
+        />
+      </div>
     </div>
   );
 }

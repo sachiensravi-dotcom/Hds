@@ -15,3 +15,85 @@
     transform: translateX(calc(-100% - 64px));
   }
 }
+
+.glow-card-gold {
+  transition: all .3s ease-in-out;
+}
+.glow-card-gold:hover {
+  box-shadow: 0 0 35px rgba(255, 166, 42, 0.18);
+  border-color: #ffa62a !important;
+}
+
+.bg-halo-gold {
+  filter: blur(40px);
+  background: radial-gradient(circle, rgba(255, 166, 42, 0.12), rgba(255, 230, 42, 0.04) 50%, rgba(20, 20, 20, 0) 70%);
+}
+
+.bg-halo-yellow {
+  filter: blur(60px);
+  background: radial-gradient(circle, rgba(255, 230, 42, 0.1), rgba(255, 166, 42, 0.03) 60%, rgba(20, 20, 20, 0) 80%);
+}
+
+.text-gold-gradient {
+  -webkit-text-fill-color: transparent;
+  background: linear-gradient(135deg, #ffe62a, #ffa62a, #d48a1d);
+  -webkit-background-clip: text;
+  background-clip: text;
+}
+
+.bg-gold-gradient {
+  background: linear-gradient(135deg, #ffe62a, #ffa62a);
+}
+
+.border-gold-gradient {
+  border-image: linear-gradient(135deg, #ffe62a, #ffa62a) 1;
+}
+
+.glow-button-company {
+  z-index: 0 !important;
+  transition: all .3s ease-in-out !important;
+  position: relative !important;
+}
+.glow-button-company:before {
+  content: "" !important;
+  z-index: -1 !important;
+  filter: blur(5px) !important;
+  opacity: 0 !important;
+  border-radius: inherit !important;
+  background: linear-gradient(45deg, #ffa62a, #ffe62a, #ffc266, #d48a1d, #ffa62a, #ffe62a, #ffc266, #d48a1d, #ffa62a) 0 0/400% !important;
+  width: calc(100% + 4px) !important;
+  height: calc(100% + 4px) !important;
+  position: absolute !important;
+  top: -2px !important;
+  left: -2px !important;
+  animation: glowing-company 20s linear infinite !important;
+}
+.glow-button-company:after {
+  z-index: -1 !important;
+  content: "" !important;
+  border-radius: inherit !important;
+  background: #141414 !important;
+  width: 100% !important;
+  height: 100% !important;
+  transition: background-color .3s ease-in-out !important;
+  position: absolute !important;
+  top: 0 !important;
+  left: 0 !important;
+}
+.glow-button-company:not(.bg-transparent):after {
+  background: inherit !important;
+}
+.glow-button-company:hover:before {
+  opacity: 1 !important;
+}
+.glow-button-company:active:before {
+  filter: blur(10px) !important;
+}
+.glow-button-company:active:after {
+  background: transparent !important;
+}
+@keyframes glowing-company {
+  0% { background-position: 0 0 }
+  50% { background-position: 400% 0 }
+  100% { background-position: 0 0 }
+}
