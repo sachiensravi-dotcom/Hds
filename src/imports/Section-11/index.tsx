@@ -87,7 +87,7 @@ function Item2() {
       <div className="content-stretch flex gap-[120px] items-center overflow-clip py-[24px] relative rounded-[inherit] size-full group cursor-pointer">
         <IconoirDesignPencil />
         <p className="[word-break:break-word] flex-[1_0_0] font-['Inter_Tight:Medium',sans-serif] leading-[normal] min-w-px not-italic relative text-[32px] text-white">Visual Design</p>
-        <p className="[word-break:break-word] font-['Inter_Tight:Regular',sans-serif] leading-[1.4] not-italic relative shrink-0 text-[#989898] text-[16px] w-[640px]">Design is about more than just looking good—it’s about creating an experience. Our design team focuses on clean, aesthetically pleasing layouts that are both eye-catching and functional, ensuring your website is not only beautiful but also easy to use.</p>
+        <p className="[word-break:break-word] font-['Inter_Tight:Regular',sans-serif] leading-[1.4] not-italic relative shrink-0 text-[#989898] text-[16px] w-[640px]">Design is about more than just looking good - it’s about creating an experience. Our design team focuses on clean, aesthetically pleasing layouts that are both eye-catching and functional, ensuring your website is not only beautiful but also easy to use.</p>
       </div>
       <div aria-hidden className="absolute border-[#3b3b3b] border-b border-solid inset-0 pointer-events-none" />
     </div>
@@ -112,7 +112,7 @@ function Item3() {
       <div className="content-stretch flex gap-[120px] items-center overflow-clip py-[24px] relative rounded-[inherit] size-full group cursor-pointer">
         <GgMenuMotion />
         <p className="[word-break:break-word] flex-[1_0_0] font-['Inter_Tight:Medium',sans-serif] leading-[normal] min-w-px not-italic relative text-[32px] text-white">{`Interaction & Motion`}</p>
-        <p className="[word-break:break-word] font-['Inter_Tight:Regular',sans-serif] leading-[1.4] not-italic relative shrink-0 text-[#989898] text-[16px] w-[640px]">Great websites don’t just sit there—they come alive. We incorporate subtle animations, transitions, and interactions that make your website feel dynamic, helping to guide visitors and create a memorable experience that encourages action.</p>
+        <p className="[word-break:break-word] font-['Inter_Tight:Regular',sans-serif] leading-[1.4] not-italic relative shrink-0 text-[#989898] text-[16px] w-[640px]">Great websites don’t just sit there - they come alive. We incorporate subtle animations, transitions, and interactions that make your website feel dynamic, helping to guide visitors and create a memorable experience that encourages action.</p>
       </div>
       <div aria-hidden className="absolute border-[#3b3b3b] border-b border-solid inset-0 pointer-events-none" />
     </div>
