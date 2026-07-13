@@ -91,7 +91,7 @@ function Main1() {
 function Logo() {
   return (
     <div className="flex items-center justify-center shrink-0 h-[80px]" data-name="Logo">
-      <img src="/logo_whitewright.png" className="h-[52px] w-auto opacity-80 hover:opacity-100 transition-opacity duration-300 select-none brightness-0 invert" alt="Whitewright" />
+      <img src="/logo_whitewright.png" className="h-[52px] w-auto opacity-80 hover:opacity-100 transition-opacity duration-300 select-none" alt="Whitewright" />
     </div>
   );
 }
@@ -99,7 +99,7 @@ function Logo() {
 function Logo1() {
   return (
     <div className="flex items-center justify-center shrink-0 h-[80px]" data-name="Logo">
-      <img src="/logo_texas_sun.png" className="h-[52px] w-auto opacity-80 hover:opacity-100 transition-opacity duration-300 select-none brightness-0 invert" alt="Texas Sun" />
+      <img src="/logo_texas_sun.png" className="h-[52px] w-auto opacity-80 hover:opacity-100 transition-opacity duration-300 select-none" alt="Texas Sun" />
     </div>
   );
 }
@@ -107,7 +107,7 @@ function Logo1() {
 function Logo2() {
   return (
     <div className="flex items-center justify-center shrink-0 h-[80px]" data-name="Logo">
-      <img src="/logo_coffee.png" className="h-[60px] w-auto opacity-80 hover:opacity-100 transition-opacity duration-300 select-none brightness-0 invert" alt="Country Charm Coffee" />
+      <img src="/logo_coffee.png" className="h-[60px] w-auto opacity-80 hover:opacity-100 transition-opacity duration-300 select-none" alt="Country Charm Coffee" />
     </div>
   );
 }
@@ -115,7 +115,7 @@ function Logo2() {
 function Logo3() {
   return (
     <div className="flex items-center justify-center shrink-0 h-[80px]" data-name="Logo">
-      <img src="/logo_remax.png" className="h-[48px] w-auto opacity-80 hover:opacity-100 transition-opacity duration-300 select-none brightness-0 invert" alt="Remax" />
+      <img src="/logo_remax.png" className="h-[48px] w-auto opacity-80 hover:opacity-100 transition-opacity duration-300 select-none" alt="Remax" />
     </div>
   );
 }
@@ -123,7 +123,7 @@ function Logo3() {
 function Logo4() {
   return (
     <div className="flex items-center justify-center shrink-0 h-[80px]" data-name="Logo">
-      <img src="/logo_barber.png" className="h-[60px] w-auto opacity-80 hover:opacity-100 transition-opacity duration-300 select-none brightness-0 invert" alt="4th Main Barber" />
+      <img src="/logo_barber.png" className="h-[60px] w-auto opacity-80 hover:opacity-100 transition-opacity duration-300 select-none" alt="4th Main Barber" />
     </div>
   );
 }
@@ -131,7 +131,13 @@ function Logo4() {
 function Logo5() {
   return (
     <div className="flex items-center justify-center shrink-0 h-[80px]" data-name="Logo">
-      <img src="/logo_texas_sun.png" className="h-[52px] w-auto opacity-80 hover:opacity-100 transition-opacity duration-300 select-none brightness-0 invert" alt="Texas Sun" />
+      <svg className="h-[44px] w-auto opacity-80 hover:opacity-100 transition-opacity duration-300 select-none" fill="none" viewBox="0 0 160 48" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="24" cy="24" r="18" stroke="#ffa62a" strokeWidth="1.5" />
+        <text x="17" y="30" fill="#ffa62a" fontFamily="Georgia, serif" fontSize="18px" fontWeight="bold">B</text>
+        <text x="24" y="30" fill="white" fontFamily="Georgia, serif" fontSize="18px" fontWeight="bold">N</text>
+        <text x="52" y="24" fill="white" fontFamily="Inter, sans-serif" fontSize="13px" fontWeight="600" letterSpacing="0.12em">BRUCE NORWOOD</text>
+        <text x="52" y="36" fill="#8f8f8f" fontFamily="Inter, sans-serif" fontSize="9px" fontWeight="400" letterSpacing="0.08em">LUXURY REAL ESTATE</text>
+      </svg>
     </div>
   );
 }
@@ -139,7 +145,7 @@ function Logo5() {
 function Logo6() {
   return (
     <div className="flex items-center justify-center shrink-0 h-[80px]" data-name="Logo">
-      <img src="/logo_coffee.png" className="h-[60px] w-auto opacity-80 hover:opacity-100 transition-opacity duration-300 select-none brightness-0 invert" alt="Country Charm Coffee" />
+      <img src="/logo_coffee.png" className="h-[60px] w-auto opacity-80 hover:opacity-100 transition-opacity duration-300 select-none" alt="Country Charm Coffee" />
     </div>
   );
 }
