@@ -373,7 +373,7 @@ export default function HeroSection() {
       
       {/* Sideways Framing Brand Halo Arch */}
       <div 
-        className="absolute pointer-events-none select-none right-[-450px] top-[40px] h-[820px] w-[620px] overflow-visible flex items-center justify-end z-0 opacity-75"
+        className="absolute pointer-events-none select-none right-[-510px] top-[40px] h-[820px] w-[620px] overflow-visible flex items-center justify-end z-0 opacity-75"
         data-name="framing-halo"
       >
         <img 
@@ -382,6 +382,7 @@ export default function HeroSection() {
           className="h-[800px] w-auto max-w-none object-contain select-none" 
           style={{
             transform: 'rotate(-90deg)',
+            filter: 'contrast(1.35) saturate(1.2) drop-shadow(0 0 10px rgba(255, 166, 42, 0.85)) drop-shadow(0 0 25px rgba(255, 166, 42, 0.4))',
           }}
         />
       </div>
