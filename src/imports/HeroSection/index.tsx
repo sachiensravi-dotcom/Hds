@@ -4,12 +4,19 @@ import svgPaths from "./svg-7jy2cgk51z";
 function Btn() {
   const navigate = useNavigate();
   return (
-    <div 
-      onClick={() => navigate("/contact")}
-      className="bg-[#ffa62a] hover:bg-[#ffb547] content-stretch flex items-center justify-center px-[28px] py-[16px] rounded-[8px] cursor-pointer transition-all duration-200 hover:scale-[1.02] active:scale-[0.98] shadow-[0_4px_25px_rgba(255,166,42,0.15)] hover:shadow-[0_8px_30px_rgba(255,166,42,0.25)]" 
-      data-name="btn"
-    >
-      <p className="font-['Inter_Tight',sans-serif] font-bold leading-none text-[#141414] text-[16px] select-none">Book a Consultation</p>
+    <div className="relative group shrink-0" onClick={() => navigate("/contact")}>
+      {/* Glowing backdrop halo behind the button */}
+      <div className="absolute -inset-1.5 bg-[#ffa62a] rounded-[10px] opacity-25 blur-[12px] group-hover:opacity-50 transition-opacity duration-300 pointer-events-none" />
+      
+      {/* The main button container */}
+      <div className="relative bg-[#141414]/90 backdrop-blur-md border border-white/15 px-[28px] py-[15px] rounded-[8px] cursor-pointer flex items-center justify-center overflow-hidden transition-all duration-300 hover:scale-[1.02] hover:border-white/30 active:scale-[0.98]">
+        {/* Inner organic fluid glow gradient */}
+        <div className="absolute inset-0 bg-gradient-to-tr from-[#ffa62a]/25 via-[#ff7c00]/30 to-[#ff2a00]/10 mix-blend-screen opacity-90 group-hover:opacity-100 transition-opacity duration-300" />
+        
+        <p className="relative font-['Inter_Tight',sans-serif] font-bold text-white text-[16px] select-none tracking-wide z-10">
+          Book a Consultation
+        </p>
+      </div>
     </div>
   );
 }
@@ -308,12 +315,19 @@ function Menu() {
 function Btn3() {
   const navigate = useNavigate();
   return (
-    <div 
-      onClick={() => navigate("/contact")}
-      className="border border-[#ffa62a]/30 hover:border-[#ffa62a]/60 hover:bg-[#ffa62a]/5 active:scale-[0.97] transition-all duration-200 cursor-pointer flex items-center justify-center px-[22px] py-[11px] rounded-[8px]" 
-      data-name="btn"
-    >
-      <p className="font-['Inter_Tight',sans-serif] text-[15px] font-bold text-[#ffa62a] whitespace-nowrap select-none">Contact us</p>
+    <div className="relative group shrink-0" onClick={() => navigate("/contact")}>
+      {/* Glowing backdrop halo behind the button */}
+      <div className="absolute -inset-1 bg-[#ffa62a] rounded-[10px] opacity-15 blur-[8px] group-hover:opacity-35 transition-opacity duration-300 pointer-events-none" />
+      
+      {/* The main button container */}
+      <div className="relative bg-[#141414]/90 backdrop-blur-md border border-white/15 px-[22px] py-[11px] rounded-[8px] cursor-pointer flex items-center justify-center overflow-hidden transition-all duration-300 active:scale-[0.97] hover:border-white/30">
+        {/* Inner organic fluid glow gradient */}
+        <div className="absolute inset-0 bg-gradient-to-tr from-[#ffa62a]/20 via-[#ff7c00]/25 to-[#ff2a00]/8 mix-blend-screen opacity-90 group-hover:opacity-100 transition-opacity duration-300" />
+        
+        <p className="relative font-['Inter_Tight',sans-serif] font-bold text-white text-[15px] select-none z-10">
+          Contact us
+        </p>
+      </div>
     </div>
   );
 }
