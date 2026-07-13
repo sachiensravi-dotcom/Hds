@@ -151,11 +151,16 @@ function SupabaseLogo() {
 
 function HighLevelLogo() {
   return (
-    <div className="h-[32px] overflow-clip relative shrink-0 w-[140px]" data-name="highlevel logo">
-      <svg className="absolute block inset-0 size-full" fill="none" viewBox="0 0 140 32">
-        <path d="M16 4C9.37 4 4 9.37 4 16C4 22.63 9.37 28 16 28C22.63 28 28 22.63 28 16" stroke="#2a85ff" strokeWidth="4" strokeLinecap="round" />
-        <path d="M16 10C12.69 10 10 12.69 10 16C10 19.31 12.69 22 16 22" stroke="#2a85ff" strokeWidth="3" strokeLinecap="round" />
-        <text x="38" y="21" fill="white" fontFamily="Inter, sans-serif" fontSize="16px" fontWeight="700" letterSpacing="-0.02em">HighLevel</text>
+    <div className="h-[32px] overflow-clip relative shrink-0 w-[145px]" data-name="highlevel logo">
+      <svg className="absolute block inset-0 size-full" fill="none" viewBox="0 0 145 32">
+        {/* Yellow Arrow (Left) */}
+        <path d="M8 4L16 12H11V28H5V12H0L8 4Z" fill="#FFA62A" />
+        {/* Green Arrow (Right) */}
+        <path d="M28 4L36 12H31V28H25V12H20L28 4Z" fill="#00C22B" />
+        {/* Blue Arrow (Middle - overlapping) */}
+        <path d="M18 10L25 17H21V28H15V17H11L18 10Z" fill="#0085FF" />
+        {/* Brand Name */}
+        <text x="44" y="21" fill="white" fontFamily="Inter, sans-serif" fontSize="16px" fontWeight="700" letterSpacing="-0.02em">HighLevel</text>
       </svg>
     </div>
   );
@@ -163,14 +168,11 @@ function HighLevelLogo() {
 
 function LogoList() {
   return (
-    <div className="absolute content-stretch flex gap-[48px] items-center right-[40px] top-[59px]" data-name="logo list">
+    <div className="absolute content-stretch flex gap-[64px] items-center right-[40px] top-[59px]" data-name="logo list">
       <FigmaLogo />
       <WebflowLogo />
       <HighLevelLogo />
       <VercelLogo />
-      <Css10Logo />
-      <JavascriptLogo />
-      <SupabaseLogo />
     </div>
   );
 }
