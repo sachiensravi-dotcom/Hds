@@ -70,7 +70,7 @@ export default function Section() {
           <p
             key={u}
             onClick={() => o(u)}
-            className={`[word-break:break-word] font-['Geist_Mono:Regular',sans-serif] font-normal leading-[normal] text-[14px] uppercase whitespace-nowrap cursor-pointer transition-colors duration-300 ${i === u ? "text-white font-medium" : "text-[#8f8f8f] hover:text-white"}`}
+            className={`[word-break:break-word] font-geist-mono font-normal leading-[normal] text-[14px] uppercase whitespace-nowrap cursor-pointer transition-colors duration-300 ${i === u ? "text-white font-medium" : "text-[#8f8f8f] hover:text-white"}`}
           >
             {l.label}
           </p>

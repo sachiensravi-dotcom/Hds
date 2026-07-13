@@ -35,7 +35,7 @@ export default function Section() {
       <div className="absolute left-[80px] top-[280px] w-[500px] h-[450px] bg-halo-gold pointer-events-none opacity-25 mix-blend-screen" />
       <div className="absolute right-[80px] top-[280px] w-[500px] h-[450px] bg-halo-yellow pointer-events-none opacity-20 mix-blend-screen" />
 
-      <p className="[word-break:break-word] absolute font-['Inter_Tight:Regular',sans-serif] font-normal leading-[normal] left-[40px] text-[#989898] text-[16px] top-[120px] uppercase whitespace-nowrap font-medium tracking-wide">
+      <p className="[word-break:break-word] absolute font-geist-mono leading-[normal] left-[40px] text-[#989898] text-[16px] top-[120px] uppercase whitespace-nowrap tracking-widest">
         Built on quality
       </p>
       <p className="[word-break:break-word] absolute font-['Inter_Tight:Regular',sans-serif] leading-[normal] left-[40px] not-italic text-[48px] text-white top-[157px] w-[651px]">

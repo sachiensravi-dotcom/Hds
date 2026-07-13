@@ -39,7 +39,7 @@ function Main1() {
         <p className="leading-[1.4] mb-0">​</p>
         <p className="leading-[1.4]">We build websites from the ground up with real thought behind the structure, messaging, design, and user journey. The result is a website that feels more credible, more distinct, and more aligned with the actual business it represents.</p>
       </div>
-      <div className="[word-break:break-word] absolute font-['Geist_Mono:SemiBold',sans-serif] font-semibold leading-[0] left-[31px] text-[#ffa62a] text-[16px] top-[230px] uppercase whitespace-nowrap">
+      <div className="[word-break:break-word] absolute font-geist-mono font-semibold leading-[0] left-[31px] text-[#ffa62a] text-[16px] top-[230px] uppercase whitespace-nowrap">
         <p className="leading-[normal] mb-0">Originality is not an extra.</p>
         <p className="leading-[normal]">It is the standard.</p>
       </div>
@@ -50,7 +50,7 @@ function Main1() {
 export default function Section() {
   return (
     <div className="bg-[#141414] relative size-full" data-name="Section">
-      <p className="[word-break:break-word] absolute font-['Geist_Mono:Regular',sans-serif] font-normal leading-[normal] left-[40px] text-[#989898] text-[16px] top-[120px] uppercase whitespace-nowrap">What make us different</p>
+      <p className="[word-break:break-word] absolute font-geist-mono leading-[normal] left-[40px] text-[#989898] text-[16px] top-[120px] uppercase whitespace-nowrap tracking-widest">What make us different</p>
       <p className="[word-break:break-word] absolute font-['Inter_Tight:Regular',sans-serif] leading-[normal] left-[40px] not-italic text-[48px] text-white top-[157px] whitespace-nowrap">No AI-generated websites. No generic output.</p>
       <Main />
       <Main1 />

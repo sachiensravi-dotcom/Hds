@@ -52,7 +52,7 @@ export default function Section() {
         </TiltCard>
       ))}
 
-      <p className="[word-break:break-word] absolute font-['Geist_Mono',sans-serif] font-normal leading-[normal] left-[40px] text-[#989898] text-[16px] top-[120px] uppercase w-[96px]">
+      <p className="[word-break:break-word] absolute font-geist-mono leading-[normal] left-[40px] text-[#989898] text-[16px] top-[120px] uppercase w-[96px] tracking-widest">
         Blog
       </p>
       <p className="[word-break:break-word] absolute font-['Inter_Tight',sans-serif] leading-[normal] left-[40px] not-italic text-[48px] text-white top-[157px] w-[651px]">
