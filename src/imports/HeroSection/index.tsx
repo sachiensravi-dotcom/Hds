@@ -128,28 +128,6 @@ function Logo4() {
   );
 }
 
-function Logo5() {
-  return (
-    <div className="flex items-center justify-center shrink-0 h-[80px]" data-name="Logo">
-      <svg className="h-[44px] w-auto opacity-80 hover:opacity-100 transition-opacity duration-300 select-none" fill="none" viewBox="0 0 160 48" xmlns="http://www.w3.org/2000/svg">
-        <circle cx="24" cy="24" r="18" stroke="#ffa62a" strokeWidth="1.5" />
-        <text x="17" y="30" fill="#ffa62a" fontFamily="Georgia, serif" fontSize="18px" fontWeight="bold">B</text>
-        <text x="24" y="30" fill="white" fontFamily="Georgia, serif" fontSize="18px" fontWeight="bold">N</text>
-        <text x="52" y="24" fill="white" fontFamily="Inter, sans-serif" fontSize="13px" fontWeight="600" letterSpacing="0.12em">BRUCE NORWOOD</text>
-        <text x="52" y="36" fill="#8f8f8f" fontFamily="Inter, sans-serif" fontSize="9px" fontWeight="400" letterSpacing="0.08em">LUXURY REAL ESTATE</text>
-      </svg>
-    </div>
-  );
-}
-
-function Logo6() {
-  return (
-    <div className="flex items-center justify-center shrink-0 h-[80px]" data-name="Logo">
-      <img src="/logo_coffee.png" className="h-[60px] w-auto opacity-80 hover:opacity-100 transition-opacity duration-300 select-none" alt="Country Charm Coffee" />
-    </div>
-  );
-}
-
 function LogoMarquee() {
   return (
     <div className="absolute overflow-hidden left-[40px] top-[793px] w-[1360px] h-[80px] flex items-center gap-[64px]" data-name="logo marquee">
@@ -159,8 +137,6 @@ function LogoMarquee() {
         <Logo2 />
         <Logo3 />
         <Logo4 />
-        <Logo5 />
-        <Logo6 />
       </div>
       <div className="flex gap-[64px] shrink-0 min-w-full justify-around animate-marquee" aria-hidden="true">
         <Logo />
@@ -168,8 +144,6 @@ function LogoMarquee() {
         <Logo2 />
         <Logo3 />
         <Logo4 />
-        <Logo5 />
-        <Logo6 />
       </div>
     </div>
   );
