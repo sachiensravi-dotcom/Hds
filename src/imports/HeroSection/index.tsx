@@ -35,12 +35,11 @@ function Main() {
         <div className="flex items-center gap-[12px]">
           {/* Overlapping User Avatars */}
           <div className="flex -space-x-[12px]">
-            <img src="/barber_owner_portrait.jpg" className="w-[36px] h-[36px] rounded-full border-2 border-[#141414] object-cover" alt="Client 1" />
-            <img src="/founder_portrait.jpg" className="w-[36px] h-[36px] rounded-full border-2 border-[#141414] object-cover" alt="Client 2" />
-            <img src="/barber_owner_portrait.jpg" className="w-[36px] h-[36px] rounded-full border-2 border-[#141414] object-cover" alt="Client 3" />
+            <img src="/barber_owner_portrait.jpg" className="w-[36px] h-[36px] rounded-full border-2 border-[#141414] object-cover" alt="Jay" />
+            <img src="/founder_portrait.jpg" className="w-[36px] h-[36px] rounded-full border-2 border-[#141414] object-cover" alt="Kevin" />
           </div>
           <p className="font-['Inter_Tight',sans-serif] text-[13px] text-[#8c8c8c] font-medium leading-none">
-            More than <span className="text-white font-semibold">50+ local brands</span> grown with us
+            More than <span className="text-white font-semibold">10+ local brands</span> grown with us
           </p>
         </div>
       </div>
