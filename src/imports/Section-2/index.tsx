@@ -50,7 +50,7 @@ function Main1() {
 export default function Section() {
   return (
     <div className="bg-[#141414] relative size-full" data-name="Section">
-      <p className="[word-break:break-word] absolute font-geist-mono leading-[normal] left-[40px] text-[#989898] text-[16px] top-[120px] uppercase whitespace-nowrap tracking-widest">What make us different</p>
+      <p className="[word-break:break-word] absolute font-geist-mono leading-[normal] left-[40px] text-[#989898] text-[16px] top-[120px] uppercase whitespace-nowrap tracking-widest">What makes us different</p>
       <p className="[word-break:break-word] absolute font-['Inter_Tight:Regular',sans-serif] leading-[normal] left-[40px] not-italic text-[48px] text-white top-[157px] whitespace-nowrap">No AI-generated websites. No generic output.</p>
       <Main />
       <Main1 />

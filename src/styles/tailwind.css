@@ -232,3 +232,31 @@
   font-family: 'Geist Mono', monospace !important;
 }
 
+/* Active outline icon animations for Section-8 */
+@keyframes float-slow {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-4px); }
+}
+
+@keyframes sway-slow {
+  0%, 100% { transform: rotate(-3deg); }
+  50% { transform: rotate(3deg); }
+}
+
+@keyframes pulse-slow {
+  0%, 100% { transform: scale(0.98); }
+  50% { transform: scale(1.04); }
+}
+
+.animate-float-slow {
+  animation: float-slow 4s ease-in-out infinite;
+}
+
+.animate-sway-slow {
+  animation: sway-slow 5s ease-in-out infinite;
+}
+
+.animate-pulse-slow {
+  animation: pulse-slow 3s ease-in-out infinite;
+}
+

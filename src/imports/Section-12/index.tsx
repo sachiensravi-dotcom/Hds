@@ -149,11 +149,24 @@ function SupabaseLogo() {
   );
 }
 
+function HighLevelLogo() {
+  return (
+    <div className="h-[32px] overflow-clip relative shrink-0 w-[140px]" data-name="highlevel logo">
+      <svg className="absolute block inset-0 size-full" fill="none" viewBox="0 0 140 32">
+        <path d="M16 4C9.37 4 4 9.37 4 16C4 22.63 9.37 28 16 28C22.63 28 28 22.63 28 16" stroke="#2a85ff" strokeWidth="4" strokeLinecap="round" />
+        <path d="M16 10C12.69 10 10 12.69 10 16C10 19.31 12.69 22 16 22" stroke="#2a85ff" strokeWidth="3" strokeLinecap="round" />
+        <text x="38" y="21" fill="white" fontFamily="Inter, sans-serif" fontSize="16px" fontWeight="700" letterSpacing="-0.02em">HighLevel</text>
+      </svg>
+    </div>
+  );
+}
+
 function LogoList() {
   return (
-    <div className="absolute content-stretch flex gap-[64px] items-center right-[40px] top-[59px]" data-name="logo list">
+    <div className="absolute content-stretch flex gap-[48px] items-center right-[40px] top-[59px]" data-name="logo list">
       <FigmaLogo />
       <WebflowLogo />
+      <HighLevelLogo />
       <VercelLogo />
       <Css10Logo />
       <JavascriptLogo />
@@ -165,7 +178,7 @@ function LogoList() {
 export default function Section() {
   return (
     <div className="bg-[#141414] relative size-full" data-name="Section">
-      <p className="[word-break:break-word] absolute font-['Geist_Mono:Regular',sans-serif] font-normal leading-[normal] left-[calc(4.17%-20px)] text-[#989898] text-[16px] top-0 uppercase whitespace-nowrap">Tech stack</p>
+      <p className="[word-break:break-word] absolute font-geist-mono leading-[normal] left-[calc(4.17%-20px)] text-[#989898] text-[16px] top-0 uppercase whitespace-nowrap tracking-widest">Tech stack</p>
       <p className="[word-break:break-word] absolute font-['Inter_Tight:Regular',sans-serif] leading-[normal] left-[calc(16.67%-200px)] not-italic text-[48px] text-white top-[37px] w-[420px]">All needed for the perfect website</p>
       <LogoList />
     </div>

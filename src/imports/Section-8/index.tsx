@@ -118,7 +118,7 @@ function Group() {
 
 function LetsIconsUser() {
   return (
-    <div className="overflow-clip relative shrink-0 size-[32px] text-[#989898] transition-all duration-300 group-hover:scale-115 group-hover:rotate-[8deg] group-hover:text-[#ffa62a]" data-name="lets-icons:user">
+    <div className="overflow-clip relative shrink-0 size-[32px] text-[#989898] transition-all duration-300 animate-float-slow group-hover:[animation-play-state:paused] group-hover:scale-115 group-hover:rotate-[8deg] group-hover:text-[#ffa62a]" data-name="lets-icons:user">
       <Group />
     </div>
   );
@@ -162,7 +162,7 @@ function Group1() {
 
 function HugeiconsPlant() {
   return (
-    <div className="overflow-clip relative shrink-0 size-[32px] text-[#989898] transition-all duration-300 group-hover:scale-115 group-hover:rotate-[8deg] group-hover:text-[#ffa62a]" data-name="hugeicons:plant-01">
+    <div className="overflow-clip relative shrink-0 size-[32px] text-[#989898] transition-all duration-300 animate-sway-slow group-hover:[animation-play-state:paused] group-hover:scale-115 group-hover:rotate-[8deg] group-hover:text-[#ffa62a]" data-name="hugeicons:plant-01">
       <Group1 />
     </div>
   );
@@ -207,7 +207,7 @@ function Group2() {
 
 function HugeiconsCustomize() {
   return (
-    <div className="overflow-clip relative shrink-0 size-[32px] text-[#989898] transition-all duration-300 group-hover:scale-115 group-hover:rotate-[8deg] group-hover:text-[#ffa62a]" data-name="hugeicons:customize">
+    <div className="overflow-clip relative shrink-0 size-[32px] text-[#989898] transition-all duration-300 animate-pulse-slow group-hover:[animation-play-state:paused] group-hover:scale-115 group-hover:rotate-[8deg] group-hover:text-[#ffa62a]" data-name="hugeicons:customize">
       <Group2 />
     </div>
   );
@@ -252,7 +252,7 @@ function Group5() {
 
 function IconParkOutlinePeopleSafe() {
   return (
-    <div className="overflow-clip relative shrink-0 size-[32px] text-[#989898] transition-all duration-300 group-hover:scale-115 group-hover:rotate-[8deg] group-hover:text-[#ffa62a]" data-name="icon-park-outline:people-safe">
+    <div className="overflow-clip relative shrink-0 size-[32px] text-[#989898] transition-all duration-300 animate-float-slow group-hover:[animation-play-state:paused] group-hover:scale-115 group-hover:rotate-[8deg] group-hover:text-[#ffa62a]" data-name="icon-park-outline:people-safe">
       <Group5 />
     </div>
   );
@@ -318,7 +318,7 @@ function Group6() {
 
 function HugeiconsWebDesign() {
   return (
-    <div className="overflow-clip relative shrink-0 size-[32px] text-[#989898] transition-all duration-300 group-hover:scale-115 group-hover:rotate-[8deg] group-hover:text-[#ffa62a]" data-name="hugeicons:web-design-01">
+    <div className="overflow-clip relative shrink-0 size-[32px] text-[#989898] transition-all duration-300 animate-sway-slow group-hover:[animation-play-state:paused] group-hover:scale-115 group-hover:rotate-[8deg] group-hover:text-[#ffa62a]" data-name="hugeicons:web-design-01">
       <Group6 />
     </div>
   );
@@ -347,7 +347,7 @@ function Card4() {
 
 function IconoirSineWave() {
   return (
-    <div className="relative shrink-0 size-[32px] text-[#989898] transition-all duration-300 group-hover:scale-115 group-hover:rotate-[8deg] group-hover:text-[#ffa62a]" data-name="iconoir:sine-wave">
+    <div className="relative shrink-0 size-[32px] text-[#989898] transition-all duration-300 animate-pulse-slow group-hover:[animation-play-state:paused] group-hover:scale-115 group-hover:rotate-[8deg] group-hover:text-[#ffa62a]" data-name="iconoir:sine-wave">
       <svg className="absolute block inset-0 size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 32 32">
         <g id="iconoir:sine-wave">
           <path d={svgPaths.p1d5f300} id="Vector" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" />
@@ -396,7 +396,7 @@ function Group7() {
 
 function LetsIconsSpeed() {
   return (
-    <div className="overflow-clip relative shrink-0 size-[32px] text-[#989898] transition-all duration-300 group-hover:scale-115 group-hover:rotate-[8deg] group-hover:text-[#ffa62a]" data-name="lets-icons:speed">
+    <div className="overflow-clip relative shrink-0 size-[32px] text-[#989898] transition-all duration-300 animate-float-slow group-hover:[animation-play-state:paused] group-hover:scale-115 group-hover:rotate-[8deg] group-hover:text-[#ffa62a]" data-name="lets-icons:speed">
       <Group7 />
     </div>
   );
@@ -440,7 +440,7 @@ function Group8() {
 
 function SolarScaleLinear() {
   return (
-    <div className="overflow-clip relative shrink-0 size-[32px] text-[#989898] transition-all duration-300 group-hover:scale-115 group-hover:rotate-[8deg] group-hover:text-[#ffa62a]" data-name="solar:scale-linear">
+    <div className="overflow-clip relative shrink-0 size-[32px] text-[#989898] transition-all duration-300 animate-sway-slow group-hover:[animation-play-state:paused] group-hover:scale-115 group-hover:rotate-[8deg] group-hover:text-[#ffa62a]" data-name="solar:scale-linear">
       <Group8 />
     </div>
   );
