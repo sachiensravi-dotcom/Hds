@@ -228,7 +228,7 @@
 }
 
 /* Global override to ensure all Geist Mono inline alias classes render the monospaced font correctly */
-[class*="Geist_Mono"] {
+[class*="Geist_Mono"], [class*="geist-mono"], .font-geist-mono {
   font-family: 'Geist Mono', monospace !important;
 }
 
