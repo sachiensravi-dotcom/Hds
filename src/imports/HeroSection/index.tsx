@@ -482,7 +482,6 @@ function MainNav() {
 function NavbarFull() {
   return (
     <div className="absolute content-stretch flex flex-col items-start left-0 top-0 w-[1440px]" data-name="navbar full">
-      <TopNav />
       <MainNav />
     </div>
   );
