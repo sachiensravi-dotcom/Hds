@@ -91,9 +91,7 @@ function Main1() {
 function Logo() {
   return (
     <div className="flex items-center justify-center shrink-0 h-[40px]" data-name="Logo">
-      <p className="font-geist-mono text-[#8c8c8c] hover:text-white transition-colors duration-300 text-[16px] font-medium uppercase tracking-[0.2em] select-none">
-        Whitewright
-      </p>
+      <img src="/logo_whitewright.png" className="h-[26px] w-auto opacity-50 hover:opacity-100 transition-opacity duration-300 select-none brightness-0 invert" alt="Whitewright" />
     </div>
   );
 }
@@ -101,9 +99,7 @@ function Logo() {
 function Logo1() {
   return (
     <div className="flex items-center justify-center shrink-0 h-[40px]" data-name="Logo">
-      <p className="font-geist-mono text-[#8c8c8c] hover:text-white transition-colors duration-300 text-[16px] font-medium uppercase tracking-[0.2em] select-none">
-        Texas Sun
-      </p>
+      <img src="/logo_texas_sun.png" className="h-[26px] w-auto opacity-50 hover:opacity-100 transition-opacity duration-300 select-none brightness-0 invert" alt="Texas Sun" />
     </div>
   );
 }
@@ -111,9 +107,7 @@ function Logo1() {
 function Logo2() {
   return (
     <div className="flex items-center justify-center shrink-0 h-[40px]" data-name="Logo">
-      <p className="font-geist-mono text-[#8c8c8c] hover:text-white transition-colors duration-300 text-[16px] font-medium uppercase tracking-[0.2em] select-none">
-        Country Charm Coffee
-      </p>
+      <img src="/logo_coffee.png" className="h-[30px] w-auto opacity-50 hover:opacity-100 transition-opacity duration-300 select-none brightness-0 invert" alt="Country Charm Coffee" />
     </div>
   );
 }
@@ -121,9 +115,7 @@ function Logo2() {
 function Logo3() {
   return (
     <div className="flex items-center justify-center shrink-0 h-[40px]" data-name="Logo">
-      <p className="font-geist-mono text-[#8c8c8c] hover:text-white transition-colors duration-300 text-[16px] font-medium uppercase tracking-[0.2em] select-none">
-        Bruce Norwood
-      </p>
+      <img src="/logo_remax.png" className="h-[24px] w-auto opacity-50 hover:opacity-100 transition-opacity duration-300 select-none brightness-0 invert" alt="Remax" />
     </div>
   );
 }
@@ -131,9 +123,7 @@ function Logo3() {
 function Logo4() {
   return (
     <div className="flex items-center justify-center shrink-0 h-[40px]" data-name="Logo">
-      <p className="font-geist-mono text-[#8c8c8c] hover:text-white transition-colors duration-300 text-[16px] font-medium uppercase tracking-[0.2em] select-none">
-        4th Main Barber
-      </p>
+      <img src="/logo_barber.png" className="h-[30px] w-auto opacity-50 hover:opacity-100 transition-opacity duration-300 select-none brightness-0 invert" alt="4th Main Barber" />
     </div>
   );
 }
@@ -141,9 +131,7 @@ function Logo4() {
 function Logo5() {
   return (
     <div className="flex items-center justify-center shrink-0 h-[40px]" data-name="Logo">
-      <p className="font-geist-mono text-[#8c8c8c] hover:text-white transition-colors duration-300 text-[16px] font-medium uppercase tracking-[0.2em] select-none">
-        Texas Sun
-      </p>
+      <img src="/logo_texas_sun.png" className="h-[26px] w-auto opacity-50 hover:opacity-100 transition-opacity duration-300 select-none brightness-0 invert" alt="Texas Sun" />
     </div>
   );
 }
@@ -151,9 +139,7 @@ function Logo5() {
 function Logo6() {
   return (
     <div className="flex items-center justify-center shrink-0 h-[40px]" data-name="Logo">
-      <p className="font-geist-mono text-[#8c8c8c] hover:text-white transition-colors duration-300 text-[16px] font-medium uppercase tracking-[0.2em] select-none">
-        Country Charm Coffee
-      </p>
+      <img src="/logo_coffee.png" className="h-[30px] w-auto opacity-50 hover:opacity-100 transition-opacity duration-300 select-none brightness-0 invert" alt="Country Charm Coffee" />
     </div>
   );
 }
