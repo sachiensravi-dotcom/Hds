@@ -168,7 +168,7 @@ function HighLevelLogo() {
 
 function LogoList() {
   return (
-    <div className="absolute content-stretch flex gap-[64px] items-center right-[40px] top-[59px]" data-name="logo list">
+    <div className="absolute content-stretch flex gap-[96px] items-center right-[40px] top-[59px]" data-name="logo list">
       <FigmaLogo />
       <WebflowLogo />
       <HighLevelLogo />
