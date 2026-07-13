@@ -397,12 +397,6 @@ function Menu() {
       </p>
       <Dropdown />
       <p 
-        onClick={() => navigate("/services")}
-        className="[word-break:break-word] font-['Inter_Tight',sans-serif] leading-[normal] not-italic relative shrink-0 text-[16px] text-center text-white whitespace-nowrap cursor-pointer transition-colors duration-250 hover:text-[#ffa62a] select-none"
-      >
-        Industries
-      </p>
-      <p 
         onClick={() => navigate("/case-studies")}
         className="[word-break:break-word] font-['Inter_Tight',sans-serif] leading-[normal] not-italic relative shrink-0 text-[16px] text-center text-white whitespace-nowrap cursor-pointer transition-colors duration-250 hover:text-[#ffa62a] select-none"
       >
