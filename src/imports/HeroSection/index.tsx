@@ -6,10 +6,10 @@ function Btn() {
   return (
     <div 
       onClick={() => navigate("/contact")}
-      className="btn-shine-effect bg-[#ffa62a] content-stretch flex items-center justify-center px-[24px] py-[16px] relative rounded-[120px] shrink-0 cursor-pointer transition-all duration-300 hover:scale-[1.04] hover:shadow-[0_0_20px_rgba(255,166,42,0.4)] active:scale-[0.98]" 
+      className="bg-[#ffa62a] hover:bg-[#ffb547] content-stretch flex items-center justify-center px-[28px] py-[16px] rounded-[8px] cursor-pointer transition-all duration-200 hover:scale-[1.02] active:scale-[0.98] shadow-[0_4px_25px_rgba(255,166,42,0.15)] hover:shadow-[0_8px_30px_rgba(255,166,42,0.25)]" 
       data-name="btn"
     >
-      <p className="[word-break:break-word] font-['Inter_Tight',sans-serif] font-bold leading-[normal] not-italic relative shrink-0 text-[#462c07] text-[16px] text-right whitespace-nowrap select-none">Book a Consultation</p>
+      <p className="font-['Inter_Tight',sans-serif] font-bold leading-none text-[#141414] text-[16px] select-none">Book a Consultation</p>
     </div>
   );
 }
@@ -310,10 +310,10 @@ function Btn3() {
   return (
     <div 
       onClick={() => navigate("/contact")}
-      className="glow-button-company bg-[#ffa62a] hover:bg-[#ffe62a] active:scale-[0.97] transition-all duration-300 cursor-pointer flex items-center justify-center px-[22px] py-[12px] rounded-[6px]" 
+      className="border border-[#ffa62a]/30 hover:border-[#ffa62a]/60 hover:bg-[#ffa62a]/5 active:scale-[0.97] transition-all duration-200 cursor-pointer flex items-center justify-center px-[22px] py-[11px] rounded-[8px]" 
       data-name="btn"
     >
-      <p className="[word-break:break-word] font-['Inter_Tight',sans-serif] leading-[normal] not-italic relative shrink-0 text-[#462c07] text-[16px] font-bold whitespace-nowrap select-none z-10">Contact us</p>
+      <p className="font-['Inter_Tight',sans-serif] text-[15px] font-bold text-[#ffa62a] whitespace-nowrap select-none">Contact us</p>
     </div>
   );
 }
