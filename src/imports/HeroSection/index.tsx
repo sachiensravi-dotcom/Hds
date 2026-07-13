@@ -16,7 +16,7 @@ function Btn() {
 
 function Main() {
   return (
-    <div className="absolute left-[40px] top-[340px] w-[740px]" data-name="main">
+    <div className="absolute left-[40px] top-[373px] w-[740px]" data-name="main">
       {/* Short Dynamic Subtitle */}
       <p className="font-['Inter_Tight',sans-serif] text-[18px] text-[#b3b3b3] leading-[1.6] w-[620px] mb-[32px]">
         We are a dynamic organic growth agency dedicated to building high-performance websites that unlock your business's full potential through strategic design.
@@ -70,7 +70,7 @@ function Main() {
 
 function Main1() {
   return (
-    <div className="absolute h-[520px] left-[820px] top-[180px] w-[580px] overflow-visible" data-name="main">
+    <div className="absolute h-[520px] left-[820px] top-[235px] w-[580px] overflow-visible" data-name="main">
       {/* Brand Halos - Orbiting Glowing backdrops */}
       {/* Halo 1: Large Gold Glow backdrop */}
       <div className="absolute w-[400px] h-[400px] rounded-full bg-[#ffa62a]/15 blur-[120px] top-[40px] left-[60px] animate-pulse pointer-events-none" style={{ animationDuration: '6s' }} />
@@ -224,45 +224,99 @@ function SocilaMedia() {
   );
 }
 
-function Hyperion() {
+function TopNav() {
   return (
-    <div className="content-stretch flex gap-[12px] items-center relative shrink-0 cursor-pointer" data-name="Hyperion">
-      <div className="relative shrink-0 size-[32px]" data-name="group">
-        <svg className="absolute block inset-0 size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 32 32">
-          <g id="group">
-            <path d={svgPaths.pf6ca7a80} fill="var(--fill-0, #FFA62A)" id="Vector" />
-            <path d={svgPaths.p6dbd2300} fill="var(--fill-1, white)" id="Vector_2" />
-          </g>
-        </svg>
+    <div className="backdrop-blur-[10px] bg-[rgba(20,20,20,0.5)] relative shrink-0 w-full" data-name="top nav">
+      <div aria-hidden className="absolute border-[#3b3b3b] border-b border-solid inset-0 pointer-events-none" />
+      <div className="flex flex-row items-center size-full">
+        <div className="content-stretch flex items-center justify-between px-[40px] py-[12px] relative size-full">
+          <p className="[word-break:break-word] font-['Inter_Tight',sans-serif] leading-[normal] not-italic relative shrink-0 text-[#989898] text-[14px] whitespace-nowrap">GMT-5 | 8:05 AM</p>
+          <SocilaMedia />
+        </div>
       </div>
-      <p className="[word-break:break-word] font-['Inter_Tight',sans-serif] font-bold leading-[normal] not-italic relative shrink-0 text-[20px] text-white whitespace-nowrap select-none">Hyperion</p>
     </div>
   );
 }
 
-function Link1() {
+function Hyperion() {
   const navigate = useNavigate();
   return (
-    <div onClick={() => navigate("/works")} className="content-stretch flex items-center relative shrink-0 cursor-pointer text-[#989898] hover:text-white transition-colors duration-300">
-      <p className="[word-break:break-word] font-['Inter_Tight',sans-serif] leading-[normal] not-italic relative shrink-0 text-[16px] text-inherit whitespace-nowrap select-none">Our work</p>
+    <div 
+      onClick={() => navigate("/")}
+      className="h-[20px] relative shrink-0 w-[131.175px] cursor-pointer" 
+      data-name="HYPERION"
+    >
+      <svg className="absolute block inset-0 size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 131.175 20">
+        <g id="HYPERION">
+          <path d={svgPaths.pae2b200} fill="var(--fill-0, white)" id="Vector" />
+          <path d={svgPaths.p10eca630} fill="var(--fill-0, white)" id="Vector_2" />
+          <path d={svgPaths.p1cd61800} fill="var(--fill-0, white)" id="Vector_3" />
+          <path d={svgPaths.p1e0bf70} fill="var(--fill-0, white)" id="Vector_4" />
+          <path d={svgPaths.p2b1eab00} fill="var(--fill-0, white)" id="Vector_5" />
+          <path d={svgPaths.p1b895480} fill="var(--fill-0, white)" id="Vector_6" />
+          <path d={svgPaths.p3077a180} fill="var(--fill-0, white)" id="Vector_7" />
+          <path d={svgPaths.p1524c500} fill="url(#paint0_linear_1_366)" id="Ellipse 6 (Stroke)" />
+        </g>
+        <defs>
+          <linearGradient gradientUnits="userSpaceOnUse" id="paint0_linear_1_366" x1="102" x2="102" y1="20" y2="0">
+            <stop stopColor="#FFE62A" />
+            <stop offset="1" stopColor="#FFA62A" />
+          </linearGradient>
+        </defs>
+      </svg>
     </div>
   );
 }
 
-function Link2() {
+function GlyphsChevronBold() {
+  return (
+    <div className="relative shrink-0 size-[12px]" data-name="glyphs:chevron-bold">
+      <svg className="absolute block inset-0 size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 12 12">
+        <g id="glyphs:chevron-bold">
+          <path d={svgPaths.p2334ce00} id="Vector" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" />
+        </g>
+      </svg>
+    </div>
+  );
+}
+
+function Dropdown() {
   const navigate = useNavigate();
   return (
-    <div onClick={() => navigate("/blogs")} className="content-stretch flex items-center relative shrink-0 cursor-pointer text-[#989898] hover:text-white transition-colors duration-300">
-      <p className="[word-break:break-word] font-['Inter_Tight',sans-serif] leading-[normal] not-italic relative shrink-0 text-[16px] text-inherit whitespace-nowrap select-none">Blogs</p>
+    <div 
+      onClick={() => navigate("/services")}
+      className="content-stretch flex gap-[6px] items-center relative shrink-0 cursor-pointer transition-colors duration-250 hover:text-[#ffa62a] text-white" 
+      data-name="dropdown"
+    >
+      <p className="[word-break:break-word] font-['Inter_Tight',sans-serif] leading-[normal] not-italic relative shrink-0 text-[16px] text-center text-inherit whitespace-nowrap select-none">Services</p>
+      <GlyphsChevronBold />
     </div>
   );
 }
 
 function Menu() {
+  const navigate = useNavigate();
   return (
-    <div className="content-stretch flex gap-[32px] items-start relative shrink-0" data-name="menu">
-      <Link1 />
-      <Link2 />
+    <div className="content-stretch flex gap-[40px] items-center relative shrink-0" data-name="menu">
+      <p 
+        onClick={() => navigate("/works")}
+        className="[word-break:break-word] font-['Inter_Tight',sans-serif] leading-[normal] not-italic relative shrink-0 text-[16px] text-center text-white whitespace-nowrap cursor-pointer transition-colors duration-250 hover:text-[#ffa62a] select-none"
+      >
+        Works
+      </p>
+      <Dropdown />
+      <p 
+        onClick={() => navigate("/case-studies")}
+        className="[word-break:break-word] font-['Inter_Tight',sans-serif] leading-[normal] not-italic relative shrink-0 text-[16px] text-center text-white whitespace-nowrap cursor-pointer transition-colors duration-250 hover:text-[#ffa62a] select-none"
+      >
+        Case studies
+      </p>
+      <p 
+        onClick={() => navigate("/blogs")}
+        className="[word-break:break-word] font-['Inter_Tight',sans-serif] leading-[normal] not-italic relative shrink-0 text-[16px] text-center text-white whitespace-nowrap cursor-pointer transition-colors duration-250 hover:text-[#ffa62a] select-none"
+      >
+        Blogs
+      </p>
     </div>
   );
 }
@@ -314,6 +368,7 @@ function MainNav() {
 function NavbarFull() {
   return (
     <div className="absolute content-stretch flex flex-col items-start left-0 top-0 w-[1440px]" data-name="navbar full">
+      <TopNav />
       <MainNav />
     </div>
   );
@@ -323,7 +378,7 @@ export default function HeroSection() {
   return (
     <div className="bg-[#141414] relative size-full" data-name="Hero Section">
       {/* Brand Tagline Title */}
-      <p className="[word-break:break-word] absolute font-['Inter_Tight',sans-serif] font-bold leading-[1.15] left-[40px] not-italic text-[56px] text-white top-[170px] w-[750px]">
+      <p className="[word-break:break-word] absolute font-['Inter_Tight',sans-serif] font-bold leading-[1.15] left-[40px] not-italic text-[56px] text-white top-[205px] w-[750px]">
         Custom Websites Built for Businesses Ready to{" "}
         <span className="relative text-gold-gradient font-bold inline-block">
           Grow
@@ -334,7 +389,7 @@ export default function HeroSection() {
       <Main />
       <Main1 />
       
-      <p className="[word-break:break-word] absolute font-geist-mono font-normal leading-[normal] left-[40px] text-[#989898] text-[16px] top-[132px] uppercase whitespace-nowrap tracking-wider">The organic growth Web Agency</p>
+      <p className="[word-break:break-word] absolute font-geist-mono font-normal leading-[normal] left-[40px] text-[#989898] text-[16px] top-[168px] uppercase whitespace-nowrap tracking-wider">The organic growth Web Agency</p>
       
       <LogoMarquee />
       <NavbarFull />
