@@ -73,11 +73,11 @@ function Main1() {
     <div className="absolute h-[520px] left-[820px] top-[235px] w-[580px] overflow-visible" data-name="main">
       {/* Brand Halos - Orbiting Glowing backdrops */}
       {/* Halo 1: Large Gold Glow backdrop */}
-      <div className="absolute w-[400px] h-[400px] rounded-full bg-[#ffa62a]/15 blur-[120px] top-[40px] left-[60px] animate-pulse pointer-events-none" style={{ animationDuration: '6s' }} />
+      <div className="absolute w-[450px] h-[450px] rounded-full bg-[#ffa62a]/12 blur-[120px] top-[35px] left-[65px] animate-pulse pointer-events-none" style={{ animationDuration: '6s' }} />
 
       {/* Halo 2: Thin Rotating Dashed Vector Ring */}
       <div 
-        className="absolute border border-dashed border-[#ffa62a]/25 rounded-full animate-[spin_35s_linear_infinite] pointer-events-none"
+        className="absolute border border-dashed border-[#ffa62a]/20 rounded-full animate-[spin_35s_linear_infinite] pointer-events-none"
         style={{
           width: '380px',
           height: '380px',
@@ -97,12 +97,12 @@ function Main1() {
         }}
       />
 
-      {/* 3D Shapes Image Render - Clean float */}
+      {/* 3D Shapes Image Render - Screen blended for seamless page integration */}
       <div className="absolute inset-0 flex items-center justify-center z-10 animate-float-slow">
         <img 
           src="/hero_3d_shapes.jpg" 
           alt="3D Floating Shapes Render" 
-          className="w-full h-auto object-contain rounded-[16px] select-none shadow-[0_30px_100px_rgba(0,0,0,0.8)]" 
+          className="w-full h-auto object-contain select-none mix-blend-screen" 
         />
       </div>
     </div>
