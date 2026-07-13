@@ -68,53 +68,6 @@ function Main() {
   );
 }
 
-function Main1() {
-  return (
-    <div className="absolute h-[520px] left-[820px] top-[235px] w-[580px] overflow-visible" data-name="main">
-      {/* Brand Halos - Orbiting Glowing backdrops */}
-      {/* Halo 1: Large Gold Glow backdrop */}
-      <div className="absolute w-[450px] h-[450px] rounded-full bg-[#ffa62a]/12 blur-[120px] top-[35px] left-[65px] animate-pulse pointer-events-none" style={{ animationDuration: '6s' }} />
-
-      {/* Halo 2: Thin Rotating Dashed Vector Ring */}
-      <div 
-        className="absolute border border-dashed border-[#ffa62a]/20 rounded-full animate-[spin_35s_linear_infinite] pointer-events-none"
-        style={{
-          width: '380px',
-          height: '380px',
-          left: 'calc(50% - 190px)',
-          top: 'calc(50% - 190px)',
-        }}
-      />
-
-      {/* Halo 3: Double Outline Swaying Vector Ring */}
-      <div 
-        className="absolute border border-double border-white/5 rounded-full animate-sway-slow pointer-events-none"
-        style={{
-          width: '460px',
-          height: '460px',
-          left: 'calc(50% - 230px)',
-          top: 'calc(50% - 230px)',
-        }}
-      />
-
-      {/* Brand Halo Gyroscope - Dual spinning transparent rings */}
-      <div className="absolute inset-0 flex items-center justify-center z-10 animate-float-slow">
-        {/* Outer Halo */}
-        <img 
-          src="/brand_halo_full.png" 
-          alt="Outer Brand Halo" 
-          className="w-[85%] h-auto object-contain select-none mix-blend-screen animate-[spin_60s_linear_infinite]" 
-        />
-        {/* Inner Counter-spinning Halo */}
-        <img 
-          src="/brand_halo_full.png" 
-          alt="Inner Brand Halo" 
-          className="absolute w-[68%] h-auto object-contain select-none mix-blend-screen opacity-70 animate-[spin_40s_linear_infinite_reverse] rotate-[30deg] scale-x-[-1]" 
-        />
-      </div>
-    </div>
-  );
-}
 
 function Logo() {
   return (
@@ -417,7 +370,21 @@ export default function HeroSection() {
       </p>
       
       <Main />
-      <Main1 />
+      
+      {/* Sideways Framing Brand Halo Arch */}
+      <div 
+        className="absolute pointer-events-none select-none right-[-310px] top-[40px] h-[820px] w-[620px] overflow-visible flex items-center justify-end z-0 opacity-75"
+        data-name="framing-halo"
+      >
+        <img 
+          src="/brand_halo_half.png" 
+          alt="Sideways framing brand halo" 
+          className="h-[800px] w-auto max-w-none object-contain select-none" 
+          style={{
+            transform: 'rotate(-90deg)',
+          }}
+        />
+      </div>
       
       <p className="[word-break:break-word] absolute font-geist-mono font-normal leading-[normal] left-[40px] text-[#989898] text-[16px] top-[168px] uppercase whitespace-nowrap tracking-wider">The organic growth Web Agency</p>
       
