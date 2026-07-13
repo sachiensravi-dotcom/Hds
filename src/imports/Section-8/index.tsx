@@ -61,7 +61,7 @@ function Graphic1() {
             <foreignObject height="369.297" width="223.253" x="-24" y="-24">
               <div style={{ backdropFilter: "blur(12px)", clipPath: "url(#bgblur_0_5_3610_clip_path)", height: "100%", width: "100%" }} xmlns="http://www.w3.org/1999/xhtml" />
             </foreignObject>
-            <path d={svgPaths.p22ffdb00} fill="url(#paint0_linear_5_3610)" id="Vector 5" stroke="var(--stroke-0, white)" strokeOpacity="0.4" data-figma-bg-blur-radius="24" />
+            <path d={svgPaths.p22ffdb00} fill="url(#paint0_linear_5_3610)" id="Vector 5" stroke="currentColor" strokeOpacity="0.4" data-figma-bg-blur-radius="24" />
             <defs>
               <clipPath id="bgblur_0_5_3610_clip_path" transform="translate(24 24)">
                 <path d={svgPaths.p22ffdb00} />
@@ -82,7 +82,7 @@ function Graphic1() {
                 <foreignObject height="369.296" width="223.252" x="-24" y="-24">
                   <div style={{ backdropFilter: "blur(12px)", clipPath: "url(#bgblur_0_5_3600_clip_path)", height: "100%", width: "100%" }} xmlns="http://www.w3.org/1999/xhtml" />
                 </foreignObject>
-                <path d={svgPaths.p1e63c600} fill="url(#paint0_linear_5_3600)" id="Vector 6" stroke="var(--stroke-0, white)" strokeOpacity="0.4" data-figma-bg-blur-radius="24" />
+                <path d={svgPaths.p1e63c600} fill="url(#paint0_linear_5_3600)" id="Vector 6" stroke="currentColor" strokeOpacity="0.4" data-figma-bg-blur-radius="24" />
                 <defs>
                   <clipPath id="bgblur_0_5_3600_clip_path" transform="translate(24 24)">
                     <path d={svgPaths.p1e63c600} />
@@ -107,8 +107,8 @@ function Group() {
       <div className="absolute inset-[-3.42%_-3.64%]">
         <svg className="block size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 22.1057 23.4295">
           <g id="Group">
-            <path d={svgPaths.pe53d880} id="Vector" stroke="var(--stroke-0, white)" strokeLinecap="round" strokeWidth="1.5" />
-            <path d={svgPaths.p4cfb480} id="Vector_2" stroke="var(--stroke-0, white)" strokeLinecap="round" strokeWidth="1.5" />
+            <path d={svgPaths.pe53d880} id="Vector" stroke="currentColor" strokeLinecap="round" strokeWidth="1.5" />
+            <path d={svgPaths.p4cfb480} id="Vector_2" stroke="currentColor" strokeLinecap="round" strokeWidth="1.5" />
           </g>
         </svg>
       </div>
@@ -118,7 +118,7 @@ function Group() {
 
 function LetsIconsUser() {
   return (
-    <div className="overflow-clip relative shrink-0 size-[32px]" data-name="lets-icons:user">
+    <div className="overflow-clip relative shrink-0 size-[32px] text-[#989898] transition-all duration-300 group-hover:scale-115 group-hover:rotate-[8deg] group-hover:text-[#ffa62a]" data-name="lets-icons:user">
       <Group />
     </div>
   );
@@ -135,7 +135,7 @@ function Content() {
 
 function Card() {
   return (
-    <div className="flex-[1_0_0] h-full min-w-px relative" data-name="card">
+    <div className="flex-[1_0_0] h-full min-w-px relative group cursor-pointer" data-name="card">
       <div aria-hidden className="absolute border border-[#3b3b3b] border-solid inset-0 pointer-events-none" />
       <div className="content-stretch flex flex-col gap-[40px] items-start p-[24px] relative size-full">
         <LetsIconsUser />
@@ -151,8 +151,8 @@ function Group1() {
       <div className="absolute inset-[-3.13%_-2.81%]">
         <svg className="block size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 28.1672 25.4995">
           <g id="Group">
-            <path d={svgPaths.p38448280} id="Vector" stroke="var(--stroke-0, white)" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" />
-            <path d={svgPaths.p25b38b00} id="Vector_2" stroke="var(--stroke-0, white)" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" />
+            <path d={svgPaths.p38448280} id="Vector" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" />
+            <path d={svgPaths.p25b38b00} id="Vector_2" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" />
           </g>
         </svg>
       </div>
@@ -162,7 +162,7 @@ function Group1() {
 
 function HugeiconsPlant() {
   return (
-    <div className="overflow-clip relative shrink-0 size-[32px]" data-name="hugeicons:plant-01">
+    <div className="overflow-clip relative shrink-0 size-[32px] text-[#989898] transition-all duration-300 group-hover:scale-115 group-hover:rotate-[8deg] group-hover:text-[#ffa62a]" data-name="hugeicons:plant-01">
       <Group1 />
     </div>
   );
@@ -179,7 +179,7 @@ function Content1() {
 
 function Card1() {
   return (
-    <div className="flex-[1_0_0] h-full min-w-px relative" data-name="card">
+    <div className="flex-[1_0_0] h-full min-w-px relative group cursor-pointer" data-name="card">
       <div aria-hidden className="absolute border border-[#3b3b3b] border-solid inset-0 pointer-events-none" />
       <div className="content-stretch flex flex-col gap-[40px] items-start p-[24px] relative size-full">
         <HugeiconsPlant />
@@ -195,9 +195,9 @@ function Group2() {
       <div className="absolute inset-[-3.13%]">
         <svg className="block size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 25.5 25.5">
           <g id="Group">
-            <path d={svgPaths.p1a92ed80} id="Vector" stroke="var(--stroke-0, white)" strokeWidth="1.5" />
-            <path d={svgPaths.p419800} id="Vector_2" stroke="var(--stroke-0, white)" strokeWidth="1.5" />
-            <path d={svgPaths.p2c774d00} id="Vector_3" stroke="var(--stroke-0, white)" strokeWidth="1.5" />
+            <path d={svgPaths.p1a92ed80} id="Vector" stroke="currentColor" strokeWidth="1.5" />
+            <path d={svgPaths.p419800} id="Vector_2" stroke="currentColor" strokeWidth="1.5" />
+            <path d={svgPaths.p2c774d00} id="Vector_3" stroke="currentColor" strokeWidth="1.5" />
           </g>
         </svg>
       </div>
@@ -207,7 +207,7 @@ function Group2() {
 
 function HugeiconsCustomize() {
   return (
-    <div className="overflow-clip relative shrink-0 size-[32px]" data-name="hugeicons:customize">
+    <div className="overflow-clip relative shrink-0 size-[32px] text-[#989898] transition-all duration-300 group-hover:scale-115 group-hover:rotate-[8deg] group-hover:text-[#ffa62a]" data-name="hugeicons:customize">
       <Group2 />
     </div>
   );
@@ -224,7 +224,7 @@ function Content2() {
 
 function Card2() {
   return (
-    <div className="flex-[1_0_0] h-full min-w-px relative" data-name="card">
+    <div className="flex-[1_0_0] h-full min-w-px relative group cursor-pointer" data-name="card">
       <div aria-hidden className="absolute border border-[#3b3b3b] border-solid inset-0 pointer-events-none" />
       <div className="content-stretch flex flex-col gap-[40px] items-start p-[24px] relative size-full">
         <HugeiconsCustomize />
@@ -240,9 +240,9 @@ function Group5() {
       <div className="absolute inset-[-2.81%_-3.13%]">
         <svg className="block size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 25.5 28.1667">
           <g id="Group">
-            <path d={svgPaths.p1a5b0bf0} id="Vector" stroke="var(--stroke-0, white)" strokeLinejoin="round" strokeWidth="1.5" />
-            <path d={svgPaths.p183d0e00} id="Vector_2" stroke="var(--stroke-0, white)" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" />
-            <path d={svgPaths.p1c9fd600} id="Vector_3" stroke="var(--stroke-0, white)" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" />
+            <path d={svgPaths.p1a5b0bf0} id="Vector" stroke="currentColor" strokeLinejoin="round" strokeWidth="1.5" />
+            <path d={svgPaths.p183d0e00} id="Vector_2" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" />
+            <path d={svgPaths.p1c9fd600} id="Vector_3" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" />
           </g>
         </svg>
       </div>
@@ -252,7 +252,7 @@ function Group5() {
 
 function IconParkOutlinePeopleSafe() {
   return (
-    <div className="overflow-clip relative shrink-0 size-[32px]" data-name="icon-park-outline:people-safe">
+    <div className="overflow-clip relative shrink-0 size-[32px] text-[#989898] transition-all duration-300 group-hover:scale-115 group-hover:rotate-[8deg] group-hover:text-[#ffa62a]" data-name="icon-park-outline:people-safe">
       <Group5 />
     </div>
   );
@@ -269,7 +269,7 @@ function Content3() {
 
 function Card3() {
   return (
-    <div className="flex-[1_0_0] h-full min-w-px relative" data-name="card">
+    <div className="flex-[1_0_0] h-full min-w-px relative group cursor-pointer" data-name="card">
       <div aria-hidden className="absolute border border-[#3b3b3b] border-solid inset-0 pointer-events-none" />
       <div className="content-stretch flex flex-col gap-[40px] items-start p-[24px] relative size-full">
         <IconParkOutlinePeopleSafe />
@@ -304,11 +304,11 @@ function Group6() {
       <div className="absolute inset-[-2.96%]">
         <svg className="block size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 26.8333 26.8333">
           <g id="Group">
-            <path d={svgPaths.p32f57e80} id="Vector" stroke="var(--stroke-0, white)" strokeWidth="1.5" />
-            <path d="M0.75 9.41667H26.0833" id="Vector_2" stroke="var(--stroke-0, white)" strokeLinejoin="round" strokeWidth="1.5" />
-            <path d={svgPaths.p1805200} id="Vector_3" stroke="var(--stroke-0, white)" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" />
-            <path d={svgPaths.p1f8fb900} id="Vector_4" stroke="var(--stroke-0, white)" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" />
-            <path d="M9.41667 9.41667V26.0833" id="Vector_5" stroke="var(--stroke-0, white)" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" />
+            <path d={svgPaths.p32f57e80} id="Vector" stroke="currentColor" strokeWidth="1.5" />
+            <path d="M0.75 9.41667H26.0833" id="Vector_2" stroke="currentColor" strokeLinejoin="round" strokeWidth="1.5" />
+            <path d={svgPaths.p1805200} id="Vector_3" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" />
+            <path d={svgPaths.p1f8fb900} id="Vector_4" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" />
+            <path d="M9.41667 9.41667V26.0833" id="Vector_5" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" />
           </g>
         </svg>
       </div>
@@ -318,7 +318,7 @@ function Group6() {
 
 function HugeiconsWebDesign() {
   return (
-    <div className="overflow-clip relative shrink-0 size-[32px]" data-name="hugeicons:web-design-01">
+    <div className="overflow-clip relative shrink-0 size-[32px] text-[#989898] transition-all duration-300 group-hover:scale-115 group-hover:rotate-[8deg] group-hover:text-[#ffa62a]" data-name="hugeicons:web-design-01">
       <Group6 />
     </div>
   );
@@ -335,7 +335,7 @@ function Content4() {
 
 function Card4() {
   return (
-    <div className="flex-[1_0_0] h-full min-w-px relative" data-name="card">
+    <div className="flex-[1_0_0] h-full min-w-px relative group cursor-pointer" data-name="card">
       <div aria-hidden className="absolute border border-[#3b3b3b] border-solid inset-0 pointer-events-none" />
       <div className="content-stretch flex flex-col gap-[40px] items-start p-[24px] relative size-full">
         <HugeiconsWebDesign />
@@ -347,10 +347,10 @@ function Card4() {
 
 function IconoirSineWave() {
   return (
-    <div className="relative shrink-0 size-[32px]" data-name="iconoir:sine-wave">
+    <div className="relative shrink-0 size-[32px] text-[#989898] transition-all duration-300 group-hover:scale-115 group-hover:rotate-[8deg] group-hover:text-[#ffa62a]" data-name="iconoir:sine-wave">
       <svg className="absolute block inset-0 size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 32 32">
         <g id="iconoir:sine-wave">
-          <path d={svgPaths.p1d5f300} id="Vector" stroke="var(--stroke-0, white)" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" />
+          <path d={svgPaths.p1d5f300} id="Vector" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" />
         </g>
       </svg>
     </div>
@@ -368,7 +368,7 @@ function Content5() {
 
 function Card5() {
   return (
-    <div className="flex-[1_0_0] h-full min-w-px relative" data-name="card">
+    <div className="flex-[1_0_0] h-full min-w-px relative group cursor-pointer" data-name="card">
       <div aria-hidden className="absolute border border-[#3b3b3b] border-solid inset-0 pointer-events-none" />
       <div className="content-stretch flex flex-col gap-[40px] items-start p-[24px] relative size-full">
         <IconoirSineWave />
@@ -384,9 +384,9 @@ function Group7() {
       <div className="absolute inset-[-4.29%_-2.68%]">
         <svg className="block size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 29.4997 18.9997">
           <g id="Group">
-            <path d={svgPaths.pc235760} id="Vector" stroke="var(--stroke-0, white)" strokeLinejoin="round" strokeWidth="1.5" />
-            <path d={svgPaths.p10ca1dc0} id="Vector_2" stroke="var(--stroke-0, white)" strokeLinejoin="round" strokeWidth="1.5" />
-            <path d={svgPaths.p34af2f80} id="Vector_3" stroke="var(--stroke-0, white)" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" />
+            <path d={svgPaths.pc235760} id="Vector" stroke="currentColor" strokeLinejoin="round" strokeWidth="1.5" />
+            <path d={svgPaths.p10ca1dc0} id="Vector_2" stroke="currentColor" strokeLinejoin="round" strokeWidth="1.5" />
+            <path d={svgPaths.p34af2f80} id="Vector_3" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" />
           </g>
         </svg>
       </div>
@@ -396,7 +396,7 @@ function Group7() {
 
 function LetsIconsSpeed() {
   return (
-    <div className="overflow-clip relative shrink-0 size-[32px]" data-name="lets-icons:speed">
+    <div className="overflow-clip relative shrink-0 size-[32px] text-[#989898] transition-all duration-300 group-hover:scale-115 group-hover:rotate-[8deg] group-hover:text-[#ffa62a]" data-name="lets-icons:speed">
       <Group7 />
     </div>
   );
@@ -413,7 +413,7 @@ function Content6() {
 
 function Card6() {
   return (
-    <div className="flex-[1_0_0] h-full min-w-px relative" data-name="card">
+    <div className="flex-[1_0_0] h-full min-w-px relative group cursor-pointer" data-name="card">
       <div aria-hidden className="absolute border border-[#3b3b3b] border-solid inset-0 pointer-events-none" />
       <div className="content-stretch flex flex-col gap-[40px] items-start p-[24px] relative size-full">
         <LetsIconsSpeed />
@@ -429,8 +429,8 @@ function Group8() {
       <div className="absolute inset-[-2.81%]">
         <svg className="block size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 28.1667 28.1653">
           <g id="Group">
-            <path d={svgPaths.p1e759be0} id="Vector" stroke="var(--stroke-0, white)" strokeLinecap="round" strokeWidth="1.5" />
-            <path d={svgPaths.p3ed1eee0} id="Vector_2" stroke="var(--stroke-0, white)" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" />
+            <path d={svgPaths.p1e759be0} id="Vector" stroke="currentColor" strokeLinecap="round" strokeWidth="1.5" />
+            <path d={svgPaths.p3ed1eee0} id="Vector_2" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" />
           </g>
         </svg>
       </div>
@@ -440,7 +440,7 @@ function Group8() {
 
 function SolarScaleLinear() {
   return (
-    <div className="overflow-clip relative shrink-0 size-[32px]" data-name="solar:scale-linear">
+    <div className="overflow-clip relative shrink-0 size-[32px] text-[#989898] transition-all duration-300 group-hover:scale-115 group-hover:rotate-[8deg] group-hover:text-[#ffa62a]" data-name="solar:scale-linear">
       <Group8 />
     </div>
   );
@@ -457,7 +457,7 @@ function Content7() {
 
 function Card7() {
   return (
-    <div className="flex-[1_0_0] h-full min-w-px relative" data-name="card">
+    <div className="flex-[1_0_0] h-full min-w-px relative group cursor-pointer" data-name="card">
       <div aria-hidden className="absolute border border-[#3b3b3b] border-solid inset-0 pointer-events-none" />
       <div className="content-stretch flex flex-col gap-[40px] items-start p-[24px] relative size-full">
         <SolarScaleLinear />
