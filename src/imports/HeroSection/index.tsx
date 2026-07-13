@@ -103,6 +103,11 @@ function Main1() {
           src="/hero_3d_shapes.jpg" 
           alt="3D Floating Shapes Render" 
           className="w-full h-auto object-contain select-none mix-blend-screen" 
+          style={{
+            filter: 'contrast(1.4) brightness(0.8) saturate(1.25)',
+            maskImage: 'radial-gradient(circle, rgba(0,0,0,1) 55%, rgba(0,0,0,0) 85%)',
+            WebkitMaskImage: 'radial-gradient(circle, rgba(0,0,0,1) 55%, rgba(0,0,0,0) 85%)',
+          }}
         />
       </div>
     </div>
@@ -283,13 +288,37 @@ function GlyphsChevronBold() {
 function Dropdown() {
   const navigate = useNavigate();
   return (
-    <div 
-      onClick={() => navigate("/services")}
-      className="content-stretch flex gap-[6px] items-center relative shrink-0 cursor-pointer transition-colors duration-250 hover:text-[#ffa62a] text-white" 
-      data-name="dropdown"
-    >
-      <p className="[word-break:break-word] font-['Inter_Tight',sans-serif] leading-[normal] not-italic relative shrink-0 text-[16px] text-center text-inherit whitespace-nowrap select-none">Services</p>
-      <GlyphsChevronBold />
+    <div className="relative group" data-name="dropdown-wrapper">
+      {/* Trigger Button */}
+      <div 
+        onClick={() => navigate("/services")}
+        className="content-stretch flex gap-[6px] items-center relative shrink-0 cursor-pointer transition-colors duration-250 hover:text-[#ffa62a] text-white" 
+        data-name="dropdown"
+      >
+        <p className="[word-break:break-word] font-['Inter_Tight',sans-serif] leading-[normal] not-italic relative shrink-0 text-[16px] text-center text-inherit whitespace-nowrap select-none">Services</p>
+        <div className="relative shrink-0 size-[12px] transition-transform duration-200 group-hover:rotate-180" data-name="glyphs:chevron-bold">
+          <svg className="absolute block inset-0 size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 12 12">
+            <g id="glyphs:chevron-bold">
+              <path d={svgPaths.p2334ce00} id="Vector" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" />
+            </g>
+          </svg>
+        </div>
+      </div>
+
+      {/* Dropdown Menu list */}
+      <div className="absolute top-[100%] left-[-40px] pt-[12px] w-[240px] opacity-0 scale-95 pointer-events-none group-hover:opacity-100 group-hover:scale-100 group-hover:pointer-events-auto transition-all duration-200 z-50">
+        <div className="bg-[#1a1a1a]/95 backdrop-blur-md border border-white/10 rounded-[12px] p-[8px] shadow-2xl flex flex-col gap-[2px]">
+          <div onClick={() => navigate("/services/website")} className="px-[12px] py-[8px] rounded-[6px] text-[14px] text-[#989898] hover:text-white hover:bg-white/5 transition-colors duration-150 cursor-pointer select-none">Custom Websites</div>
+          <div onClick={() => navigate("/services/landing-pages")} className="px-[12px] py-[8px] rounded-[6px] text-[14px] text-[#989898] hover:text-white hover:bg-white/5 transition-colors duration-150 cursor-pointer select-none">Landing Pages</div>
+          <div onClick={() => navigate("/services/seo")} className="px-[12px] py-[8px] rounded-[6px] text-[14px] text-[#989898] hover:text-white hover:bg-white/5 transition-colors duration-150 cursor-pointer select-none">SEO & Growth</div>
+          <div onClick={() => navigate("/services/smm")} className="px-[12px] py-[8px] rounded-[6px] text-[14px] text-[#989898] hover:text-white hover:bg-white/5 transition-colors duration-150 cursor-pointer select-none">Social Media Marketing</div>
+          <div onClick={() => navigate("/services/crm-automation")} className="px-[12px] py-[8px] rounded-[6px] text-[14px] text-[#989898] hover:text-white hover:bg-white/5 transition-colors duration-150 cursor-pointer select-none">CRM Automation</div>
+          <div onClick={() => navigate("/services/voice-ai")} className="px-[12px] py-[8px] rounded-[6px] text-[14px] text-[#989898] hover:text-white hover:bg-white/5 transition-colors duration-150 cursor-pointer select-none">Voice AI Agents</div>
+          <div onClick={() => navigate("/services/email-nurturing")} className="px-[12px] py-[8px] rounded-[6px] text-[14px] text-[#989898] hover:text-white hover:bg-white/5 transition-colors duration-150 cursor-pointer select-none">Email Nurturing</div>
+          <div onClick={() => navigate("/services/reputation-management")} className="px-[12px] py-[8px] rounded-[6px] text-[14px] text-[#989898] hover:text-white hover:bg-white/5 transition-colors duration-150 cursor-pointer select-none">Reputation Management</div>
+          <div onClick={() => navigate("/services/database-reactivation")} className="px-[12px] py-[8px] rounded-[6px] text-[14px] text-[#989898] hover:text-white hover:bg-white/5 transition-colors duration-150 cursor-pointer select-none">Database Reactivation</div>
+        </div>
+      </div>
     </div>
   );
 }
@@ -367,8 +396,7 @@ function MainNav() {
 
 function NavbarFull() {
   return (
-    <div className="absolute content-stretch flex flex-col items-start left-0 top-0 w-[1440px]" data-name="navbar full">
-      <TopNav />
+    <div className="absolute content-stretch flex flex-col items-start left-0 top-0 w-[1440px] z-50" data-name="navbar full">
       <MainNav />
     </div>
   );
