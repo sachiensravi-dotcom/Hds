@@ -260,3 +260,54 @@
   animation: pulse-slow 3s ease-in-out infinite;
 }
 
+/* Premium Hero Section Animations */
+@keyframes shine {
+  0% { left: -100%; }
+  50% { left: 100%; }
+  100% { left: 100%; }
+}
+
+.btn-shine-effect {
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-shine-effect::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 0.45) 50%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  transform: skewX(-25deg);
+  animation: shine 4.5s infinite ease-in-out;
+}
+
+@keyframes float-hero-card {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-10px) rotate(0.4deg);
+  }
+}
+
+.animate-float-hero-card {
+  animation: float-hero-card 6s ease-in-out infinite;
+}
+
+@keyframes border-glow {
+  0%, 100% { border-color: rgba(59, 59, 59, 1); }
+  50% { border-color: rgba(255, 166, 42, 0.45); }
+}
+
+.animate-border-glow {
+  animation: border-glow 8s ease-in-out infinite;
+}
+

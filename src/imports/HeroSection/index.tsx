@@ -7,7 +7,7 @@ function Btn() {
   return (
     <div 
       onClick={() => navigate("/contact")}
-      className="bg-[#ffa62a] content-stretch flex items-center justify-center px-[20px] py-[16px] relative rounded-[120px] shrink-0 cursor-pointer transition-all duration-300 hover:scale-[1.04] hover:shadow-[0_0_20px_rgba(255,166,42,0.4)] active:scale-[0.98]" 
+      className="btn-shine-effect bg-[#ffa62a] content-stretch flex items-center justify-center px-[20px] py-[16px] relative rounded-[120px] shrink-0 cursor-pointer transition-all duration-300 hover:scale-[1.04] hover:shadow-[0_0_20px_rgba(255,166,42,0.4)] active:scale-[0.98]" 
       data-name="btn"
     >
       <p className="[word-break:break-word] font-['Inter_Tight',sans-serif] leading-[normal] not-italic relative shrink-0 text-[#462c07] text-[18px] text-right whitespace-nowrap select-none">Book a Consultation</p>
@@ -40,7 +40,7 @@ function BtnGroup() {
 
 function Main() {
   return (
-    <div className="absolute border border-[#3b3b3b] border-solid h-[400px] left-[40px] overflow-clip top-[373px] w-[783px]" data-name="main">
+    <div className="absolute border border-[#3b3b3b] border-solid h-[400px] left-[40px] overflow-clip top-[373px] w-[783px] animate-border-glow" data-name="main">
       <div className="[word-break:break-word] absolute font-['Inter_Tight:Regular',sans-serif] leading-[0] left-[31px] not-italic text-[20px] text-white top-[31px] w-[719px] whitespace-pre-wrap">
         <p className="leading-[1.4] mb-0">{`Hyperion Agency designs and builds fully original websites for businesses that want to look sharper, earn trust faster, and convert more attention into opportunity. `}</p>
         <p className="leading-[1.4] mb-0">​</p>
@@ -53,7 +53,7 @@ function Main() {
 
 function Main1() {
   return (
-    <div className="absolute bg-black h-[400px] left-[calc(58.33%+7px)] overflow-clip top-[373px] w-[553px]" data-name="main">
+    <div className="absolute bg-black h-[400px] left-[calc(58.33%+7px)] overflow-clip top-[373px] w-[553px] animate-float-hero-card" data-name="main">
       <div className="absolute flex items-center justify-center left-[-68px] size-[1042.27px] top-[-139px]">
         <div className="flex-none rotate-[15.84deg]">
           <div className="opacity-70 relative size-[843.92px]" data-name="Rectangle">
@@ -347,7 +347,13 @@ function NavbarFull() {
 export default function HeroSection() {
   return (
     <div className="bg-[#141414] relative size-full" data-name="Hero Section">
-      <p className="[word-break:break-word] absolute font-['Inter_Tight:Regular',sans-serif] leading-[normal] left-[40px] not-italic text-[56px] text-white top-[205px] w-[668px]">Custom Websites Built for Businesses Ready to <span className="text-gold-gradient font-semibold">Grow</span></p>
+      <p className="[word-break:break-word] absolute font-['Inter_Tight:Regular',sans-serif] leading-[normal] left-[40px] not-italic text-[56px] text-white top-[205px] w-[668px]">
+        Custom Websites Built for Businesses Ready to{" "}
+        <span className="relative text-gold-gradient font-semibold inline-block">
+          Grow
+          <span className="absolute -inset-x-3 -inset-y-1 bg-[#ffa62a] opacity-25 blur-2xl rounded-full -z-10 animate-pulse" style={{ animationDuration: '4s' }} />
+        </span>
+      </p>
       <Main />
       <Main1 />
       <p className="[word-break:break-word] absolute font-geist-mono font-normal leading-[normal] left-[40px] text-[#989898] text-[16px] top-[168px] uppercase whitespace-nowrap">The organic growth Web Agency</p>
