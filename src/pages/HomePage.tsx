@@ -17,7 +17,7 @@ export default function HomePage() {
   return (
     <div className="bg-[#141414] min-w-[1440px] overflow-x-hidden flex flex-col items-center">
       {/* 1. Hero Section */}
-      <div className="relative w-[1440px] h-[1063px] shrink-0">
+      <div className="relative w-[1440px] h-[1063px] shrink-0 z-20">
         <HeroSection />
       </div>
 

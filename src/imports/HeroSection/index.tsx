@@ -359,7 +359,7 @@ function NavbarFull() {
 
 export default function HeroSection() {
   return (
-    <div className="bg-[#141414] relative size-full" data-name="Hero Section">
+    <div className="bg-[#141414] relative size-full z-20" data-name="Hero Section">
       {/* Brand Tagline Title */}
       <p className="[word-break:break-word] absolute font-['Inter_Tight',sans-serif] font-bold leading-[1.15] left-[40px] not-italic text-[56px] text-white top-[205px] w-[750px]">
         Custom Websites Built for Businesses Ready to{" "}
@@ -373,7 +373,7 @@ export default function HeroSection() {
       
       {/* Sideways Framing Brand Halo Arch */}
       <div 
-        className="absolute pointer-events-none select-none right-[-535px] top-[40px] h-[820px] w-[620px] overflow-visible flex items-center justify-end z-0 opacity-75"
+        className="absolute pointer-events-none select-none right-[-535px] top-[40px] h-[820px] w-[620px] overflow-visible flex items-center justify-end z-20 opacity-75"
         data-name="framing-halo"
       >
         <img 
