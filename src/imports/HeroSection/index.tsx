@@ -29,31 +29,23 @@ function Btn1() {
   );
 }
 
-function BtnGroup() {
-  return (
-    <div className="absolute content-stretch flex gap-[16px] items-center left-[31px] top-[203px]" data-name="btn group">
-      <Btn />
-      <Btn1 />
-    </div>
-  );
-}
-
 function Main() {
   return (
-    <div className="absolute border border-[#3b3b3b] border-solid h-[400px] left-[40px] overflow-clip top-[373px] w-[783px] animate-border-glow" data-name="main">
-      <div className="[word-break:break-word] absolute font-['Inter_Tight:Regular',sans-serif] leading-[0] left-[31px] not-italic text-[20px] text-white top-[31px] w-[719px] whitespace-pre-wrap">
-        <p className="leading-[1.4] mb-0">{`Hyperion Agency designs and builds fully original websites for businesses that want to look sharper, earn trust faster, and convert more attention into opportunity. `}</p>
-        <p className="leading-[1.4] mb-0">​</p>
-        <p className="leading-[1.4]">No AI-generated websites. No recycled templates. Just custom work built with intention.</p>
+    <div className="absolute h-[300px] left-[40px] top-[345px] w-[780px]" data-name="main">
+      <p className="font-['Inter_Tight',sans-serif] text-[20px] text-[#989898] leading-[1.6] w-[640px]">
+        Hyperion designs and builds custom, high-performance websites built to capture attention and convert it into growth.
+      </p>
+      <div className="flex gap-[16px] items-center mt-[36px]" data-name="btn group">
+        <Btn />
+        <Btn1 />
       </div>
-      <BtnGroup />
     </div>
   );
 }
 
 function Main1() {
   return (
-    <div className="absolute bg-[#111111] border border-[#3b3b3b] border-solid h-[400px] left-[calc(58.33%+7px)] overflow-clip top-[373px] w-[553px] rounded-[8px] animate-float-hero-card" data-name="main">
+    <div className="absolute bg-[#111111] border border-[#3b3b3b] border-solid h-[400px] left-[calc(58.33%+7px)] overflow-clip top-[373px] w-[553px] rounded-[8px]" data-name="main">
       {/* Background Halo 1: Pulsing Gold Glow (Top Left) */}
       <div className="absolute w-[240px] h-[240px] rounded-full bg-[#ffa62a]/10 blur-3xl -top-[20px] -left-[20px] animate-pulse pointer-events-none" style={{ animationDuration: '5s' }} />
 
@@ -81,6 +73,48 @@ function Main1() {
           top: 'calc(50% - 210px)',
         }}
       />
+
+      {/* Animated Components Overlay */}
+      {/* Floating Pointer Cursor */}
+      <svg 
+        className="absolute w-[22px] h-[22px] text-[#ffa62a] drop-shadow-[0_2px_10px_rgba(255,166,42,0.4)] animate-[float-slow_6s_infinite_ease-in-out] z-20 pointer-events-none"
+        viewBox="0 0 24 24"
+        fill="currentColor"
+        style={{ left: '42%', top: '48%', animationDelay: '1s' }}
+      >
+        <path d="M4.5 3v15.25l4.5-4.5h6.25L4.5 3z" />
+      </svg>
+
+      {/* Floating Speech Bubble 1 */}
+      <div 
+        className="absolute bg-white/90 text-[#141414] font-['Inter_Tight',sans-serif] text-[11px] font-bold px-[12px] py-[6px] rounded-[12px] shadow-lg animate-[float-slow_4.5s_infinite_ease-in-out] z-20 pointer-events-none whitespace-nowrap"
+        style={{ left: '50%', top: '12%' }}
+      >
+        Let's put the header here!
+        <div className="absolute border-solid border-t-white/90 border-t-[6px] border-x-[6px] border-x-transparent border-b-0 left-[20px] bottom-[-6px]" />
+      </div>
+
+      {/* Floating Speech Bubble 2 */}
+      <div 
+        className="absolute bg-white/90 text-[#141414] font-['Inter_Tight',sans-serif] text-[11px] font-bold px-[12px] py-[6px] rounded-[12px] shadow-lg animate-[float-slow_5.5s_infinite_ease-in-out] z-20 pointer-events-none whitespace-nowrap"
+        style={{ left: '12%', top: '68%', animationDelay: '1.5s' }}
+      >
+        What about a banner?
+        <div className="absolute border-solid border-t-white/90 border-t-[6px] border-x-[6px] border-x-transparent border-b-0 right-[20px] bottom-[-6px]" />
+      </div>
+
+      {/* Swaying Drawing Pen */}
+      <svg 
+        className="absolute w-[32px] h-[32px] text-white/80 animate-[sway-slow_4s_infinite_ease-in-out] z-20 pointer-events-none"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        strokeWidth="2"
+        style={{ left: '52%', top: '35%' }}
+      >
+        <path d="M12 20h9" />
+        <path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z" />
+      </svg>
 
       {/* Wireframe Illustration - Inverted to render as clean white-on-dark lines */}
       <div className="absolute inset-0 flex items-center justify-center p-[20px] z-10">
