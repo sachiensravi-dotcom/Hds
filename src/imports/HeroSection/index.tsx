@@ -91,7 +91,7 @@ function Main1() {
 function Logo() {
   return (
     <div className="flex items-center justify-center shrink-0 h-[80px]" data-name="Logo">
-      <img src="/logo_whitewright.png" className="h-[52px] w-auto opacity-80 hover:opacity-100 transition-opacity duration-300 select-none" alt="Whitewright" />
+      <img src="/logo_whitewright.png" className="h-[52px] w-auto opacity-80 hover:opacity-100 transition-opacity duration-300 select-none mix-blend-screen" alt="Whitewright" />
     </div>
   );
 }
@@ -115,7 +115,7 @@ function Logo2() {
 function Logo3() {
   return (
     <div className="flex items-center justify-center shrink-0 h-[80px]" data-name="Logo">
-      <img src="/logo_remax.png" className="h-[48px] w-auto opacity-80 hover:opacity-100 transition-opacity duration-300 select-none" alt="Remax" />
+      <img src="/logo_remax.png" className="h-[48px] w-auto opacity-80 hover:opacity-100 transition-opacity duration-300 select-none brightness-0 invert" alt="Remax" />
     </div>
   );
 }
@@ -123,22 +123,42 @@ function Logo3() {
 function Logo4() {
   return (
     <div className="flex items-center justify-center shrink-0 h-[80px]" data-name="Logo">
-      <img src="/logo_barber.png" className="h-[60px] w-auto opacity-80 hover:opacity-100 transition-opacity duration-300 select-none" alt="4th Main Barber" />
+      <img src="/logo_barber.png" className="h-[60px] w-auto opacity-80 hover:opacity-100 transition-opacity duration-300 select-none mix-blend-screen" alt="4th Main Barber" />
     </div>
   );
 }
 
 function LogoMarquee() {
   return (
-    <div className="absolute overflow-hidden left-[40px] top-[793px] w-[1360px] h-[80px] flex items-center gap-[64px]" data-name="logo marquee">
-      <div className="flex gap-[64px] shrink-0 min-w-full justify-around animate-marquee">
+    <div className="absolute overflow-hidden left-[40px] top-[793px] w-[1360px] h-[80px] flex items-center gap-[80px]" data-name="logo marquee">
+      <div className="flex gap-[80px] shrink-0 animate-marquee">
+        <Logo />
+        <Logo1 />
+        <Logo2 />
+        <Logo3 />
+        <Logo4 />
+        <Logo />
+        <Logo1 />
+        <Logo2 />
+        <Logo3 />
+        <Logo4 />
         <Logo />
         <Logo1 />
         <Logo2 />
         <Logo3 />
         <Logo4 />
       </div>
-      <div className="flex gap-[64px] shrink-0 min-w-full justify-around animate-marquee" aria-hidden="true">
+      <div className="flex gap-[80px] shrink-0 animate-marquee" aria-hidden="true">
+        <Logo />
+        <Logo1 />
+        <Logo2 />
+        <Logo3 />
+        <Logo4 />
+        <Logo />
+        <Logo1 />
+        <Logo2 />
+        <Logo3 />
+        <Logo4 />
         <Logo />
         <Logo1 />
         <Logo2 />
