@@ -6,7 +6,7 @@ export default function Section({
   title = "Start building your online presence", 
   ctaText = "Talk with us" 
 }: { 
-  title?: string; 
+  title?: React.ReactNode; 
   ctaText?: string; 
 }) {
   const containerRef = useRef<HTMLDivElement>(null);
@@ -32,6 +32,45 @@ export default function Section({
     
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
+
+  const highlightTitle = (text: string) => {
+    const phrases = [
+      "growth engine?",
+      "success story?",
+      "online presence?",
+      "dormant leads?",
+      "email flows?",
+      "ad spend?",
+      "positive feedback",
+      "organic search?",
+      "ad campaigns?",
+      "AI voice agents?",
+      "pipelines?",
+      "funnel",
+      "growth",
+      "presence",
+      "success",
+      "automate",
+      "domimate"
+    ];
+
+    for (const phrase of phrases) {
+      const index = text.toLowerCase().indexOf(phrase.toLowerCase());
+      if (index !== -1) {
+        const originalPhrase = text.substring(index, index + phrase.length);
+        const before = text.substring(0, index);
+        const after = text.substring(index + phrase.length);
+        return (
+          <>
+            {before}
+            <span className="text-gold-gradient font-semibold">{originalPhrase}</span>
+            {after}
+          </>
+        );
+      }
+    }
+    return text;
+  };
 
   return (
     <div 
@@ -89,7 +128,7 @@ export default function Section({
       {/* Content */}
       <div className="relative z-20 flex flex-col items-center gap-6">
         <p className="[word-break:break-word] font-['Inter_Tight',sans-serif] leading-[normal] not-italic text-[44px] text-white text-center font-normal">
-          {title}
+          {typeof title === "string" ? highlightTitle(title) : title}
         </p>
         
         {/* Glow Button */}

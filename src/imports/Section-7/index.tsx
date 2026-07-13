@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { useNavigate } from "react-router";
 import imgRectangle7 from "../Section-14/fe3273560c41cea13faaa5f45d423a2c6b6dd56c.png";
-import imgBarberPortrait from "./barber_owner_portrait.png";
+import imgBarberPortrait from "./barber_owner_portrait.jpg";
 
 const Ts = [
   {

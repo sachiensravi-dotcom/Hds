@@ -227,3 +227,8 @@
   font-style: italic !important;
 }
 
+/* Global override to ensure all Geist Mono inline alias classes render the monospaced font correctly */
+[class*="Geist_Mono"] {
+  font-family: 'Geist Mono', monospace !important;
+}
+

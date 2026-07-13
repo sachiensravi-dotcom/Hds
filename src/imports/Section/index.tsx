@@ -1,4 +1,5 @@
 import svgPaths from "./svg-jhwcgkx0x6";
+import TiltCard from "../TiltCard";
 
 function Group() {
   return (
@@ -26,7 +27,7 @@ function HugeiconsCustomize() {
 
 function IcWrap() {
   return (
-    <div className="bg-[#ffa62a] overflow-clip relative rounded-[4px] shrink-0 size-[40px]" data-name="ic-wrap">
+    <div className="bg-[#ffa62a] overflow-clip relative rounded-[4px] shrink-0 size-[40px] transition-all duration-300 group-hover:scale-110 group-hover:rotate-[8deg] group-hover:bg-[#ffe62a] group-hover:shadow-[0_0_15px_rgba(255,166,42,0.4)]" data-name="ic-wrap">
       <HugeiconsCustomize />
     </div>
   );
@@ -43,13 +44,17 @@ function Main() {
 
 function Item() {
   return (
-    <div className="flex-[1_0_0] min-w-px relative" data-name="item">
-      <div className="content-stretch flex flex-col gap-[40px] items-start overflow-clip pb-[24px] relative rounded-[inherit] size-full">
+    <TiltCard 
+      max={6}
+      scale={1.02}
+      className="flex-[1_0_0] min-w-px relative group cursor-pointer bg-[rgba(255,255,255,0.01)] border border-[#2d2d2d] rounded-[8px] p-[24px] hover:border-[#ffa62a] transition-all duration-300 glow-card-gold" 
+      data-name="item"
+    >
+      <div className="content-stretch flex flex-col gap-[40px] items-start overflow-clip relative size-full">
         <IcWrap />
         <Main />
       </div>
-      <div aria-hidden className="absolute border-[#3b3b3b] border-b border-solid inset-0 pointer-events-none" />
-    </div>
+    </TiltCard>
   );
 }
 
@@ -72,7 +77,7 @@ function SimpleIconsDevelopmentcontainers() {
 
 function IcWrap1() {
   return (
-    <div className="bg-[#ffa62a] overflow-clip relative rounded-[4px] shrink-0 size-[40px]" data-name="ic-wrap">
+    <div className="bg-[#ffa62a] overflow-clip relative rounded-[4px] shrink-0 size-[40px] transition-all duration-300 group-hover:scale-110 group-hover:rotate-[8deg] group-hover:bg-[#ffe62a] group-hover:shadow-[0_0_15px_rgba(255,166,42,0.4)]" data-name="ic-wrap">
       <SimpleIconsDevelopmentcontainers />
     </div>
   );
@@ -89,13 +94,17 @@ function Main1() {
 
 function Item1() {
   return (
-    <div className="flex-[1_0_0] min-w-px relative" data-name="item">
-      <div className="content-stretch flex flex-col gap-[40px] items-start overflow-clip pb-[24px] relative rounded-[inherit] size-full">
+    <TiltCard 
+      max={6}
+      scale={1.02}
+      className="flex-[1_0_0] min-w-px relative group cursor-pointer bg-[rgba(255,255,255,0.01)] border border-[#2d2d2d] rounded-[8px] p-[24px] hover:border-[#ffa62a] transition-all duration-300 glow-card-gold" 
+      data-name="item"
+    >
+      <div className="content-stretch flex flex-col gap-[40px] items-start overflow-clip relative size-full">
         <IcWrap1 />
         <Main1 />
       </div>
-      <div aria-hidden className="absolute border-[#3b3b3b] border-b border-solid inset-0 pointer-events-none" />
-    </div>
+    </TiltCard>
   );
 }
 
@@ -122,7 +131,7 @@ function MingcuteSearchLine() {
 
 function IcWrap2() {
   return (
-    <div className="bg-[#ffa62a] overflow-clip relative rounded-[4px] shrink-0 size-[40px]" data-name="ic-wrap">
+    <div className="bg-[#ffa62a] overflow-clip relative rounded-[4px] shrink-0 size-[40px] transition-all duration-300 group-hover:scale-110 group-hover:rotate-[8deg] group-hover:bg-[#ffe62a] group-hover:shadow-[0_0_15px_rgba(255,166,42,0.4)]" data-name="ic-wrap">
       <MingcuteSearchLine />
     </div>
   );
@@ -139,13 +148,17 @@ function Main2() {
 
 function Item2() {
   return (
-    <div className="flex-[1_0_0] min-w-px relative" data-name="item">
-      <div className="content-stretch flex flex-col gap-[40px] items-start overflow-clip pb-[24px] relative rounded-[inherit] size-full">
+    <TiltCard 
+      max={6}
+      scale={1.02}
+      className="flex-[1_0_0] min-w-px relative group cursor-pointer bg-[rgba(255,255,255,0.01)] border border-[#2d2d2d] rounded-[8px] p-[24px] hover:border-[#ffa62a] transition-all duration-300 glow-card-gold" 
+      data-name="item"
+    >
+      <div className="content-stretch flex flex-col gap-[40px] items-start overflow-clip relative size-full">
         <IcWrap2 />
         <Main2 />
       </div>
-      <div aria-hidden className="absolute border-[#3b3b3b] border-b border-solid inset-0 pointer-events-none" />
-    </div>
+    </TiltCard>
   );
 }
 
@@ -163,7 +176,7 @@ export default function Section() {
   return (
     <div className="bg-[#141414] relative size-full" data-name="Section">
       <p className="[word-break:break-word] absolute font-['Geist_Mono:Regular',sans-serif] font-normal leading-[normal] left-[40px] text-[#989898] text-[16px] top-[80px] uppercase whitespace-nowrap">The complete website package</p>
-      <p className="[word-break:break-word] absolute font-['Inter_Tight:Regular',sans-serif] leading-[normal] left-[40px] not-italic text-[48px] text-white top-[117px] whitespace-nowrap">Websites first. Growth built in.</p>
+      <p className="[word-break:break-word] absolute font-['Inter_Tight:Regular',sans-serif] leading-[normal] left-[40px] not-italic text-[48px] text-white top-[117px] whitespace-nowrap">Websites first. <span className="text-gold-gradient font-semibold">Growth</span> built in.</p>
       <p className="[word-break:break-word] absolute font-['Inter_Tight:Regular',sans-serif] leading-[1.4] left-[calc(58.33%+7px)] not-italic text-[#989898] text-[16px] top-[80px] w-[553px]">A strong website is not just about appearance. It is a business asset. It should support how your brand is perceived, how users move through your content, and how your business gets found online. We focus on custom websites that are built with performance, usability, clarity, and long-term visibility in mind. As your business grows, your site should be able to support that growth.</p>
       <List />
     </div>

@@ -14,7 +14,7 @@ const Ts = [
     author: "Jay Barber",
     role: "Owner | 4th Main Barber & Co.",
     label: "02. 4th Main Barber & Co.",
-    image: "/barber_owner_portrait.png"
+    image: "/barber_owner_portrait.jpg"
   }
 ];
 

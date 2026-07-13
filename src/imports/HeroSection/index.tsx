@@ -90,168 +90,70 @@ function Main1() {
 
 function Logo() {
   return (
-    <div className="h-[40px] relative shrink-0 w-[187px]" data-name="Logo">
-      <svg className="absolute block inset-0 size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 187 40">
-        <g id="Logo">
-          <path d={svgPaths.p3c9c4580} fill="var(--fill-0, #989898)" id="Vector" />
-          <path d={svgPaths.pbed8500} fill="var(--fill-0, #989898)" id="Vector_2" />
-          <path d={svgPaths.p3873e680} fill="var(--fill-0, #989898)" id="Vector_3" />
-          <path d={svgPaths.p7cbf500} fill="var(--fill-0, #989898)" id="Vector_4" />
-          <path d={svgPaths.p320e0000} fill="var(--fill-0, #989898)" id="Vector_5" />
-          <path d={svgPaths.p44b6200} fill="var(--fill-0, #989898)" id="Vector_6" />
-          <path d={svgPaths.p9ccca00} fill="var(--fill-0, #989898)" id="Vector_7" />
-          <path d={svgPaths.p18d02100} fill="var(--fill-0, #989898)" id="Vector_8" />
-          <path d={svgPaths.p3dc86f20} fill="var(--fill-0, #989898)" id="Vector_9" />
-          <path d={svgPaths.p36d11d00} fill="var(--fill-0, #989898)" id="Vector_10" />
-          <path d={svgPaths.p11a4200} fill="var(--fill-0, #989898)" id="Vector_11" />
-          <path d={svgPaths.p28032e00} fill="var(--fill-0, #989898)" id="Vector_12" />
-          <path d={svgPaths.p1e956500} fill="var(--fill-0, #989898)" id="Vector_13" />
-        </g>
-      </svg>
+    <div className="flex items-center justify-center shrink-0 h-[40px]" data-name="Logo">
+      <p className="font-geist-mono text-[#8c8c8c] hover:text-white transition-colors duration-300 text-[16px] font-medium uppercase tracking-[0.2em] select-none">
+        Whitewright
+      </p>
     </div>
   );
 }
 
 function Logo1() {
   return (
-    <div className="h-[40px] relative shrink-0 w-[186px]" data-name="Logo">
-      <svg className="absolute block inset-0 size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 186 40">
-        <g id="Logo">
-          <path d={svgPaths.p22265380} fill="var(--fill-0, #989898)" id="Vector" />
-          <path d={svgPaths.p3134c700} fill="var(--fill-0, #989898)" id="Vector_2" />
-          <path d={svgPaths.p18924e90} fill="var(--fill-0, #989898)" id="Vector_3" />
-          <path d={svgPaths.pc265100} fill="var(--fill-0, #989898)" id="Vector_4" />
-          <path d={svgPaths.p5ca9400} fill="var(--fill-0, #989898)" id="Vector_5" />
-          <path d={svgPaths.p4adb800} fill="var(--fill-0, #989898)" id="Vector_6" />
-          <path d={svgPaths.p2b8a0200} fill="var(--fill-0, #989898)" id="Vector_7" />
-          <path d={svgPaths.p34ebfff2} fill="var(--fill-0, #989898)" id="Vector_8" />
-          <path d={svgPaths.p4e2a300} fill="var(--fill-0, #989898)" id="Vector_9" />
-          <path d={svgPaths.p15c5b980} fill="var(--fill-0, #989898)" id="Vector_10" />
-          <path d={svgPaths.p2578bb00} fill="var(--fill-0, #989898)" id="Vector_11" />
-          <path d={svgPaths.p3590e00} fill="var(--fill-0, #989898)" id="Vector_12" />
-          <path d={svgPaths.p243d1dc0} fill="var(--fill-0, #989898)" id="Vector_13" />
-        </g>
-      </svg>
+    <div className="flex items-center justify-center shrink-0 h-[40px]" data-name="Logo">
+      <p className="font-geist-mono text-[#8c8c8c] hover:text-white transition-colors duration-300 text-[16px] font-medium uppercase tracking-[0.2em] select-none">
+        Texas Sun
+      </p>
     </div>
   );
 }
 
 function Logo2() {
   return (
-    <div className="h-[40px] relative shrink-0 w-[186px]" data-name="Logo">
-      <svg className="absolute block inset-0 size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 186 40">
-        <g id="Logo">
-          <path d={svgPaths.p22265380} fill="var(--fill-0, #989898)" id="Vector" />
-          <path d={svgPaths.p3134c700} fill="var(--fill-0, #989898)" id="Vector_2" />
-          <path d={svgPaths.p18924e90} fill="var(--fill-0, #989898)" id="Vector_3" />
-          <path d={svgPaths.pc265100} fill="var(--fill-0, #989898)" id="Vector_4" />
-          <path d={svgPaths.p5ca9400} fill="var(--fill-0, #989898)" id="Vector_5" />
-          <path d={svgPaths.p4adb800} fill="var(--fill-0, #989898)" id="Vector_6" />
-          <path d={svgPaths.p2b8a0200} fill="var(--fill-0, #989898)" id="Vector_7" />
-          <path d={svgPaths.p34ebfff2} fill="var(--fill-0, #989898)" id="Vector_8" />
-          <path d={svgPaths.p4e2a300} fill="var(--fill-0, #989898)" id="Vector_9" />
-          <path d={svgPaths.p15c5b980} fill="var(--fill-0, #989898)" id="Vector_10" />
-          <path d={svgPaths.p2578bb00} fill="var(--fill-0, #989898)" id="Vector_11" />
-          <path d={svgPaths.p3590e00} fill="var(--fill-0, #989898)" id="Vector_12" />
-          <path d={svgPaths.p243d1dc0} fill="var(--fill-0, #989898)" id="Vector_13" />
-        </g>
-      </svg>
+    <div className="flex items-center justify-center shrink-0 h-[40px]" data-name="Logo">
+      <p className="font-geist-mono text-[#8c8c8c] hover:text-white transition-colors duration-300 text-[16px] font-medium uppercase tracking-[0.2em] select-none">
+        Country Charm Coffee
+      </p>
     </div>
   );
 }
 
 function Logo3() {
   return (
-    <div className="h-[40px] relative shrink-0 w-[186px]" data-name="Logo">
-      <svg className="absolute block inset-0 size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 186 40">
-        <g id="Logo">
-          <path d={svgPaths.p22265380} fill="var(--fill-0, #989898)" id="Vector" />
-          <path d={svgPaths.p3134c700} fill="var(--fill-0, #989898)" id="Vector_2" />
-          <path d={svgPaths.p18924e90} fill="var(--fill-0, #989898)" id="Vector_3" />
-          <path d={svgPaths.pc265100} fill="var(--fill-0, #989898)" id="Vector_4" />
-          <path d={svgPaths.p5ca9400} fill="var(--fill-0, #989898)" id="Vector_5" />
-          <path d={svgPaths.p4adb800} fill="var(--fill-0, #989898)" id="Vector_6" />
-          <path d={svgPaths.p2b8a0200} fill="var(--fill-0, #989898)" id="Vector_7" />
-          <path d={svgPaths.p34ebfff2} fill="var(--fill-0, #989898)" id="Vector_8" />
-          <path d={svgPaths.p4e2a300} fill="var(--fill-0, #989898)" id="Vector_9" />
-          <path d={svgPaths.p15c5b980} fill="var(--fill-0, #989898)" id="Vector_10" />
-          <path d={svgPaths.p2578bb00} fill="var(--fill-0, #989898)" id="Vector_11" />
-          <path d={svgPaths.p3590e00} fill="var(--fill-0, #989898)" id="Vector_12" />
-          <path d={svgPaths.p243d1dc0} fill="var(--fill-0, #989898)" id="Vector_13" />
-        </g>
-      </svg>
+    <div className="flex items-center justify-center shrink-0 h-[40px]" data-name="Logo">
+      <p className="font-geist-mono text-[#8c8c8c] hover:text-white transition-colors duration-300 text-[16px] font-medium uppercase tracking-[0.2em] select-none">
+        Bruce Norwood
+      </p>
     </div>
   );
 }
 
 function Logo4() {
   return (
-    <div className="h-[40px] relative shrink-0 w-[187px]" data-name="Logo">
-      <svg className="absolute block inset-0 size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 187 40">
-        <g id="Logo">
-          <path d={svgPaths.p3c9c4580} fill="var(--fill-0, #989898)" id="Vector" />
-          <path d={svgPaths.pbed8500} fill="var(--fill-0, #989898)" id="Vector_2" />
-          <path d={svgPaths.p3873e680} fill="var(--fill-0, #989898)" id="Vector_3" />
-          <path d={svgPaths.p7cbf500} fill="var(--fill-0, #989898)" id="Vector_4" />
-          <path d={svgPaths.p320e0000} fill="var(--fill-0, #989898)" id="Vector_5" />
-          <path d={svgPaths.p44b6200} fill="var(--fill-0, #989898)" id="Vector_6" />
-          <path d={svgPaths.p9ccca00} fill="var(--fill-0, #989898)" id="Vector_7" />
-          <path d={svgPaths.p18d02100} fill="var(--fill-0, #989898)" id="Vector_8" />
-          <path d={svgPaths.p3dc86f20} fill="var(--fill-0, #989898)" id="Vector_9" />
-          <path d={svgPaths.p36d11d00} fill="var(--fill-0, #989898)" id="Vector_10" />
-          <path d={svgPaths.p11a4200} fill="var(--fill-0, #989898)" id="Vector_11" />
-          <path d={svgPaths.p28032e00} fill="var(--fill-0, #989898)" id="Vector_12" />
-          <path d={svgPaths.p1e956500} fill="var(--fill-0, #989898)" id="Vector_13" />
-        </g>
-      </svg>
+    <div className="flex items-center justify-center shrink-0 h-[40px]" data-name="Logo">
+      <p className="font-geist-mono text-[#8c8c8c] hover:text-white transition-colors duration-300 text-[16px] font-medium uppercase tracking-[0.2em] select-none">
+        4th Main Barber
+      </p>
     </div>
   );
 }
 
 function Logo5() {
   return (
-    <div className="h-[40px] relative shrink-0 w-[187px]" data-name="Logo">
-      <svg className="absolute block inset-0 size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 187 40">
-        <g id="Logo">
-          <path d={svgPaths.p3c9c4580} fill="var(--fill-0, #989898)" id="Vector" />
-          <path d={svgPaths.pbed8500} fill="var(--fill-0, #989898)" id="Vector_2" />
-          <path d={svgPaths.p3873e680} fill="var(--fill-0, #989898)" id="Vector_3" />
-          <path d={svgPaths.p7cbf500} fill="var(--fill-0, #989898)" id="Vector_4" />
-          <path d={svgPaths.p320e0000} fill="var(--fill-0, #989898)" id="Vector_5" />
-          <path d={svgPaths.p44b6200} fill="var(--fill-0, #989898)" id="Vector_6" />
-          <path d={svgPaths.p9ccca00} fill="var(--fill-0, #989898)" id="Vector_7" />
-          <path d={svgPaths.p18d02100} fill="var(--fill-0, #989898)" id="Vector_8" />
-          <path d={svgPaths.p3dc86f20} fill="var(--fill-0, #989898)" id="Vector_9" />
-          <path d={svgPaths.p36d11d00} fill="var(--fill-0, #989898)" id="Vector_10" />
-          <path d={svgPaths.p11a4200} fill="var(--fill-0, #989898)" id="Vector_11" />
-          <path d={svgPaths.p28032e00} fill="var(--fill-0, #989898)" id="Vector_12" />
-          <path d={svgPaths.p1e956500} fill="var(--fill-0, #989898)" id="Vector_13" />
-        </g>
-      </svg>
+    <div className="flex items-center justify-center shrink-0 h-[40px]" data-name="Logo">
+      <p className="font-geist-mono text-[#8c8c8c] hover:text-white transition-colors duration-300 text-[16px] font-medium uppercase tracking-[0.2em] select-none">
+        Texas Sun
+      </p>
     </div>
   );
 }
 
 function Logo6() {
   return (
-    <div className="h-[40px] relative shrink-0 w-[187px]" data-name="Logo">
-      <svg className="absolute block inset-0 size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 187 40">
-        <g id="Logo">
-          <path d={svgPaths.p3c9c4580} fill="var(--fill-0, #989898)" id="Vector" />
-          <path d={svgPaths.pbed8500} fill="var(--fill-0, #989898)" id="Vector_2" />
-          <path d={svgPaths.p3873e680} fill="var(--fill-0, #989898)" id="Vector_3" />
-          <path d={svgPaths.p7cbf500} fill="var(--fill-0, #989898)" id="Vector_4" />
-          <path d={svgPaths.p320e0000} fill="var(--fill-0, #989898)" id="Vector_5" />
-          <path d={svgPaths.p44b6200} fill="var(--fill-0, #989898)" id="Vector_6" />
-          <path d={svgPaths.p9ccca00} fill="var(--fill-0, #989898)" id="Vector_7" />
-          <path d={svgPaths.p18d02100} fill="var(--fill-0, #989898)" id="Vector_8" />
-          <path d={svgPaths.p3dc86f20} fill="var(--fill-0, #989898)" id="Vector_9" />
-          <path d={svgPaths.p36d11d00} fill="var(--fill-0, #989898)" id="Vector_10" />
-          <path d={svgPaths.p11a4200} fill="var(--fill-0, #989898)" id="Vector_11" />
-          <path d={svgPaths.p28032e00} fill="var(--fill-0, #989898)" id="Vector_12" />
-          <path d={svgPaths.p1e956500} fill="var(--fill-0, #989898)" id="Vector_13" />
-        </g>
-      </svg>
+    <div className="flex items-center justify-center shrink-0 h-[40px]" data-name="Logo">
+      <p className="font-geist-mono text-[#8c8c8c] hover:text-white transition-colors duration-300 text-[16px] font-medium uppercase tracking-[0.2em] select-none">
+        Country Charm Coffee
+      </p>
     </div>
   );
 }
@@ -424,33 +326,22 @@ function TablerMoon() {
   );
 }
 
-function Btn2() {
-  return (
-    <div className="bg-[rgba(255,255,255,0.1)] content-stretch flex items-center justify-center px-[16px] py-[12px] relative rounded-[6px] shrink-0 size-[46px] cursor-pointer transition-all duration-300 hover:bg-[rgba(255,255,255,0.18)] hover:scale-[1.05] active:scale-[0.96] text-white hover:text-[#ffa62a]" data-name="btn">
-      <div aria-hidden className="absolute border border-[rgba(255,255,255,0.2)] border-solid inset-0 pointer-events-none rounded-[6px]" />
-      <TablerMoon />
-    </div>
-  );
-}
-
 function Btn3() {
   const navigate = useNavigate();
   return (
     <div 
       onClick={() => navigate("/contact")}
-      className="bg-[rgba(255,255,255,0.1)] content-stretch flex items-center justify-center px-[16px] py-[12px] relative rounded-[6px] shrink-0 cursor-pointer transition-all duration-300 hover:bg-[rgba(255,255,255,0.18)] hover:scale-[1.03] active:scale-[0.98] text-white hover:text-[#ffa62a]" 
+      className="glow-button-company bg-[#ffa62a] hover:bg-[#ffe62a] active:scale-[0.97] transition-all duration-300 cursor-pointer flex items-center justify-center px-[22px] py-[12px] rounded-[6px]" 
       data-name="btn"
     >
-      <div aria-hidden className="absolute border border-[rgba(255,255,255,0.2)] border-solid inset-0 pointer-events-none rounded-[6px]" />
-      <p className="[word-break:break-word] font-['Inter_Tight',sans-serif] leading-[normal] not-italic relative shrink-0 text-[18px] text-right text-inherit whitespace-nowrap select-none">Contact us</p>
+      <p className="[word-break:break-word] font-['Inter_Tight',sans-serif] leading-[normal] not-italic relative shrink-0 text-[#462c07] text-[16px] font-bold whitespace-nowrap select-none z-10">Contact us</p>
     </div>
   );
 }
 
 function BtnGroup1() {
   return (
-    <div className="content-stretch flex gap-[12px] items-center relative shrink-0" data-name="btn group">
-      <Btn2 />
+    <div className="content-stretch flex items-center relative shrink-0" data-name="btn group">
       <Btn3 />
     </div>
   );
@@ -490,10 +381,10 @@ function NavbarFull() {
 export default function HeroSection() {
   return (
     <div className="bg-[#141414] relative size-full" data-name="Hero Section">
-      <p className="[word-break:break-word] absolute font-['Inter_Tight:Regular',sans-serif] leading-[normal] left-[40px] not-italic text-[56px] text-white top-[205px] w-[668px]">Custom Websites Built for Businesses Ready to Grow</p>
+      <p className="[word-break:break-word] absolute font-['Inter_Tight:Regular',sans-serif] leading-[normal] left-[40px] not-italic text-[56px] text-white top-[205px] w-[668px]">Custom Websites Built for Businesses Ready to <span className="text-gold-gradient font-semibold">Grow</span></p>
       <Main />
       <Main1 />
-      <p className="[word-break:break-word] absolute font-['Geist_Mono:Regular',sans-serif] font-normal leading-[normal] left-[40px] text-[#989898] text-[16px] top-[168px] uppercase whitespace-nowrap">The organic growth Web Agency</p>
+      <p className="[word-break:break-word] absolute font-geist-mono font-normal leading-[normal] left-[40px] text-[#989898] text-[16px] top-[168px] uppercase whitespace-nowrap">The organic growth Web Agency</p>
       <LogoMarquee />
       <NavbarFull />
     </div>

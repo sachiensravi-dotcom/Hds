@@ -1,6 +1,5 @@
 import TiltCard from "../TiltCard";
-import imgRectangle42 from "./d5ffe7fae8a12fbb3cb464abf2b895cfe7132e5e.png";
-import imgRectangle43 from "./a5886d4c0c5391756000f8920be8a9afc6b2d0e1.png";
+import imgFounder from "./founder_portrait.jpg";
 
 function FounderCard() {
   return (
@@ -13,8 +12,7 @@ function FounderCard() {
       <div className="absolute h-[320px] left-[23px] top-[45px] w-[240px]">
         <div aria-hidden className="absolute inset-0 pointer-events-none rounded-[4px] overflow-hidden">
           <div className="absolute bg-[#d9d9d9] inset-0" />
-          <img alt="" className="absolute max-w-none object-cover size-full" src={imgRectangle42} />
-          <img alt="" className="absolute max-w-none object-cover size-full" src={imgRectangle43} />
+          <img alt="Sachien R" className="absolute inset-0 object-cover size-full" src={imgFounder} />
         </div>
       </div>
       <p className="[word-break:break-word] absolute font-['Inter_Tight:Regular',sans-serif] leading-[normal] left-[287px] not-italic text-[32px] text-white top-[23px] whitespace-nowrap">
