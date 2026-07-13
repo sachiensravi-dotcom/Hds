@@ -1,43 +1,68 @@
 import { useNavigate } from "react-router";
 import svgPaths from "./svg-7jy2cgk51z";
-import imgRectangle from "./0fc5cd55bfcfabe97c24fc66a7c313eb74b63633.png";
 
 function Btn() {
   const navigate = useNavigate();
   return (
     <div 
       onClick={() => navigate("/contact")}
-      className="btn-shine-effect bg-[#ffa62a] content-stretch flex items-center justify-center px-[20px] py-[16px] relative rounded-[120px] shrink-0 cursor-pointer transition-all duration-300 hover:scale-[1.04] hover:shadow-[0_0_20px_rgba(255,166,42,0.4)] active:scale-[0.98]" 
+      className="btn-shine-effect bg-[#ffa62a] content-stretch flex items-center justify-center px-[24px] py-[16px] relative rounded-[120px] shrink-0 cursor-pointer transition-all duration-300 hover:scale-[1.04] hover:shadow-[0_0_20px_rgba(255,166,42,0.4)] active:scale-[0.98]" 
       data-name="btn"
     >
-      <p className="[word-break:break-word] font-['Inter_Tight',sans-serif] leading-[normal] not-italic relative shrink-0 text-[#462c07] text-[18px] text-right whitespace-nowrap select-none">Book a Consultation</p>
-    </div>
-  );
-}
-
-function Btn1() {
-  const navigate = useNavigate();
-  return (
-    <div 
-      onClick={() => navigate("/works")}
-      className="bg-white content-stretch flex items-center justify-center px-[20px] py-[16px] relative rounded-[120px] shrink-0 cursor-pointer transition-all duration-300 hover:bg-[#eaeaea] hover:scale-[1.04] active:scale-[0.98]" 
-      data-name="btn"
-    >
-      <div aria-hidden className="absolute border border-[#c7c7c7] border-solid inset-0 pointer-events-none rounded-[120px]" />
-      <p className="[word-break:break-word] font-['Inter_Tight',sans-serif] leading-[normal] not-italic relative shrink-0 text-[#141414] text-[18px] text-right whitespace-nowrap select-none">View Our Work</p>
+      <p className="[word-break:break-word] font-['Inter_Tight',sans-serif] font-bold leading-[normal] not-italic relative shrink-0 text-[#462c07] text-[16px] text-right whitespace-nowrap select-none">Book a Consultation</p>
     </div>
   );
 }
 
 function Main() {
   return (
-    <div className="absolute h-[300px] left-[40px] top-[345px] w-[780px]" data-name="main">
-      <p className="font-['Inter_Tight',sans-serif] text-[20px] text-[#989898] leading-[1.6] w-[640px]">
-        Hyperion designs and builds custom, high-performance websites built to capture attention and convert it into growth.
+    <div className="absolute left-[40px] top-[340px] w-[740px]" data-name="main">
+      {/* Short Dynamic Subtitle */}
+      <p className="font-['Inter_Tight',sans-serif] text-[18px] text-[#b3b3b3] leading-[1.6] w-[620px] mb-[32px]">
+        We are a dynamic organic growth agency dedicated to building high-performance websites that unlock your business's full potential through strategic design.
       </p>
-      <div className="flex gap-[16px] items-center mt-[36px]" data-name="btn group">
+
+      {/* CTA Button and Social Proof Avatars */}
+      <div className="flex items-center gap-[24px] mb-[40px]">
         <Btn />
-        <Btn1 />
+        <div className="flex items-center gap-[12px]">
+          {/* Overlapping User Avatars */}
+          <div className="flex -space-x-[12px]">
+            <img src="/barber_owner_portrait.jpg" className="w-[36px] h-[36px] rounded-full border-2 border-[#141414] object-cover" alt="Client 1" />
+            <img src="/founder_portrait.jpg" className="w-[36px] h-[36px] rounded-full border-2 border-[#141414] object-cover" alt="Client 2" />
+            <img src="/barber_owner_portrait.jpg" className="w-[36px] h-[36px] rounded-full border-2 border-[#141414] object-cover" alt="Client 3" />
+          </div>
+          <p className="font-['Inter_Tight',sans-serif] text-[13px] text-[#8c8c8c] font-medium leading-none">
+            More than <span className="text-white font-semibold">50+ local brands</span> grown with us
+          </p>
+        </div>
+      </div>
+
+      {/* Two Column Feature Cards */}
+      <div className="flex gap-[24px] w-full">
+        {/* Card 1: Creativity */}
+        <div className="flex-1 bg-[#191919]/60 border border-white/5 rounded-[12px] p-[20px]">
+          <div className="flex items-center justify-between mb-[12px]">
+            <span className="text-[11px] font-geist-mono text-[#ffa62a] uppercase tracking-widest font-bold">01 / Creative</span>
+            <span className="w-[6px] h-[6px] rounded-full bg-[#ffa62a]" />
+          </div>
+          <h4 className="font-['Inter_Tight',sans-serif] text-[16px] text-white font-bold mb-[6px]">Custom Figma Design</h4>
+          <p className="font-['Inter_Tight',sans-serif] text-[13px] text-[#8c8c8c] leading-[1.5]">
+            100% original designs crafted from scratch to align perfectly with your unique brand identity.
+          </p>
+        </div>
+
+        {/* Card 2: SEO */}
+        <div className="flex-1 bg-[#191919]/60 border border-white/5 rounded-[12px] p-[20px]">
+          <div className="flex items-center justify-between mb-[12px]">
+            <span className="text-[11px] font-geist-mono text-[#ffa62a] uppercase tracking-widest font-bold">02 / SEO</span>
+            <span className="w-[6px] h-[6px] rounded-full bg-[#ffa62a]" />
+          </div>
+          <h4 className="font-['Inter_Tight',sans-serif] text-[16px] text-white font-bold mb-[6px]">Engineered to Grow</h4>
+          <p className="font-['Inter_Tight',sans-serif] text-[13px] text-[#8c8c8c] leading-[1.5]">
+            Built-in technical SEO, structured markup, and performance tuning for maximum ranking power.
+          </p>
+        </div>
       </div>
     </div>
   );
@@ -45,83 +70,39 @@ function Main() {
 
 function Main1() {
   return (
-    <div className="absolute bg-[#111111] border border-[#3b3b3b] border-solid h-[400px] left-[calc(58.33%+7px)] overflow-clip top-[373px] w-[553px] rounded-[8px]" data-name="main">
-      {/* Background Halo 1: Pulsing Gold Glow (Top Left) */}
-      <div className="absolute w-[240px] h-[240px] rounded-full bg-[#ffa62a]/10 blur-3xl -top-[20px] -left-[20px] animate-pulse pointer-events-none" style={{ animationDuration: '5s' }} />
+    <div className="absolute h-[520px] left-[820px] top-[180px] w-[580px] overflow-visible" data-name="main">
+      {/* Brand Halos - Orbiting Glowing backdrops */}
+      {/* Halo 1: Large Gold Glow backdrop */}
+      <div className="absolute w-[400px] h-[400px] rounded-full bg-[#ffa62a]/15 blur-[120px] top-[40px] left-[60px] animate-pulse pointer-events-none" style={{ animationDuration: '6s' }} />
 
-      {/* Background Halo 2: Pulsing Amber Glow (Bottom Right) */}
-      <div className="absolute w-[200px] h-[200px] rounded-full bg-[#ffa62a]/8 blur-3xl -bottom-[10px] -right-[10px] animate-pulse pointer-events-none" style={{ animationDuration: '7s' }} />
-
-      {/* Background Halo 3: Thin Rotating Dashed Vector Ring */}
+      {/* Halo 2: Thin Rotating Dashed Vector Ring */}
       <div 
-        className="absolute border border-dashed border-[#ffa62a]/20 rounded-full animate-[spin_30s_linear_infinite] pointer-events-none"
+        className="absolute border border-dashed border-[#ffa62a]/25 rounded-full animate-[spin_35s_linear_infinite] pointer-events-none"
         style={{
-          width: '340px',
-          height: '340px',
-          left: 'calc(50% - 170px)',
-          top: 'calc(50% - 170px)',
+          width: '380px',
+          height: '380px',
+          left: 'calc(50% - 190px)',
+          top: 'calc(50% - 190px)',
         }}
       />
 
-      {/* Background Halo 4: Double Outline Swaying Vector Ring */}
+      {/* Halo 3: Double Outline Swaying Vector Ring */}
       <div 
         className="absolute border border-double border-white/5 rounded-full animate-sway-slow pointer-events-none"
         style={{
-          width: '420px',
-          height: '420px',
-          left: 'calc(50% - 210px)',
-          top: 'calc(50% - 210px)',
+          width: '460px',
+          height: '460px',
+          left: 'calc(50% - 230px)',
+          top: 'calc(50% - 230px)',
         }}
       />
 
-      {/* Animated Components Overlay */}
-      {/* Floating Pointer Cursor */}
-      <svg 
-        className="absolute w-[22px] h-[22px] text-[#ffa62a] drop-shadow-[0_2px_10px_rgba(255,166,42,0.4)] animate-[float-slow_6s_infinite_ease-in-out] z-20 pointer-events-none"
-        viewBox="0 0 24 24"
-        fill="currentColor"
-        style={{ left: '42%', top: '48%', animationDelay: '1s' }}
-      >
-        <path d="M4.5 3v15.25l4.5-4.5h6.25L4.5 3z" />
-      </svg>
-
-      {/* Floating Speech Bubble 1 */}
-      <div 
-        className="absolute bg-white/90 text-[#141414] font-['Inter_Tight',sans-serif] text-[11px] font-bold px-[12px] py-[6px] rounded-[12px] shadow-lg animate-[float-slow_4.5s_infinite_ease-in-out] z-20 pointer-events-none whitespace-nowrap"
-        style={{ left: '50%', top: '12%' }}
-      >
-        Let's put the header here!
-        <div className="absolute border-solid border-t-white/90 border-t-[6px] border-x-[6px] border-x-transparent border-b-0 left-[20px] bottom-[-6px]" />
-      </div>
-
-      {/* Floating Speech Bubble 2 */}
-      <div 
-        className="absolute bg-white/90 text-[#141414] font-['Inter_Tight',sans-serif] text-[11px] font-bold px-[12px] py-[6px] rounded-[12px] shadow-lg animate-[float-slow_5.5s_infinite_ease-in-out] z-20 pointer-events-none whitespace-nowrap"
-        style={{ left: '12%', top: '68%', animationDelay: '1.5s' }}
-      >
-        What about a banner?
-        <div className="absolute border-solid border-t-white/90 border-t-[6px] border-x-[6px] border-x-transparent border-b-0 right-[20px] bottom-[-6px]" />
-      </div>
-
-      {/* Swaying Drawing Pen */}
-      <svg 
-        className="absolute w-[32px] h-[32px] text-white/80 animate-[sway-slow_4s_infinite_ease-in-out] z-20 pointer-events-none"
-        viewBox="0 0 24 24"
-        fill="none"
-        stroke="currentColor"
-        strokeWidth="2"
-        style={{ left: '52%', top: '35%' }}
-      >
-        <path d="M12 20h9" />
-        <path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z" />
-      </svg>
-
-      {/* Wireframe Illustration - Inverted to render as clean white-on-dark lines */}
-      <div className="absolute inset-0 flex items-center justify-center p-[20px] z-10">
+      {/* 3D Shapes Image Render - Clean float */}
+      <div className="absolute inset-0 flex items-center justify-center z-10 animate-float-slow">
         <img 
-          src="/hero_notion_illustration.jpg" 
-          alt="Web Wireframing Illustration" 
-          className="w-full h-auto object-contain rounded-[6px] select-none opacity-85 hover:opacity-100 transition-opacity duration-300 filter invert-[0.9] brightness-[1.25] contrast-[1.05]" 
+          src="/hero_3d_shapes.jpg" 
+          alt="3D Floating Shapes Render" 
+          className="w-full h-auto object-contain rounded-[16px] select-none shadow-[0_30px_100px_rgba(0,0,0,0.8)]" 
         />
       </div>
     </div>
@@ -236,118 +217,52 @@ function RiInstagramFill() {
 function SocilaMedia() {
   return (
     <div className="content-stretch flex gap-[6px] items-start relative shrink-0" data-name="socila media">
-      <p className="[word-break:break-word] font-['Inter_Tight:Regular',sans-serif] leading-[normal] not-italic relative shrink-0 text-[#989898] text-[14px] text-right whitespace-nowrap">Follow us on</p>
+      <p className="[word-break:break-word] font-['Inter_Tight',sans-serif] leading-[normal] not-italic relative shrink-0 text-[#989898] text-[14px] text-right whitespace-nowrap">Follow us on</p>
       <RiFacebookFill />
       <RiInstagramFill />
     </div>
   );
 }
 
-function TopNav() {
-  return (
-    <div className="backdrop-blur-[10px] bg-[rgba(20,20,20,0.5)] relative shrink-0 w-full" data-name="top nav">
-      <div aria-hidden className="absolute border-[#3b3b3b] border-b border-solid inset-0 pointer-events-none" />
-      <div className="flex flex-row items-center size-full">
-        <div className="content-stretch flex items-center justify-between px-[40px] py-[12px] relative size-full">
-          <p className="[word-break:break-word] font-['Inter_Tight:Regular',sans-serif] leading-[normal] not-italic relative shrink-0 text-[#989898] text-[14px] whitespace-nowrap">GMT-5 | 8:05 AM</p>
-          <SocilaMedia />
-        </div>
-      </div>
-    </div>
-  );
-}
-
 function Hyperion() {
-  const navigate = useNavigate();
   return (
-    <div 
-      onClick={() => navigate("/")}
-      className="h-[20px] relative shrink-0 w-[131.175px] cursor-pointer" 
-      data-name="HYPERION"
-    >
-      <svg className="absolute block inset-0 size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 131.175 20">
-        <g id="HYPERION">
-          <path d={svgPaths.pae2b200} fill="var(--fill-0, white)" id="Vector" />
-          <path d={svgPaths.p10eca630} fill="var(--fill-0, white)" id="Vector_2" />
-          <path d={svgPaths.p1cd61800} fill="var(--fill-0, white)" id="Vector_3" />
-          <path d={svgPaths.p1e0bf70} fill="var(--fill-0, white)" id="Vector_4" />
-          <path d={svgPaths.p2b1eab00} fill="var(--fill-0, white)" id="Vector_5" />
-          <path d={svgPaths.p1b895480} fill="var(--fill-0, white)" id="Vector_6" />
-          <path d={svgPaths.p3077a180} fill="var(--fill-0, white)" id="Vector_7" />
-          <path d={svgPaths.p1524c500} fill="url(#paint0_linear_1_366)" id="Ellipse 6 (Stroke)" />
-        </g>
-        <defs>
-          <linearGradient gradientUnits="userSpaceOnUse" id="paint0_linear_1_366" x1="102" x2="102" y1="20" y2="0">
-            <stop stopColor="#FFE62A" />
-            <stop offset="1" stopColor="#FFA62A" />
-          </linearGradient>
-        </defs>
-      </svg>
+    <div className="content-stretch flex gap-[12px] items-center relative shrink-0 cursor-pointer" data-name="Hyperion">
+      <div className="relative shrink-0 size-[32px]" data-name="group">
+        <svg className="absolute block inset-0 size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 32 32">
+          <g id="group">
+            <path d={svgPaths.pf6ca7a80} fill="var(--fill-0, #FFA62A)" id="Vector" />
+            <path d={svgPaths.p6dbd2300} fill="var(--fill-1, white)" id="Vector_2" />
+          </g>
+        </svg>
+      </div>
+      <p className="[word-break:break-word] font-['Inter_Tight',sans-serif] font-bold leading-[normal] not-italic relative shrink-0 text-[20px] text-white whitespace-nowrap select-none">Hyperion</p>
     </div>
   );
 }
 
-function GlyphsChevronBold() {
+function Link1() {
+  const navigate = useNavigate();
   return (
-    <div className="relative shrink-0 size-[12px]" data-name="glyphs:chevron-bold">
-      <svg className="absolute block inset-0 size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 12 12">
-        <g id="glyphs:chevron-bold">
-          <path d={svgPaths.p2334ce00} id="Vector" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" />
-        </g>
-      </svg>
+    <div onClick={() => navigate("/works")} className="content-stretch flex items-center relative shrink-0 cursor-pointer text-[#989898] hover:text-white transition-colors duration-300">
+      <p className="[word-break:break-word] font-['Inter_Tight',sans-serif] leading-[normal] not-italic relative shrink-0 text-[16px] text-inherit whitespace-nowrap select-none">Our work</p>
     </div>
   );
 }
 
-function Dropdown() {
+function Link2() {
   const navigate = useNavigate();
   return (
-    <div 
-      onClick={() => navigate("/services")}
-      className="content-stretch flex gap-[6px] items-center relative shrink-0 cursor-pointer transition-colors duration-250 hover:text-[#ffa62a] text-white" 
-      data-name="dropdown"
-    >
-      <p className="[word-break:break-word] font-['Inter_Tight',sans-serif] leading-[normal] not-italic relative shrink-0 text-[16px] text-center text-inherit whitespace-nowrap select-none">Services</p>
-      <GlyphsChevronBold />
+    <div onClick={() => navigate("/blogs")} className="content-stretch flex items-center relative shrink-0 cursor-pointer text-[#989898] hover:text-white transition-colors duration-300">
+      <p className="[word-break:break-word] font-['Inter_Tight',sans-serif] leading-[normal] not-italic relative shrink-0 text-[16px] text-inherit whitespace-nowrap select-none">Blogs</p>
     </div>
   );
 }
 
 function Menu() {
-  const navigate = useNavigate();
   return (
-    <div className="content-stretch flex gap-[40px] items-center relative shrink-0" data-name="menu">
-      <p 
-        onClick={() => navigate("/works")}
-        className="[word-break:break-word] font-['Inter_Tight',sans-serif] leading-[normal] not-italic relative shrink-0 text-[16px] text-center text-white whitespace-nowrap cursor-pointer transition-colors duration-250 hover:text-[#ffa62a] select-none"
-      >
-        Works
-      </p>
-      <Dropdown />
-      <p 
-        onClick={() => navigate("/case-studies")}
-        className="[word-break:break-word] font-['Inter_Tight',sans-serif] leading-[normal] not-italic relative shrink-0 text-[16px] text-center text-white whitespace-nowrap cursor-pointer transition-colors duration-250 hover:text-[#ffa62a] select-none"
-      >
-        Case studies
-      </p>
-      <p 
-        onClick={() => navigate("/blogs")}
-        className="[word-break:break-word] font-['Inter_Tight',sans-serif] leading-[normal] not-italic relative shrink-0 text-[16px] text-center text-white whitespace-nowrap cursor-pointer transition-colors duration-250 hover:text-[#ffa62a] select-none"
-      >
-        Blogs
-      </p>
-    </div>
-  );
-}
-
-function TablerMoon() {
-  return (
-    <div className="relative shrink-0 size-[24px]" data-name="tabler:moon">
-      <svg className="absolute block inset-0 size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 24 24">
-        <g id="tabler:moon">
-          <path d={svgPaths.p17084400} id="Vector" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" />
-        </g>
-      </svg>
+    <div className="content-stretch flex gap-[32px] items-start relative shrink-0" data-name="menu">
+      <Link1 />
+      <Link2 />
     </div>
   );
 }
@@ -407,17 +322,20 @@ function NavbarFull() {
 export default function HeroSection() {
   return (
     <div className="bg-[#141414] relative size-full" data-name="Hero Section">
-      <p className="[word-break:break-word] absolute font-['Inter_Tight',sans-serif] font-bold leading-[1.15] left-[40px] not-italic text-[64px] text-white top-[195px] w-[750px]">
-        Build something{" "}
+      {/* Brand Tagline Title */}
+      <p className="[word-break:break-word] absolute font-['Inter_Tight',sans-serif] font-bold leading-[1.15] left-[40px] not-italic text-[56px] text-white top-[170px] w-[750px]">
+        Custom Websites Built for Businesses Ready to{" "}
         <span className="relative text-gold-gradient font-bold inline-block">
-          beautiful
-          <span className="absolute -inset-x-4 -inset-y-1 bg-[#ffa62a] opacity-30 blur-2xl rounded-full -z-10 animate-pulse" style={{ animationDuration: '4.5s' }} />
+          Grow
+          <span className="absolute -inset-x-3 -inset-y-1 bg-[#ffa62a] opacity-25 blur-2xl rounded-full -z-10 animate-pulse" style={{ animationDuration: '4s' }} />
         </span>
-        .
       </p>
+      
       <Main />
       <Main1 />
-      <p className="[word-break:break-word] absolute font-geist-mono font-normal leading-[normal] left-[40px] text-[#989898] text-[16px] top-[168px] uppercase whitespace-nowrap">The organic growth Web Agency</p>
+      
+      <p className="[word-break:break-word] absolute font-geist-mono font-normal leading-[normal] left-[40px] text-[#989898] text-[16px] top-[132px] uppercase whitespace-nowrap tracking-wider">The organic growth Web Agency</p>
+      
       <LogoMarquee />
       <NavbarFull />
     </div>
