@@ -97,17 +97,19 @@ function Main1() {
         }}
       />
 
-      {/* 3D Shapes Image Render - Screen blended for seamless page integration */}
+      {/* Brand Halo Gyroscope - Dual spinning transparent rings */}
       <div className="absolute inset-0 flex items-center justify-center z-10 animate-float-slow">
+        {/* Outer Halo */}
         <img 
-          src="/hero_3d_shapes.jpg" 
-          alt="3D Floating Shapes Render" 
-          className="w-full h-auto object-contain select-none mix-blend-screen" 
-          style={{
-            filter: 'contrast(1.4) brightness(0.8) saturate(1.25)',
-            maskImage: 'radial-gradient(circle, rgba(0,0,0,1) 55%, rgba(0,0,0,0) 85%)',
-            WebkitMaskImage: 'radial-gradient(circle, rgba(0,0,0,1) 55%, rgba(0,0,0,0) 85%)',
-          }}
+          src="/brand_halo.png" 
+          alt="Outer Brand Halo" 
+          className="w-[85%] h-auto object-contain select-none animate-[spin_45s_linear_infinite]" 
+        />
+        {/* Inner Counter-spinning Halo */}
+        <img 
+          src="/brand_halo.png" 
+          alt="Inner Brand Halo" 
+          className="absolute w-[62%] h-auto object-contain select-none opacity-60 animate-[spin_30s_linear_infinite_reverse] rotate-[90deg] scale-x-[-1]" 
         />
       </div>
     </div>
