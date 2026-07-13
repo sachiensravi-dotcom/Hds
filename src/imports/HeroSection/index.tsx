@@ -90,63 +90,63 @@ function Main1() {
 
 function Logo() {
   return (
-    <div className="flex items-center justify-center shrink-0 h-[40px]" data-name="Logo">
-      <img src="/logo_whitewright.png" className="h-[26px] w-auto opacity-50 hover:opacity-100 transition-opacity duration-300 select-none brightness-0 invert" alt="Whitewright" />
+    <div className="flex items-center justify-center shrink-0 h-[80px]" data-name="Logo">
+      <img src="/logo_whitewright.png" className="h-[52px] w-auto opacity-80 hover:opacity-100 transition-opacity duration-300 select-none brightness-0 invert" alt="Whitewright" />
     </div>
   );
 }
 
 function Logo1() {
   return (
-    <div className="flex items-center justify-center shrink-0 h-[40px]" data-name="Logo">
-      <img src="/logo_texas_sun.png" className="h-[26px] w-auto opacity-50 hover:opacity-100 transition-opacity duration-300 select-none brightness-0 invert" alt="Texas Sun" />
+    <div className="flex items-center justify-center shrink-0 h-[80px]" data-name="Logo">
+      <img src="/logo_texas_sun.png" className="h-[52px] w-auto opacity-80 hover:opacity-100 transition-opacity duration-300 select-none brightness-0 invert" alt="Texas Sun" />
     </div>
   );
 }
 
 function Logo2() {
   return (
-    <div className="flex items-center justify-center shrink-0 h-[40px]" data-name="Logo">
-      <img src="/logo_coffee.png" className="h-[30px] w-auto opacity-50 hover:opacity-100 transition-opacity duration-300 select-none brightness-0 invert" alt="Country Charm Coffee" />
+    <div className="flex items-center justify-center shrink-0 h-[80px]" data-name="Logo">
+      <img src="/logo_coffee.png" className="h-[60px] w-auto opacity-80 hover:opacity-100 transition-opacity duration-300 select-none brightness-0 invert" alt="Country Charm Coffee" />
     </div>
   );
 }
 
 function Logo3() {
   return (
-    <div className="flex items-center justify-center shrink-0 h-[40px]" data-name="Logo">
-      <img src="/logo_remax.png" className="h-[24px] w-auto opacity-50 hover:opacity-100 transition-opacity duration-300 select-none brightness-0 invert" alt="Remax" />
+    <div className="flex items-center justify-center shrink-0 h-[80px]" data-name="Logo">
+      <img src="/logo_remax.png" className="h-[48px] w-auto opacity-80 hover:opacity-100 transition-opacity duration-300 select-none brightness-0 invert" alt="Remax" />
     </div>
   );
 }
 
 function Logo4() {
   return (
-    <div className="flex items-center justify-center shrink-0 h-[40px]" data-name="Logo">
-      <img src="/logo_barber.png" className="h-[30px] w-auto opacity-50 hover:opacity-100 transition-opacity duration-300 select-none brightness-0 invert" alt="4th Main Barber" />
+    <div className="flex items-center justify-center shrink-0 h-[80px]" data-name="Logo">
+      <img src="/logo_barber.png" className="h-[60px] w-auto opacity-80 hover:opacity-100 transition-opacity duration-300 select-none brightness-0 invert" alt="4th Main Barber" />
     </div>
   );
 }
 
 function Logo5() {
   return (
-    <div className="flex items-center justify-center shrink-0 h-[40px]" data-name="Logo">
-      <img src="/logo_texas_sun.png" className="h-[26px] w-auto opacity-50 hover:opacity-100 transition-opacity duration-300 select-none brightness-0 invert" alt="Texas Sun" />
+    <div className="flex items-center justify-center shrink-0 h-[80px]" data-name="Logo">
+      <img src="/logo_texas_sun.png" className="h-[52px] w-auto opacity-80 hover:opacity-100 transition-opacity duration-300 select-none brightness-0 invert" alt="Texas Sun" />
     </div>
   );
 }
 
 function Logo6() {
   return (
-    <div className="flex items-center justify-center shrink-0 h-[40px]" data-name="Logo">
-      <img src="/logo_coffee.png" className="h-[30px] w-auto opacity-50 hover:opacity-100 transition-opacity duration-300 select-none brightness-0 invert" alt="Country Charm Coffee" />
+    <div className="flex items-center justify-center shrink-0 h-[80px]" data-name="Logo">
+      <img src="/logo_coffee.png" className="h-[60px] w-auto opacity-80 hover:opacity-100 transition-opacity duration-300 select-none brightness-0 invert" alt="Country Charm Coffee" />
     </div>
   );
 }
 
 function LogoMarquee() {
   return (
-    <div className="absolute overflow-hidden left-[40px] top-[813px] w-[1360px] h-[40px] flex items-center gap-[64px]" data-name="logo marquee">
+    <div className="absolute overflow-hidden left-[40px] top-[793px] w-[1360px] h-[80px] flex items-center gap-[64px]" data-name="logo marquee">
       <div className="flex gap-[64px] shrink-0 min-w-full justify-around animate-marquee">
         <Logo />
         <Logo1 />
