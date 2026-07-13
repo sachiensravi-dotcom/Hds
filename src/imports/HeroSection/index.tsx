@@ -101,15 +101,15 @@ function Main1() {
       <div className="absolute inset-0 flex items-center justify-center z-10 animate-float-slow">
         {/* Outer Halo */}
         <img 
-          src="/brand_halo.png" 
+          src="/brand_halo_full.png" 
           alt="Outer Brand Halo" 
-          className="w-[85%] h-auto object-contain select-none animate-[spin_45s_linear_infinite]" 
+          className="w-[85%] h-auto object-contain select-none mix-blend-screen animate-[spin_60s_linear_infinite]" 
         />
         {/* Inner Counter-spinning Halo */}
         <img 
-          src="/brand_halo.png" 
+          src="/brand_halo_full.png" 
           alt="Inner Brand Halo" 
-          className="absolute w-[62%] h-auto object-contain select-none opacity-60 animate-[spin_30s_linear_infinite_reverse] rotate-[90deg] scale-x-[-1]" 
+          className="absolute w-[68%] h-auto object-contain select-none mix-blend-screen opacity-70 animate-[spin_40s_linear_infinite_reverse] rotate-[30deg] scale-x-[-1]" 
         />
       </div>
     </div>
