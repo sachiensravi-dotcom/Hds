@@ -53,36 +53,42 @@ function Main() {
 
 function Main1() {
   return (
-    <div className="absolute bg-black h-[400px] left-[calc(58.33%+7px)] overflow-clip top-[373px] w-[553px] animate-float-hero-card" data-name="main">
-      <div className="absolute flex items-center justify-center left-[-68px] size-[1042.27px] top-[-139px]">
-        <div className="flex-none rotate-[15.84deg]">
-          <div className="opacity-70 relative size-[843.92px]" data-name="Rectangle">
-            <img alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none size-full" src={imgRectangle} />
-          </div>
-        </div>
-      </div>
-      <div className="absolute flex items-center justify-center left-[-298px] size-[1042.27px] top-[-214px]">
-        <div className="flex-none rotate-[15.84deg]">
-          <div className="relative size-[843.92px]" data-name="Rectangle">
-            <img alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none size-full" src={imgRectangle} />
-          </div>
-        </div>
-      </div>
-      <div className="-translate-x-1/2 absolute h-[387px] left-[calc(50%+0.03px)] top-[248px] w-[663px]">
-        <div className="absolute inset-[-62.02%_-36.2%]">
-          <svg className="block size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 1143 867">
-            <g filter="url(#filter0_f_1_352)" id="Ellipse 5">
-              <ellipse cx="571.5" cy="433.5" fill="var(--fill-0, #FFA62A)" fillOpacity="0.2" rx="331.5" ry="193.5" />
-            </g>
-            <defs>
-              <filter colorInterpolationFilters="sRGB" filterUnits="userSpaceOnUse" height="867" id="filter0_f_1_352" width="1143" x="0" y="0">
-                <feFlood floodOpacity="0" result="BackgroundImageFix" />
-                <feBlend in="SourceGraphic" in2="BackgroundImageFix" mode="normal" result="shape" />
-                <feGaussianBlur result="effect1_foregroundBlur_1_352" stdDeviation="120" />
-              </filter>
-            </defs>
-          </svg>
-        </div>
+    <div className="absolute bg-[#111111] border border-[#3b3b3b] border-solid h-[400px] left-[calc(58.33%+7px)] overflow-clip top-[373px] w-[553px] rounded-[8px] animate-float-hero-card" data-name="main">
+      {/* Background Halo 1: Pulsing Gold Glow (Top Left) */}
+      <div className="absolute w-[240px] h-[240px] rounded-full bg-[#ffa62a]/10 blur-3xl -top-[20px] -left-[20px] animate-pulse pointer-events-none" style={{ animationDuration: '5s' }} />
+
+      {/* Background Halo 2: Pulsing Amber Glow (Bottom Right) */}
+      <div className="absolute w-[200px] h-[200px] rounded-full bg-[#ffa62a]/8 blur-3xl -bottom-[10px] -right-[10px] animate-pulse pointer-events-none" style={{ animationDuration: '7s' }} />
+
+      {/* Background Halo 3: Thin Rotating Dashed Vector Ring */}
+      <div 
+        className="absolute border border-dashed border-[#ffa62a]/20 rounded-full animate-[spin_30s_linear_infinite] pointer-events-none"
+        style={{
+          width: '340px',
+          height: '340px',
+          left: 'calc(50% - 170px)',
+          top: 'calc(50% - 170px)',
+        }}
+      />
+
+      {/* Background Halo 4: Double Outline Swaying Vector Ring */}
+      <div 
+        className="absolute border border-double border-white/5 rounded-full animate-sway-slow pointer-events-none"
+        style={{
+          width: '420px',
+          height: '420px',
+          left: 'calc(50% - 210px)',
+          top: 'calc(50% - 210px)',
+        }}
+      />
+
+      {/* Wireframe Illustration - Inverted to render as clean white-on-dark lines */}
+      <div className="absolute inset-0 flex items-center justify-center p-[20px] z-10">
+        <img 
+          src="/hero_notion_illustration.jpg" 
+          alt="Web Wireframing Illustration" 
+          className="w-full h-auto object-contain rounded-[6px] select-none opacity-85 hover:opacity-100 transition-opacity duration-300 filter invert-[0.9] brightness-[1.25] contrast-[1.05]" 
+        />
       </div>
     </div>
   );
@@ -367,12 +373,13 @@ function NavbarFull() {
 export default function HeroSection() {
   return (
     <div className="bg-[#141414] relative size-full" data-name="Hero Section">
-      <p className="[word-break:break-word] absolute font-['Inter_Tight:Regular',sans-serif] leading-[normal] left-[40px] not-italic text-[56px] text-white top-[205px] w-[668px]">
-        Custom Websites Built for Businesses Ready to{" "}
-        <span className="relative text-gold-gradient font-semibold inline-block">
-          Grow
-          <span className="absolute -inset-x-3 -inset-y-1 bg-[#ffa62a] opacity-25 blur-2xl rounded-full -z-10 animate-pulse" style={{ animationDuration: '4s' }} />
+      <p className="[word-break:break-word] absolute font-['Inter_Tight',sans-serif] font-bold leading-[1.15] left-[40px] not-italic text-[64px] text-white top-[195px] w-[750px]">
+        Build something{" "}
+        <span className="relative text-gold-gradient font-bold inline-block">
+          beautiful
+          <span className="absolute -inset-x-4 -inset-y-1 bg-[#ffa62a] opacity-30 blur-2xl rounded-full -z-10 animate-pulse" style={{ animationDuration: '4.5s' }} />
         </span>
+        .
       </p>
       <Main />
       <Main1 />
