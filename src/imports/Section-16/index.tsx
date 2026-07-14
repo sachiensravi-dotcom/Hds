@@ -73,165 +73,26 @@ export default function Section() {
 
       <div className="relative z-10 w-full max-w-[1360px] grid grid-cols-1 lg:grid-cols-12 gap-[40px] items-stretch">
         
-        {/* Left Form Column */}
-        <div className="lg:col-span-7 bg-[rgba(20,20,20,0.6)] border border-[#2b2b2b] rounded-[6px] p-[40px] flex flex-col justify-between backdrop-blur-md">
-          {submitted ? (
-            <div className="flex flex-col items-center justify-center text-center py-[60px] flex-grow">
-              <div className="size-[64px] bg-[rgba(255,166,42,0.1)] border border-[#ffa62a] rounded-full flex items-center justify-center mb-6">
-                <span className="text-[#ffa62a] text-[32px]">✓</span>
-              </div>
-              <h3 className="font-['Inter_Tight:Medium',sans-serif] text-[32px] font-semibold text-white mb-4">Message Sent!</h3>
-              <p className="font-['Inter_Tight:Regular',sans-serif] text-[#989898] text-[16px] max-w-[420px] leading-relaxed">
-                Thank you for reaching out, {formData.name}. Our team has received your inquiry and will contact you via {formData.email} within 24 hours.
-              </p>
-              <button 
-                onClick={() => {
-                  setSubmitted(false);
-                  setFormData({ name: "", email: "", message: "", budget: "" });
-                }}
-                className="mt-8 px-6 py-2.5 bg-[#ffa62a] text-[#462c07] rounded-[6px] font-['Inter_Tight:Medium',sans-serif] font-semibold hover:bg-[#ffe62a] transition-all duration-300 active:scale-[0.97]"
-              >
-                Send Another Message
-              </button>
+        {/* Left Chat Instruction Column */}
+        <div className="lg:col-span-7 bg-[rgba(20,20,20,0.6)] border border-[#2b2b2b] rounded-[6px] p-[50px] flex flex-col justify-center items-center text-center backdrop-blur-md min-h-[500px]">
+          <div className="relative group shrink-0 mb-[30px]">
+            <div className="absolute -inset-4 bg-[#ffa62a] rounded-full opacity-20 blur-[20px] animate-pulse" style={{ animationDuration: '4s' }} />
+            <div className="relative size-[80px] bg-[rgba(255,166,42,0.1)] border border-[#ffa62a]/40 rounded-full flex items-center justify-center">
+              <MessageSquare className="size-[36px] text-[#ffa62a]" />
             </div>
-          ) : (
-            <form onSubmit={handleSubmit} className="flex flex-col gap-6">
-              <div>
-                <h2 className="font-['Inter_Tight:Regular',sans-serif] text-[36px] font-normal leading-tight text-white mb-2">
-                  Send us a message to get things started!
-                </h2>
-                <p className="font-['Inter_Tight:Regular',sans-serif] text-[#989898] text-[15px]">
-                  Fill out the form below or pick a slot on our scheduling calendar below.
-                </p>
-              </div>
-
-              {error && (
-                <div className="bg-[rgba(239,68,68,0.1)] border border-red-500 text-red-400 p-4 rounded-[4px] text-[14px]">
-                  {error}
-                </div>
-              )}
-
-              {/* Name & Email Row */}
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                <div className="flex flex-col gap-2">
-                  <label htmlFor="email" className="font-['Inter_Tight:Regular',sans-serif] text-[15px] text-[#989898]">Your email *</label>
-                  <div className="relative">
-                    <Mail className="absolute left-4 top-1/2 -translate-y-1/2 size-[18px] text-[#666666]" />
-                    <input 
-                      type="email" 
-                      id="email"
-                      name="email"
-                      required
-                      value={formData.email}
-                      onChange={handleInputChange}
-                      placeholder="name@company.com"
-                      className="w-full bg-[#202020] border border-[#3b3b3b] focus:border-[#ffa62a] text-white pl-11 pr-4 py-3 rounded-[4px] outline-none transition-all duration-300 font-['Inter_Tight:Regular',sans-serif] text-[15px]"
-                    />
-                  </div>
-                </div>
-
-                <div className="flex flex-col gap-2">
-                  <label htmlFor="name" className="font-['Inter_Tight:Regular',sans-serif] text-[15px] text-[#989898]">Your name *</label>
-                  <div className="relative">
-                    <User className="absolute left-4 top-1/2 -translate-y-1/2 size-[18px] text-[#666666]" />
-                    <input 
-                      type="text" 
-                      id="name"
-                      name="name"
-                      required
-                      value={formData.name}
-                      onChange={handleInputChange}
-                      placeholder="Alex Mercer"
-                      className="w-full bg-[#202020] border border-[#3b3b3b] focus:border-[#ffa62a] text-white pl-11 pr-4 py-3 rounded-[4px] outline-none transition-all duration-300 font-['Inter_Tight:Regular',sans-serif] text-[15px]"
-                    />
-                  </div>
-                </div>
-              </div>
-
-              {/* Phone Row */}
-              <div className="flex flex-col gap-2">
-                <label htmlFor="phone" className="font-['Inter_Tight:Regular',sans-serif] text-[15px] text-[#989898]">Your phone number *</label>
-                <div className="relative">
-                  <Phone className="absolute left-4 top-1/2 -translate-y-1/2 size-[18px] text-[#666666]" />
-                  <input 
-                    type="tel" 
-                    id="phone"
-                    name="phone"
-                    required
-                    value={formData.phone}
-                    onChange={handleInputChange}
-                    placeholder="(123) 456-7890"
-                    className="w-full bg-[#202020] border border-[#3b3b3b] focus:border-[#ffa62a] text-white pl-11 pr-4 py-3 rounded-[4px] outline-none transition-all duration-300 font-['Inter_Tight:Regular',sans-serif] text-[15px]"
-                  />
-                </div>
-              </div>
-
-              {/* Tell us more description */}
-              <div className="flex flex-col gap-2">
-                <label htmlFor="message" className="font-['Inter_Tight:Regular',sans-serif] text-[15px] text-[#989898]">Tell us more about your project & goals *</label>
-                <div className="relative">
-                  <MessageSquare className="absolute left-4 top-4 size-[18px] text-[#666666]" />
-                  <textarea 
-                    id="message"
-                    name="message"
-                    required
-                    rows={4}
-                    value={formData.message}
-                    onChange={handleInputChange}
-                    placeholder="Briefly describe what you're trying to achieve (Web, SEO, SMM, GHL integrations...)"
-                    className="w-full bg-[#202020] border border-[#3b3b3b] focus:border-[#ffa62a] text-white pl-11 pr-4 py-3 rounded-[4px] outline-none transition-all duration-300 font-['Inter_Tight:Regular',sans-serif] text-[15px] resize-none"
-                  />
-                </div>
-              </div>
-
-              {/* Estimated budget selection */}
-              <div className="flex flex-col gap-2">
-                <label htmlFor="budget" className="font-['Inter_Tight:Regular',sans-serif] text-[15px] text-[#989898]">Your estimated budget *</label>
-                <div className="relative">
-                  <DollarSign className="absolute left-4 top-1/2 -translate-y-1/2 size-[18px] text-[#666666]" />
-                  <select 
-                    id="budget"
-                    name="budget"
-                    required
-                    value={formData.budget}
-                    onChange={handleInputChange}
-                    className="w-full bg-[#202020] border border-[#3b3b3b] focus:border-[#ffa62a] text-white pl-11 pr-4 py-3 rounded-[4px] outline-none transition-all duration-300 font-['Inter_Tight:Regular',sans-serif] text-[15px] appearance-none cursor-pointer"
-                  >
-                    <option value="" disabled>Select an option</option>
-                    <option value="Under $5k">Under $5k</option>
-                    <option value="$5k - $10k">$5k - $10k</option>
-                    <option value="$10k - $20k">$10k - $20k</option>
-                    <option value="$20k+">$20k+</option>
-                  </select>
-                  <div className="absolute right-4 top-1/2 -translate-y-1/2 pointer-events-none text-[#989898] text-[12px]">▼</div>
-                </div>
-              </div>
-
-              {/* SMS Consent Checkbox */}
-              <div className="flex items-start gap-3 mt-2 text-neutral-400 font-['Inter_Tight:Regular',sans-serif] text-[13px] leading-relaxed text-left">
-                <input 
-                  type="checkbox" 
-                  id="sms-consent" 
-                  name="smsConsent"
-                  required 
-                  checked={formData.smsConsent}
-                  onChange={handleCheckboxChange}
-                  className="mt-1 accent-[#ffa62a] rounded cursor-pointer size-[16px]"
-                />
-                <label htmlFor="sms-consent" className="cursor-pointer select-none text-[#989898]">
-                  By checking this box, I agree to receive automated or manual SMS notifications, reminders, and updates from Hyperion Digital Solutions at the phone number provided. Consent is not a condition of purchase. Msg & data rates may apply. Msg frequency varies. Reply STOP to unsubscribe or HELP for assistance. View our <a href="/privacy" className="text-[#ffa62a] underline hover:text-white transition-colors">Privacy Policy</a> and <a href="/terms" className="text-[#ffa62a] underline hover:text-white transition-colors">Terms of Service</a>.
-                </label>
-              </div>
-
-              {/* Submit button */}
-              <button 
-                type="submit"
-                className="w-full bg-[#ffa62a] text-[#462c07] font-['Inter_Tight:Medium',sans-serif] font-semibold text-[17px] py-[14px] rounded-[6px] hover:bg-[#ffe62a] hover:shadow-[0_0_20px_rgba(255,166,42,0.15)] transition-all duration-300 active:scale-[0.98] mt-2"
-              >
-                Send to the team
-              </button>
-            </form>
-          )}
+          </div>
+          
+          <h2 className="font-['Inter_Tight',sans-serif] text-[36px] font-normal leading-tight text-white mb-4">
+            Chat with our team
+          </h2>
+          <p className="font-['Inter_Tight',sans-serif] text-[#b3b3b3] text-[17px] max-w-[480px] leading-[1.6] mb-8">
+            We've simplified how we connect. Click the chat bubble in the bottom right corner of the screen to start a conversation with our team instantly.
+          </p>
+          
+          <div className="flex flex-col gap-2 items-center text-[14px] text-[#989898] font-geist-mono">
+            <span>AVAILABLE MON-FRI</span>
+            <span className="text-[#ffa62a]">9:00 AM - 6:00 PM CST</span>
+          </div>
         </div>
 
         {/* Right Info Column with wavy background */}
