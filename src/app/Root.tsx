@@ -46,7 +46,7 @@ export default function Root() {
   }, [navigate]);
 
   return (
-    <div className="w-full flex flex-col items-center overflow-x-hidden min-h-screen">
+    <div className="w-full flex flex-col items-center overflow-x-hidden min-h-screen bg-[#141414]">
       <div 
         style={{
           width: "1440px",

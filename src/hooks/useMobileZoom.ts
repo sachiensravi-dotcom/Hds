@@ -7,7 +7,7 @@ export function useMobileZoom() {
     const handleResize = () => {
       const width = window.innerWidth;
       if (width < 1440) {
-        setZoom(width / 1440);
+        setZoom((width / 1440) * 0.995);
       } else {
         setZoom(1);
       }
