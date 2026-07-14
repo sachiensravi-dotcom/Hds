@@ -1,8 +1,10 @@
 import { Outlet, useNavigate } from "react-router";
 import { useEffect } from "react";
+import { useMobileZoom } from "../hooks/useMobileZoom";
 
 export default function Root() {
   const navigate = useNavigate();
+  const zoom = useMobileZoom();
 
   useEffect(() => {
     const handler = (e: MouseEvent) => {
@@ -43,5 +45,18 @@ export default function Root() {
     return () => window.removeEventListener("click", handler);
   }, [navigate]);
 
-  return <Outlet />;
+  return (
+    <div className="w-full flex flex-col items-center overflow-x-hidden min-h-screen">
+      <div 
+        style={{
+          width: "1440px",
+          zoom: zoom,
+          WebkitTextSizeAdjust: "100%",
+        }}
+        className="flex flex-col items-center origin-top shrink-0"
+      >
+        <Outlet />
+      </div>
+    </div>
+  );
 }
