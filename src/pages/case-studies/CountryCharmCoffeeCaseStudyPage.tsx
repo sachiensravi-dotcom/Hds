@@ -71,13 +71,17 @@ export default function CountryCharmCoffeeCaseStudyPage() {
           </div>
         </div>
 
-        {/* Laptop Showcase Section */}
+        {/* Video Showcase Section */}
         <div className="w-full max-w-[1200px] bg-[rgba(255,255,255,0.02)] border border-[#3b3b3b] rounded-[12px] p-[50px] flex items-center justify-center mb-[80px] relative overflow-hidden group">
           <div className="absolute -inset-1 bg-gradient-to-tr from-[#ffa62a]/10 to-transparent opacity-30 blur-[20px] pointer-events-none" />
-          <img 
-            alt="Country Charm Coffee Website Laptop Mockup" 
-            className="w-full max-w-[800px] h-auto object-contain z-10 transition-transform duration-300 group-hover:scale-[1.01]" 
-            src={imgCoffeeLaptop} 
+          <video 
+            src="https://dl.dropboxusercontent.com/scl/fi/hcf5vwukzj0y4apz6x0n5/Country-Charm-Coffee.mp4?rlkey=zpij00b51yljvs8meohhjow32&st=y9i8k36r&raw=1" 
+            controls 
+            className="w-full max-w-[800px] rounded-[6px] border border-[#3b3b3b] shadow-2xl z-10"
+            autoPlay 
+            muted 
+            loop 
+            playsInline
           />
         </div>
 
