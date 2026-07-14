@@ -20,6 +20,8 @@ import VoiceAIServicePage from "../pages/services/VoiceAIServicePage";
 import EmailNurturingServicePage from "../pages/services/EmailNurturingServicePage";
 import ReputationServicePage from "../pages/services/ReputationServicePage";
 import DatabaseReactivationServicePage from "../pages/services/DatabaseReactivationServicePage";
+import CountryCharmCoffeeCaseStudyPage from "../pages/case-studies/CountryCharmCoffeeCaseStudyPage";
+import BarberCaseStudyPage from "../pages/case-studies/BarberCaseStudyPage";
 
 export const router = createBrowserRouter([
   {
@@ -39,6 +41,8 @@ export const router = createBrowserRouter([
       { path: "services/reputation-management", Component: ReputationServicePage },
       { path: "services/database-reactivation", Component: DatabaseReactivationServicePage },
       { path: "case-studies", Component: CaseStudiesPage },
+      { path: "case-studies/ccc", Component: CountryCharmCoffeeCaseStudyPage },
+      { path: "case-studies/jay-barber-studio", Component: BarberCaseStudyPage },
       { path: "blogs", Component: BlogsPage },
       { path: "blog-posts/:slug", Component: BlogPostPage },
       { path: "contact", Component: ContactPage },

@@ -36,12 +36,15 @@ export default function TestimonialSlider() {
   return (
     <div className="bg-[#141414] relative w-full h-[450px] overflow-hidden" data-name="Section">
       {/* Client Portrait / Studio Image */}
-      <div className="absolute left-[40px] size-[207px] top-[120px] rounded-[6px] overflow-hidden border border-[#3b3b3b]">
+      <div 
+        onClick={() => navigate(Ts[activeIdx].link)}
+        className="absolute left-[40px] size-[207px] top-[120px] rounded-[6px] overflow-hidden border border-[#3b3b3b] cursor-pointer hover:border-[#ffa62a] transition-all duration-300 group"
+      >
         {Ts.map((item, idx) => (
           <img 
             key={idx}
             alt="" 
-            className={`absolute inset-0 w-full h-full object-cover pointer-events-none transition-all duration-500 ease-in-out ${
+            className={`absolute inset-0 w-full h-full object-cover transition-all duration-500 ease-in-out group-hover:scale-105 ${
               activeIdx === idx ? "opacity-100 scale-100" : "opacity-0 scale-95 pointer-events-none"
             }`} 
             src={item.image} 
@@ -61,13 +64,21 @@ export default function TestimonialSlider() {
             <p className="[word-break:break-word] font-['Inter_Tight',sans-serif] leading-[1.5] not-italic text-[26px] text-white">
               {item.quote}
             </p>
-            <div className="mt-4">
-              <p className="[word-break:break-word] font-['Inter_Tight',sans-serif] font-semibold leading-[normal] not-italic text-[18px] text-white">
-                {item.author}
-              </p>
-              <p className="[word-break:break-word] font-geist-mono font-normal leading-[normal] text-[#989898] text-[14px] uppercase whitespace-nowrap mt-1">
-                {item.role}
-              </p>
+            <div className="mt-4 flex items-end justify-between">
+              <div>
+                <p className="[word-break:break-word] font-['Inter_Tight',sans-serif] font-semibold leading-[normal] not-italic text-[18px] text-white">
+                  {item.author}
+                </p>
+                <p className="[word-break:break-word] font-geist-mono font-normal leading-[normal] text-[#989898] text-[14px] uppercase whitespace-nowrap mt-1">
+                  {item.role}
+                </p>
+              </div>
+              <div 
+                onClick={() => navigate(item.link)}
+                className="cursor-pointer text-[#ffa62a] hover:text-white font-['Inter_Tight',sans-serif] font-semibold text-[15px] flex items-center gap-1 transition-colors duration-200 select-none pb-1"
+              >
+                Read Case Study →
+              </div>
             </div>
           </div>
         ))}
