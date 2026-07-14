@@ -130,7 +130,7 @@ export default function Section() {
  
           <div className="relative z-10 pt-[40px] border-t border-[rgba(255,255,255,0.05)] mt-8">
             <span className="font-geist-mono text-[12px] text-[#989898] uppercase tracking-widest block mb-2">HQ LOCATION</span>
-            <p className="font-['Inter_Tight',sans-serif] text-white text-[16px]">Dallas-Fort Worth Metroplex, Texas</p>
+            <p className="font-['Inter_Tight',sans-serif] text-white text-[16px]">1924 Desoto Dr, McKinney, TX 75072</p>
           </div>
         </div>
 
