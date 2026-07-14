@@ -82,6 +82,8 @@ export default function Section() {
         <a href="tel:9724397854" className="hover:text-white transition-colors duration-300">
           (972) 439-7854
         </a>
+        <span className="mx-4 text-[#3b3b3b]">|</span>
+        <span>1924 Desoto Dr, McKinney, TX 75072</span>
       </p>
 
       <p className="absolute leading-[normal] left-[calc(91.67%+80px)] -translate-x-full not-italic text-[#989898] text-[16px] text-right top-[24px] whitespace-nowrap">
